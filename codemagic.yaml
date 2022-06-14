@@ -3,6 +3,7 @@ workflows:
     environment:
       groups:
         - app_store_credentials
+        - plists
       vars:
         XCODE_WORKSPACE: "DailyAthkar.xcworkspace"
         XCODE_SCHEME: "DailyAthkar"
