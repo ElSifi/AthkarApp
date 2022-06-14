@@ -24,7 +24,7 @@ workflows:
       - name: Set up code signing settings on Xcode project
         script: xcode-project use-profiles
       - name: Setup Google Info PList
-        script: echo $IOS_FIREBASE_SECRET > $PROJECT_ROOT/GoogleService-Info.plist
+        script: echo $IOS_FIREBASE_SECRET > $CM_BUILD_DIR/GoogleService-Info.plist
       - name: Setup Tokens Info PList
         script: echo $IOS_TOKENS > $PROJECT_ROOT/tokens.plist
       - name: Build ipa for distribution
