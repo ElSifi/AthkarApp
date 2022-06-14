@@ -3,6 +3,9 @@ workflows:
     environment:
       groups:
         - app_store_credentials
+      vars:
+        XCODE_WORKSPACE: "DailyAthkar.xcworkspace"
+        XCODE_SCHEME: "DailyAthkar"
       cocoapods: 1.10.2
       xcode: 12.5
     scripts:
