@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  DailyAthkar
+
+  Created by Mohamed ElSIfi on 8/19/18.
+  Copyright © 2018 Badi3.com. All rights reserved.
+*/
+
+"app language" = "اللغة - Language";
+"arabic" = "العربية";
+"english" = "English";
+"font" = "الخط";
+"text length mode" = "الوضع الافتراضي";
+"back" = "عودة";
+"tap to choose" = "اضغط للاختيار";
+"save" = "حفظ الإعدادات";
+"all athkar" = "كل الأذكار";
+"only short athkar" = "فقط الأذكار القصيرة";
+"of" = "من";
+"times" = "مرات";
+"play" = "تشغيل";
+"next" = "التالي";
+"previous" = "السابق";
+"pause" = "إيقاف";
+"stop" = "إيقاف";
+"morning alert" = "أذكار الصباح";
+"morning alert body" = "اضغط لقراءة أو سماع الأذكار";
+"evening alert" = "أذكار المساء";
+"evening alert body" = "اضغط لقراءة أو سماع الأذكار";
+"share the app" = "أرسل التطبيق لصديق";
+"contact developer" = "تواصل مع المبرمج";
+"share message" = "أقرأ الأذكار عبر تطبيق الأذكار اليومية لـ آي فون، تطبيق بسيط وأنيق، حمله الآن على جوالك  %@";
+"short message error" = "نص الرسالة قصير جدا";
+"message sent" = "تم الأرسال. شكرا على الاهتمام. رأيك يهمنا للغاية";
+"could not send your message" = "لم يتم إرسال الرسالة لسبب ما. برجاء التواصل على mo@badi3.com";
+"send" = "إرسال";
+"contact developer top text" = "يمكنك الإبلاغ عن مشكلة في التطبيق أو طلب ميزة جديدة";
+"optional email address" = "بريد إليكتروني للمتابعة (اختياري)";
+"rate the app" = "قيّم التطبيق على المتجر";
+"sign in is required to keep track of your invites" = "تسجيل الدخول مطلوب لحفظ سجل الدعوات";
+"are you sure you want to log out?"="هل أنت متأكد أنك تود تسجيل الخروج؟";
+"yes, log me out" = "نعم، قم بتسجيل الخروج";
+"cancel" = "إلغاء";
+"log out" = "تسجيل خروج";
+"log in" = "تسجيل دخول";
+"yes, sign me up" = "نعم، تسجيل دخول سريع";
+"no, share without keeping track" = "لا تحفظ سجل الدعوات، فقط شارك التطبيق";
+"feature requests" = "اقترح إضافة";
+"title" = "العنوان";
+"details" = "التفاصيل";
+"votes" = "أصوات";

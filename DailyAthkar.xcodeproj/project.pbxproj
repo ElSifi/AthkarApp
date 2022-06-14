@@ -1,0 +1,1659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F50E087C61F8AA4845D1EAC /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6008ACACE3D9E077D201C5F9 /* Pods_OneSignalNotificationServiceExtension.framework */; };
+		7D4117B85C02E10418D78642 /* Pods_DailyAthkar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7E9CB71F907D5583FF4764 /* Pods_DailyAthkar.framework */; };
+		9203672620988FB5003D8DAC /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671220988FAE003D8DAC /* DroidSans.ttf */; };
+		9203672720988FB5003D8DAC /* DroidSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671320988FAE003D8DAC /* DroidSerif-Italic.ttf */; };
+		9203672820988FB5003D8DAC /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671420988FAE003D8DAC /* OpenSans-LightItalic.ttf */; };
+		9203672920988FB5003D8DAC /* DroidNaskh-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671520988FAF003D8DAC /* DroidNaskh-Regular.ttf */; };
+		9203672A20988FB5003D8DAC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671620988FAF003D8DAC /* OpenSans-Regular.ttf */; };
+		9203672B20988FB5003D8DAC /* blob-round.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671720988FAF003D8DAC /* blob-round.ttf */; };
+		9203672C20988FB5003D8DAC /* amiri-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671820988FB0003D8DAC /* amiri-regular.ttf */; };
+		9203672D20988FB5003D8DAC /* Ubuntu-L.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671920988FB0003D8DAC /* Ubuntu-L.ttf */; };
+		9203672E20988FB5003D8DAC /* noorehira.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671A20988FB0003D8DAC /* noorehira.ttf */; };
+		9203672F20988FB5003D8DAC /* PDMS_Saleem_QuranFont-signed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671B20988FB1003D8DAC /* PDMS_Saleem_QuranFont-signed.ttf */; };
+		9203673020988FB5003D8DAC /* Scheherazade-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671C20988FB1003D8DAC /* Scheherazade-R.ttf */; };
+		9203673120988FB5003D8DAC /* LateefRegOT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671D20988FB1003D8DAC /* LateefRegOT.ttf */; };
+		9203673220988FB5003D8DAC /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671E20988FB1003D8DAC /* OpenSans-Italic.ttf */; };
+		9203673320988FB5003D8DAC /* DroidKufi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671F20988FB2003D8DAC /* DroidKufi-Regular.ttf */; };
+		9203673420988FB5003D8DAC /* DroidSerif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203672020988FB2003D8DAC /* DroidSerif.ttf */; };
+		9203673520988FB5003D8DAC /* mb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203672120988FB3003D8DAC /* mb.ttf */; };
+		9203673620988FB5003D8DAC /* Ubuntu-LI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203672220988FB3003D8DAC /* Ubuntu-LI.ttf */; };
+		9203673720988FB5003D8DAC /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203672320988FB3003D8DAC /* OpenSans-Light.ttf */; };
+		9203673820988FB5003D8DAC /* Al Qalam Quran Majeed 1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203672420988FB4003D8DAC /* Al Qalam Quran Majeed 1.ttf */; };
+		9203673920988FB5003D8DAC /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203672520988FB4003D8DAC /* Roboto-Thin.ttf */; };
+		9203673D2098912D003D8DAC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203673C2098912D003D8DAC /* Config.swift */; };
+		9203674320989259003D8DAC /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203674020989259003D8DAC /* LanguageManager.m */; };
+		9203674420989259003D8DAC /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203674220989259003D8DAC /* NSBundle+Language.m */; };
+		922F37182099A2DC00991346 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922F37172099A2DC00991346 /* Extensions.swift */; };
+		92377B3E213B30A200312036 /* ContactDeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92377B3D213B30A200312036 /* ContactDeveloperViewController.swift */; };
+		92377B42213B529100312036 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 92377B40213B529000312036 /* MBProgressHUD.m */; };
+		925BEB0A212863920051BA8D /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925BEB09212863920051BA8D /* ShareView.swift */; };
+		925BEB0B2128722F0051BA8D /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9203673A20988FBE003D8DAC /* BebasNeue.otf */; };
+		9260074E2132C61600C0FF4F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260074D2132C61600C0FF4F /* Utils.swift */; };
+		9260075121333D8700C0FF4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9260075321333D8700C0FF4F /* InfoPlist.strings */; };
+		926066F0212973C40083C144 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 926066F2212973C40083C144 /* Localizable.strings */; };
+		926066F52129A5990083C144 /* FontSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926066F42129A5990083C144 /* FontSelectionViewController.swift */; };
+		9262EEC82135E63B003D12A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9262EEC72135E63B003D12A9 /* GoogleService-Info.plist */; };
+		926D01E42098D9990023F06C /* SectionContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D01E32098D9990023F06C /* SectionContentViewController.swift */; };
+		926D01E82098DB5A0023F06C /* ThikrTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D01E72098DB5A0023F06C /* ThikrTableViewCell.swift */; };
+		926D01EB2098F87E0023F06C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D01EA2098F87E0023F06C /* SettingsViewController.swift */; };
+		9281478D209B9985007B0D85 /* CustomUIClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281478C209B9985007B0D85 /* CustomUIClasses.swift */; };
+		928147C6209BCD23007B0D85 /* Mishary_AfterPrayer_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92814791209BCD23007B0D85 /* Mishary_AfterPrayer_3.mp3 */; };
+		928147C7209BCD23007B0D85 /* Mishary_AfterPrayer_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92814792209BCD23007B0D85 /* Mishary_AfterPrayer_4.mp3 */; };
+		928147C8209BCD23007B0D85 /* Mishary_AfterPrayer_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92814793209BCD23007B0D85 /* Mishary_AfterPrayer_5.mp3 */; };
+		928147C9209BCD23007B0D85 /* Mishary_AfterPrayer_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92814794209BCD23007B0D85 /* Mishary_AfterPrayer_6.mp3 */; };
+		928147CA209BCD23007B0D85 /* FormatFactoryaaman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92814796209BCD23007B0D85 /* FormatFactoryaaman.mp3 */; };
+		928147CB209BCD23007B0D85 /* Mishary_Sleeping_.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92814797209BCD23007B0D85 /* Mishary_Sleeping_.mp3 */; };
+		928147CC209BCD23007B0D85 /* Mishary_Sleeping_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92814798209BCD23007B0D85 /* Mishary_Sleeping_1.mp3 */; };
+		928147CD209BCD23007B0D85 /* Mishary_Sleeping_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92814799209BCD23007B0D85 /* Mishary_Sleeping_2.mp3 */; };
+		928147CE209BCD23007B0D85 /* Mishary_Sleeping_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9281479A209BCD23007B0D85 /* Mishary_Sleeping_3.mp3 */; };
+		928147CF209BCD23007B0D85 /* Mishary_Sleeping_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9281479B209BCD23007B0D85 /* Mishary_Sleeping_5.mp3 */; };
+		928147D0209BCD23007B0D85 /* Mishary_Sleeping_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9281479C209BCD23007B0D85 /* Mishary_Sleeping_6.mp3 */; };
+		928147D1209BCD23007B0D85 /* Mishary_Sleeping_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9281479D209BCD23007B0D85 /* Mishary_Sleeping_7.mp3 */; };
+		928147D2209BCD23007B0D85 /* _unused_astaghfero_w_atoobo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9281479F209BCD23007B0D85 /* _unused_astaghfero_w_atoobo.mp3 */; };
+		928147D3209BCD23007B0D85 /* _UNUSED_nabi_salat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147A0209BCD23007B0D85 /* _UNUSED_nabi_salat.mp3 */; };
+		928147D4209BCD23007B0D85 /* Mishary_3afini.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147A1209BCD23007B0D85 /* Mishary_3afini.mp3 */; };
+		928147D5209BCD23007B0D85 /* Mishary_3alem_alghyb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147A2209BCD23007B0D85 /* Mishary_3alem_alghyb.mp3 */; };
+		928147D6209BCD23007B0D85 /* Mishary_7asbia-allah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147A3209BCD23007B0D85 /* Mishary_7asbia-allah.mp3 */; };
+		928147D7209BCD23007B0D85 /* Mishary_al3fw_w_3afia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147A4209BCD23007B0D85 /* Mishary_al3fw_w_3afia.mp3 */; };
+		928147D8209BCD23007B0D85 /* Mishary_ayat_korsi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147A5209BCD23007B0D85 /* Mishary_ayat_korsi.mp3 */; };
+		928147D9209BCD23007B0D85 /* Mishary_la_elah_kadeer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147A6209BCD23007B0D85 /* Mishary_la_elah_kadeer.mp3 */; };
+		928147DA209BCD23007B0D85 /* Mishary_raditu_b_allah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147A7209BCD23007B0D85 /* Mishary_raditu_b_allah.mp3 */; };
+		928147DB209BCD23007B0D85 /* Mishary_samee3_3leem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147A8209BCD23007B0D85 /* Mishary_samee3_3leem.mp3 */; };
+		928147DC209BCD23007B0D85 /* Mishary_sayed_estghfar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147A9209BCD23007B0D85 /* Mishary_sayed_estghfar.mp3 */; };
+		928147DD209BCD23007B0D85 /* Mishary_suat_samad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147AA209BCD23007B0D85 /* Mishary_suat_samad.mp3 */; };
+		928147DE209BCD23007B0D85 /* Mishary_sub7an_3dd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147AB209BCD23007B0D85 /* Mishary_sub7an_3dd.mp3 */; };
+		928147DF209BCD23007B0D85 /* Mishary_sub7an_w_b7mdeh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147AC209BCD23007B0D85 /* Mishary_sub7an_w_b7mdeh.mp3 */; };
+		928147E0209BCD23007B0D85 /* Mishary_surat_falak.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147AD209BCD23007B0D85 /* Mishary_surat_falak.mp3 */; };
+		928147E1209BCD23007B0D85 /* Mishary_surat_nas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147AE209BCD23007B0D85 /* Mishary_surat_nas.mp3 */; };
+		928147E2209BCD23007B0D85 /* Mishary_ya_7ii.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147AF209BCD23007B0D85 /* Mishary_ya_7ii.mp3 */; };
+		928147E3209BCD23007B0D85 /* FormatFactoryamsyna3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147B1209BCD23007B0D85 /* FormatFactoryamsyna3.mp3 */; };
+		928147E4209BCD23007B0D85 /* Mishary_Evening_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147B2209BCD23007B0D85 /* Mishary_Evening_1.mp3 */; };
+		928147E5209BCD23007B0D85 /* Mishary_Evening_17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147B3209BCD23007B0D85 /* Mishary_Evening_17.mp3 */; };
+		928147E6209BCD23007B0D85 /* Mishary_Evening_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147B4209BCD23007B0D85 /* Mishary_Evening_2.mp3 */; };
+		928147E7209BCD23007B0D85 /* Mishary_Evening_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147B5209BCD23007B0D85 /* Mishary_Evening_4.mp3 */; };
+		928147E8209BCD23007B0D85 /* Mishary_Evening_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147B6209BCD23007B0D85 /* Mishary_Evening_5.mp3 */; };
+		928147E9209BCD23007B0D85 /* Mishary_Evening_8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147B7209BCD23007B0D85 /* Mishary_Evening_8.mp3 */; };
+		928147EA209BCD23007B0D85 /* FormatFactoryallahomma.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147B9209BCD23007B0D85 /* FormatFactoryallahomma.mp3 */; };
+		928147EB209BCD23007B0D85 /* FormatFactoryfitra.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147BA209BCD23007B0D85 /* FormatFactoryfitra.mp3 */; };
+		928147EC209BCD23007B0D85 /* FormatFactoryheader.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147BB209BCD23007B0D85 /* FormatFactoryheader.mp3 */; };
+		928147ED209BCD23007B0D85 /* Mishary_Morning_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147BC209BCD23007B0D85 /* Mishary_Morning_1.mp3 */; };
+		928147EE209BCD23007B0D85 /* Mishary_Morning_16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147BD209BCD23007B0D85 /* Mishary_Morning_16.mp3 */; };
+		928147EF209BCD23007B0D85 /* Mishary_Morning_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147BE209BCD23007B0D85 /* Mishary_Morning_2.mp3 */; };
+		928147F0209BCD23007B0D85 /* Mishary_Morning_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147BF209BCD23007B0D85 /* Mishary_Morning_4.mp3 */; };
+		928147F1209BCD23007B0D85 /* Mishary_Morning_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147C0209BCD23007B0D85 /* Mishary_Morning_5.mp3 */; };
+		928147F2209BCD23007B0D85 /* ProjectNamingConvention.txt in Resources */ = {isa = PBXBuildFile; fileRef = 928147C1209BCD23007B0D85 /* ProjectNamingConvention.txt */; };
+		928147F3209BCD23007B0D85 /* Mishary_WakingUp_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147C3209BCD23007B0D85 /* Mishary_WakingUp_1.mp3 */; };
+		928147F4209BCD23007B0D85 /* Mishary_WakingUp_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147C4209BCD23007B0D85 /* Mishary_WakingUp_2.mp3 */; };
+		928147F5209BCD23007B0D85 /* Mishary_WakingUp_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 928147C5209BCD23007B0D85 /* Mishary_WakingUp_3.mp3 */; };
+		92B265A52135332A0021C973 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B265A42135332A0021C973 /* NotificationService.swift */; };
+		92B265A92135332A0021C973 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 92B265A22135332A0021C973 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		92CB9902211B08BF00F4BF7B /* ShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CB9901211B08BF00F4BF7B /* ShareView.xib */; };
+		92E152762093A85400301BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E152752093A85400301BB6 /* AppDelegate.swift */; };
+		92E152782093A85400301BB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E152772093A85400301BB6 /* HomeViewController.swift */; };
+		92E1527B2093A85400301BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E152792093A85400301BB6 /* Main.storyboard */; };
+		92E1527D2093A85400301BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E1527C2093A85400301BB6 /* Assets.xcassets */; };
+		92E152802093A85400301BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E1527E2093A85400301BB6 /* LaunchScreen.storyboard */; };
+		92E44EF12093C2D900040452 /* HomeSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E44EF02093C2D900040452 /* HomeSectionTableViewCell.swift */; };
+		92E49AFA209897990090DB34 /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 92E49AF9209897990090DB34 /* db.json */; };
+		92E4D0C5212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92E4D0C4212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 */; };
+		D81AF8F2225E11C700D28630 /* FirebasePhoneAuthUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = D81AF87A225E11C600D28630 /* FirebasePhoneAuthUI.strings */; };
+		D81AF8F3225E11C700D28630 /* FUIPhoneAuthStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8D0225E11C700D28630 /* FUIPhoneAuthStrings.m */; };
+		D81AF8F4225E11C700D28630 /* ic_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8D2225E11C700D28630 /* ic_phone.png */; };
+		D81AF8F5225E11C700D28630 /* ic_phone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8D3225E11C700D28630 /* ic_phone@3x.png */; };
+		D81AF8F6225E11C700D28630 /* ic_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8D4225E11C700D28630 /* ic_phone@2x.png */; };
+		D81AF8F7225E11C700D28630 /* country-codes.json in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8D5225E11C700D28630 /* country-codes.json */; };
+		D81AF8F8225E11C700D28630 /* FUIPhoneEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8D6225E11C700D28630 /* FUIPhoneEntryViewController.m */; };
+		D81AF8F9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8D9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m */; };
+		D81AF8FA225E11C700D28630 /* FUICollationForCountries.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8DB225E11C700D28630 /* FUICollationForCountries.m */; };
+		D81AF8FB225E11C700D28630 /* FUICountryCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8DD225E11C700D28630 /* FUICountryCodes.m */; };
+		D81AF8FC225E11C700D28630 /* FUICountryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8E0225E11C700D28630 /* FUICountryTableViewController.xib */; };
+		D81AF8FD225E11C700D28630 /* FUICountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8E1225E11C700D28630 /* FUICountryTableViewController.m */; };
+		D81AF8FE225E11C700D28630 /* FUIPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8E4225E11C700D28630 /* FUIPhoneNumber.m */; };
+		D81AF8FF225E11C700D28630 /* FUIFeatureSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8E5225E11C700D28630 /* FUIFeatureSwitch.m */; };
+		D81AF900225E11C700D28630 /* FUICodeField.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8E6225E11C700D28630 /* FUICodeField.m */; };
+		D81AF901225E11C700D28630 /* FUIPhoneVerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8E7225E11C700D28630 /* FUIPhoneVerificationViewController.m */; };
+		D81AF902225E11C700D28630 /* FUIPhoneEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8E8225E11C700D28630 /* FUIPhoneEntryViewController.xib */; };
+		D81AF903225E11C700D28630 /* FUICodeField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8EC225E11C700D28630 /* FUICodeField.xib */; };
+		D81AF904225E11C700D28630 /* FUIPhoneVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8ED225E11C700D28630 /* FUIPhoneVerificationViewController.xib */; };
+		D81AF906225E11C700D28630 /* FUIPhoneAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8F1225E11C700D28630 /* FUIPhoneAuth.m */; };
+		D81AF90C225EA1A000D28630 /* MeezanMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF90E225EA1A000D28630 /* MeezanMainViewController.xib */; };
+		D82936DC225DFF190040F839 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82936DB225DFF190040F839 /* LanguageManager.swift */; };
+		D82936DE225E011E0040F839 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82936DD225E011E0040F839 /* main.swift */; };
+		D849250A26170B55008F4182 /* DemocraticFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849250926170B54008F4182 /* DemocraticFeatures.swift */; };
+		D890F7D42259522100D37E2A /* Meezan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890F7D32259522100D37E2A /* Meezan.swift */; };
+		D8A156F7225D4EB800C8F274 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A156F5225D4EB600C8F274 /* UIAlertController+Blocks.m */; };
+		D8A9E54B2257984800544B08 /* MeezanMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9E5492257984800544B08 /* MeezanMainViewController.swift */; };
+		D8B6E000225D56C70067FDC6 /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6DFFE225D56C70067FDC6 /* AppSettingsViewController.swift */; };
+		D8B6E001225D56C70067FDC6 /* AppSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B6DFFF225D56C70067FDC6 /* AppSettingsViewController.xib */; };
+		D8D6C1A928592565008D4F50 /* tokens.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D6C1A828592565008D4F50 /* tokens.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92B265A72135332A0021C973 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E1526A2093A85400301BB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92B265A12135332A0021C973;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92B265AD2135332A0021C973 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				92B265A92135332A0021C973 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		227A61BD14E356938895BC40 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		6008ACACE3D9E077D201C5F9 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85312CDAEBEF17B3267DFBA0 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		854B3BCDC456DE17F39F0558 /* Pods-DailyAthkar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyAthkar.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar.release.xcconfig"; sourceTree = "<group>"; };
+		9203671220988FAE003D8DAC /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
+		9203671320988FAE003D8DAC /* DroidSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-Italic.ttf"; sourceTree = "<group>"; };
+		9203671420988FAE003D8DAC /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		9203671520988FAF003D8DAC /* DroidNaskh-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidNaskh-Regular.ttf"; sourceTree = "<group>"; };
+		9203671620988FAF003D8DAC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		9203671720988FAF003D8DAC /* blob-round.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "blob-round.ttf"; sourceTree = "<group>"; };
+		9203671820988FB0003D8DAC /* amiri-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "amiri-regular.ttf"; sourceTree = "<group>"; };
+		9203671920988FB0003D8DAC /* Ubuntu-L.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-L.ttf"; sourceTree = "<group>"; };
+		9203671A20988FB0003D8DAC /* noorehira.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = noorehira.ttf; sourceTree = "<group>"; };
+		9203671B20988FB1003D8DAC /* PDMS_Saleem_QuranFont-signed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PDMS_Saleem_QuranFont-signed.ttf"; sourceTree = "<group>"; };
+		9203671C20988FB1003D8DAC /* Scheherazade-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scheherazade-R.ttf"; sourceTree = "<group>"; };
+		9203671D20988FB1003D8DAC /* LateefRegOT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LateefRegOT.ttf; sourceTree = "<group>"; };
+		9203671E20988FB1003D8DAC /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		9203671F20988FB2003D8DAC /* DroidKufi-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidKufi-Regular.ttf"; sourceTree = "<group>"; };
+		9203672020988FB2003D8DAC /* DroidSerif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSerif.ttf; sourceTree = "<group>"; };
+		9203672120988FB3003D8DAC /* mb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mb.ttf; sourceTree = "<group>"; };
+		9203672220988FB3003D8DAC /* Ubuntu-LI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LI.ttf"; sourceTree = "<group>"; };
+		9203672320988FB3003D8DAC /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		9203672420988FB4003D8DAC /* Al Qalam Quran Majeed 1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Al Qalam Quran Majeed 1.ttf"; sourceTree = "<group>"; };
+		9203672520988FB4003D8DAC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		9203673A20988FBE003D8DAC /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
+		9203673C2098912D003D8DAC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9203673E20989257003D8DAC /* DailyAthkar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyAthkar-Bridging-Header.h"; sourceTree = "<group>"; };
+		9203673F20989258003D8DAC /* LanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
+		9203674020989259003D8DAC /* LanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageManager.m; sourceTree = "<group>"; };
+		9203674120989259003D8DAC /* NSBundle+Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Language.h"; sourceTree = "<group>"; };
+		9203674220989259003D8DAC /* NSBundle+Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Language.m"; sourceTree = "<group>"; };
+		92036746209892A0003D8DAC /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		922F37172099A2DC00991346 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		92377B3D213B30A200312036 /* ContactDeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDeveloperViewController.swift; sourceTree = "<group>"; };
+		92377B40213B529000312036 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		92377B41213B529000312036 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		925BEB09212863920051BA8D /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		9260074D2132C61600C0FF4F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		9260075221333D8700C0FF4F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9260075421333D8900C0FF4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		926066F1212973C40083C144 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		926066F3212973C60083C144 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		926066F42129A5990083C144 /* FontSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSelectionViewController.swift; sourceTree = "<group>"; };
+		9262EEC72135E63B003D12A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		926D01E32098D9990023F06C /* SectionContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionContentViewController.swift; sourceTree = "<group>"; };
+		926D01E72098DB5A0023F06C /* ThikrTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThikrTableViewCell.swift; sourceTree = "<group>"; };
+		926D01EA2098F87E0023F06C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9281478C209B9985007B0D85 /* CustomUIClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIClasses.swift; sourceTree = "<group>"; };
+		92814791209BCD23007B0D85 /* Mishary_AfterPrayer_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_AfterPrayer_3.mp3; sourceTree = "<group>"; };
+		92814792209BCD23007B0D85 /* Mishary_AfterPrayer_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_AfterPrayer_4.mp3; sourceTree = "<group>"; };
+		92814793209BCD23007B0D85 /* Mishary_AfterPrayer_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_AfterPrayer_5.mp3; sourceTree = "<group>"; };
+		92814794209BCD23007B0D85 /* Mishary_AfterPrayer_6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_AfterPrayer_6.mp3; sourceTree = "<group>"; };
+		92814796209BCD23007B0D85 /* FormatFactoryaaman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FormatFactoryaaman.mp3; sourceTree = "<group>"; };
+		92814797209BCD23007B0D85 /* Mishary_Sleeping_.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Sleeping_.mp3; sourceTree = "<group>"; };
+		92814798209BCD23007B0D85 /* Mishary_Sleeping_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Sleeping_1.mp3; sourceTree = "<group>"; };
+		92814799209BCD23007B0D85 /* Mishary_Sleeping_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Sleeping_2.mp3; sourceTree = "<group>"; };
+		9281479A209BCD23007B0D85 /* Mishary_Sleeping_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Sleeping_3.mp3; sourceTree = "<group>"; };
+		9281479B209BCD23007B0D85 /* Mishary_Sleeping_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Sleeping_5.mp3; sourceTree = "<group>"; };
+		9281479C209BCD23007B0D85 /* Mishary_Sleeping_6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Sleeping_6.mp3; sourceTree = "<group>"; };
+		9281479D209BCD23007B0D85 /* Mishary_Sleeping_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Sleeping_7.mp3; sourceTree = "<group>"; };
+		9281479F209BCD23007B0D85 /* _unused_astaghfero_w_atoobo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = _unused_astaghfero_w_atoobo.mp3; sourceTree = "<group>"; };
+		928147A0209BCD23007B0D85 /* _UNUSED_nabi_salat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = _UNUSED_nabi_salat.mp3; sourceTree = "<group>"; };
+		928147A1209BCD23007B0D85 /* Mishary_3afini.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_3afini.mp3; sourceTree = "<group>"; };
+		928147A2209BCD23007B0D85 /* Mishary_3alem_alghyb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_3alem_alghyb.mp3; sourceTree = "<group>"; };
+		928147A3209BCD23007B0D85 /* Mishary_7asbia-allah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mishary_7asbia-allah.mp3"; sourceTree = "<group>"; };
+		928147A4209BCD23007B0D85 /* Mishary_al3fw_w_3afia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_al3fw_w_3afia.mp3; sourceTree = "<group>"; };
+		928147A5209BCD23007B0D85 /* Mishary_ayat_korsi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_ayat_korsi.mp3; sourceTree = "<group>"; };
+		928147A6209BCD23007B0D85 /* Mishary_la_elah_kadeer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_la_elah_kadeer.mp3; sourceTree = "<group>"; };
+		928147A7209BCD23007B0D85 /* Mishary_raditu_b_allah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_raditu_b_allah.mp3; sourceTree = "<group>"; };
+		928147A8209BCD23007B0D85 /* Mishary_samee3_3leem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_samee3_3leem.mp3; sourceTree = "<group>"; };
+		928147A9209BCD23007B0D85 /* Mishary_sayed_estghfar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_sayed_estghfar.mp3; sourceTree = "<group>"; };
+		928147AA209BCD23007B0D85 /* Mishary_suat_samad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_suat_samad.mp3; sourceTree = "<group>"; };
+		928147AB209BCD23007B0D85 /* Mishary_sub7an_3dd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_sub7an_3dd.mp3; sourceTree = "<group>"; };
+		928147AC209BCD23007B0D85 /* Mishary_sub7an_w_b7mdeh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_sub7an_w_b7mdeh.mp3; sourceTree = "<group>"; };
+		928147AD209BCD23007B0D85 /* Mishary_surat_falak.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_surat_falak.mp3; sourceTree = "<group>"; };
+		928147AE209BCD23007B0D85 /* Mishary_surat_nas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_surat_nas.mp3; sourceTree = "<group>"; };
+		928147AF209BCD23007B0D85 /* Mishary_ya_7ii.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_ya_7ii.mp3; sourceTree = "<group>"; };
+		928147B1209BCD23007B0D85 /* FormatFactoryamsyna3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FormatFactoryamsyna3.mp3; sourceTree = "<group>"; };
+		928147B2209BCD23007B0D85 /* Mishary_Evening_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Evening_1.mp3; sourceTree = "<group>"; };
+		928147B3209BCD23007B0D85 /* Mishary_Evening_17.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Evening_17.mp3; sourceTree = "<group>"; };
+		928147B4209BCD23007B0D85 /* Mishary_Evening_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Evening_2.mp3; sourceTree = "<group>"; };
+		928147B5209BCD23007B0D85 /* Mishary_Evening_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Evening_4.mp3; sourceTree = "<group>"; };
+		928147B6209BCD23007B0D85 /* Mishary_Evening_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Evening_5.mp3; sourceTree = "<group>"; };
+		928147B7209BCD23007B0D85 /* Mishary_Evening_8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Evening_8.mp3; sourceTree = "<group>"; };
+		928147B9209BCD23007B0D85 /* FormatFactoryallahomma.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FormatFactoryallahomma.mp3; sourceTree = "<group>"; };
+		928147BA209BCD23007B0D85 /* FormatFactoryfitra.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FormatFactoryfitra.mp3; sourceTree = "<group>"; };
+		928147BB209BCD23007B0D85 /* FormatFactoryheader.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FormatFactoryheader.mp3; sourceTree = "<group>"; };
+		928147BC209BCD23007B0D85 /* Mishary_Morning_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Morning_1.mp3; sourceTree = "<group>"; };
+		928147BD209BCD23007B0D85 /* Mishary_Morning_16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Morning_16.mp3; sourceTree = "<group>"; };
+		928147BE209BCD23007B0D85 /* Mishary_Morning_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Morning_2.mp3; sourceTree = "<group>"; };
+		928147BF209BCD23007B0D85 /* Mishary_Morning_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Morning_4.mp3; sourceTree = "<group>"; };
+		928147C0209BCD23007B0D85 /* Mishary_Morning_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_Morning_5.mp3; sourceTree = "<group>"; };
+		928147C1209BCD23007B0D85 /* ProjectNamingConvention.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProjectNamingConvention.txt; sourceTree = "<group>"; };
+		928147C3209BCD23007B0D85 /* Mishary_WakingUp_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_WakingUp_1.mp3; sourceTree = "<group>"; };
+		928147C4209BCD23007B0D85 /* Mishary_WakingUp_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_WakingUp_2.mp3; sourceTree = "<group>"; };
+		928147C5209BCD23007B0D85 /* Mishary_WakingUp_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_WakingUp_3.mp3; sourceTree = "<group>"; };
+		92B265A22135332A0021C973 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		92B265A42135332A0021C973 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		92B265A62135332A0021C973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92B265AE213533B30021C973 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		92B265AF213533C20021C973 /* DailyAthkar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyAthkar.entitlements; sourceTree = "<group>"; };
+		92CB9901211B08BF00F4BF7B /* ShareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareView.xib; sourceTree = "<group>"; };
+		92DB00AE209893FA00BCB381 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		92DB00B02098941B00BCB381 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		92DB00B22098942000BCB381 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		92E152722093A85400301BB6 /* DailyAthkar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyAthkar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E152752093A85400301BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92E152772093A85400301BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		92E1527A2093A85400301BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92E1527C2093A85400301BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92E1527F2093A85400301BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92E152812093A85400301BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E44EF02093C2D900040452 /* HomeSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionTableViewCell.swift; sourceTree = "<group>"; };
+		92E49AF9209897990090DB34 /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
+		92E4D0C4212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_AfterPrayer_14.mp3; sourceTree = "<group>"; };
+		D81AF87B225E11C600D28630 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF87C225E11C600D28630 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF87D225E11C600D28630 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF87E225E11C600D28630 /* es-SV */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-SV"; path = "es-SV.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF87F225E11C600D28630 /* zh-Hant-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant-TW"; path = "zh-Hant-TW.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF880225E11C600D28630 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF881225E11C600D28630 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF882225E11C600D28630 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF883225E11C600D28630 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF884225E11C600D28630 /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF885225E11C600D28630 /* mr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mr; path = mr.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF886225E11C600D28630 /* es-GT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-GT"; path = "es-GT.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF887225E11C600D28630 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF888225E11C600D28630 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF889225E11C600D28630 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF88A225E11C600D28630 /* es-PY */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-PY"; path = "es-PY.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF88B225E11C600D28630 /* gu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gu; path = gu.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF88C225E11C600D28630 /* kn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kn; path = kn.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF88D225E11C600D28630 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF88E225E11C600D28630 /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF88F225E11C600D28630 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF890225E11C600D28630 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF891225E11C600D28630 /* es-VE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-VE"; path = "es-VE.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF892225E11C600D28630 /* es-CL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-CL"; path = "es-CL.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF893225E11C600D28630 /* sl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sl; path = sl.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF894225E11C600D28630 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF895225E11C600D28630 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF896225E11C600D28630 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF897225E11C600D28630 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF898225E11C600D28630 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF899225E11C600D28630 /* sr-Latn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sr-Latn"; path = "sr-Latn.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF89A225E11C600D28630 /* nn-NO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nn-NO"; path = "nn-NO.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF89B225E11C600D28630 /* es-PA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-PA"; path = "es-PA.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF89C225E11C600D28630 /* en-SG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-SG"; path = "en-SG.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF89D225E11C600D28630 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF89E225E11C600D28630 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF89F225E11C600D28630 /* es-CR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-CR"; path = "es-CR.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8A0225E11C600D28630 /* ta */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ta; path = ta.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8A1225E11C600D28630 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8A2225E11C600D28630 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8A3225E11C600D28630 /* es-AR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-AR"; path = "es-AR.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8A4225E11C600D28630 /* es-PE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-PE"; path = "es-PE.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8A5225E11C600D28630 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8A6225E11C600D28630 /* en-IE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IE"; path = "en-IE.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8A7225E11C600D28630 /* fil */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fil; path = fil.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8A8225E11C600D28630 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8A9225E11C600D28630 /* es-CO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-CO"; path = "es-CO.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8AA225E11C600D28630 /* gsw */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gsw; path = gsw.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8AB225E11C600D28630 /* en-ZA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-ZA"; path = "en-ZA.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8AC225E11C600D28630 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8AD225E11C600D28630 /* es-PR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-PR"; path = "es-PR.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8AE225E11C600D28630 /* de-AT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-AT"; path = "de-AT.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8AF225E11C600D28630 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8B0225E11C600D28630 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8B1225E11C600D28630 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8B2225E11C600D28630 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8B3225E11C600D28630 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8B4225E11C600D28630 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8B5225E11C600D28630 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8B6225E11C600D28630 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8B7225E11C600D28630 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8B8225E11C600D28630 /* es-DO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-DO"; path = "es-DO.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8B9225E11C600D28630 /* fr-CH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CH"; path = "fr-CH.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8BA225E11C600D28630 /* es-NI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-NI"; path = "es-NI.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8BB225E11C600D28630 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8BC225E11C600D28630 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8BD225E11C700D28630 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8BE225E11C700D28630 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8BF225E11C700D28630 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8C0225E11C700D28630 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8C1225E11C700D28630 /* de-CH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-CH"; path = "de-CH.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8C2225E11C700D28630 /* bn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bn; path = bn.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8C3225E11C700D28630 /* es-EC */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-EC"; path = "es-EC.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8C4225E11C700D28630 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8C5225E11C700D28630 /* es-BO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-BO"; path = "es-BO.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8C6225E11C700D28630 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8C7225E11C700D28630 /* ln */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ln; path = ln.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8C8225E11C700D28630 /* es-UY */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-UY"; path = "es-UY.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8C9225E11C700D28630 /* es-HN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-HN"; path = "es-HN.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8CA225E11C700D28630 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8CB225E11C700D28630 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8CC225E11C700D28630 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8CD225E11C700D28630 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
+		D81AF8CE225E11C700D28630 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
+		D81AF8CF225E11C700D28630 /* FUIPhoneVerificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneVerificationViewController.h; sourceTree = "<group>"; };
+		D81AF8D0225E11C700D28630 /* FUIPhoneAuthStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneAuthStrings.m; sourceTree = "<group>"; };
+		D81AF8D2225E11C700D28630 /* ic_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_phone.png; sourceTree = "<group>"; };
+		D81AF8D3225E11C700D28630 /* ic_phone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_phone@3x.png"; sourceTree = "<group>"; };
+		D81AF8D4225E11C700D28630 /* ic_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_phone@2x.png"; sourceTree = "<group>"; };
+		D81AF8D5225E11C700D28630 /* country-codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "country-codes.json"; sourceTree = "<group>"; };
+		D81AF8D6225E11C700D28630 /* FUIPhoneEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneEntryViewController.m; sourceTree = "<group>"; };
+		D81AF8D7225E11C700D28630 /* FUIPhoneAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneAuth.h; sourceTree = "<group>"; };
+		D81AF8D8225E11C700D28630 /* FUIPhoneAuth_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneAuth_Internal.h; sourceTree = "<group>"; };
+		D81AF8D9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FUIPrivacyAndTermsOfServiceView+PhoneAuth.m"; sourceTree = "<group>"; };
+		D81AF8DB225E11C700D28630 /* FUICollationForCountries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICollationForCountries.m; sourceTree = "<group>"; };
+		D81AF8DC225E11C700D28630 /* FUICountryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUICountryTableViewController.h; sourceTree = "<group>"; };
+		D81AF8DD225E11C700D28630 /* FUICountryCodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICountryCodes.m; sourceTree = "<group>"; };
+		D81AF8DE225E11C700D28630 /* FUIFeatureSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIFeatureSwitch.h; sourceTree = "<group>"; };
+		D81AF8DF225E11C700D28630 /* FUIPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneNumber.h; sourceTree = "<group>"; };
+		D81AF8E0225E11C700D28630 /* FUICountryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUICountryTableViewController.xib; sourceTree = "<group>"; };
+		D81AF8E1225E11C700D28630 /* FUICountryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICountryTableViewController.m; sourceTree = "<group>"; };
+		D81AF8E2225E11C700D28630 /* FUICollationForCountries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUICollationForCountries.h; sourceTree = "<group>"; };
+		D81AF8E3225E11C700D28630 /* FUICountryCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUICountryCodes.h; sourceTree = "<group>"; };
+		D81AF8E4225E11C700D28630 /* FUIPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneNumber.m; sourceTree = "<group>"; };
+		D81AF8E5225E11C700D28630 /* FUIFeatureSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIFeatureSwitch.m; sourceTree = "<group>"; };
+		D81AF8E6225E11C700D28630 /* FUICodeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICodeField.m; sourceTree = "<group>"; };
+		D81AF8E7225E11C700D28630 /* FUIPhoneVerificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneVerificationViewController.m; sourceTree = "<group>"; };
+		D81AF8E8225E11C700D28630 /* FUIPhoneEntryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUIPhoneEntryViewController.xib; sourceTree = "<group>"; };
+		D81AF8E9225E11C700D28630 /* FUIPhoneAuthStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneAuthStrings.h; sourceTree = "<group>"; };
+		D81AF8EA225E11C700D28630 /* FirebasePhoneAuthUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebasePhoneAuthUI.h; sourceTree = "<group>"; };
+		D81AF8EB225E11C700D28630 /* FUIPhoneEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneEntryViewController.h; sourceTree = "<group>"; };
+		D81AF8EC225E11C700D28630 /* FUICodeField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUICodeField.xib; sourceTree = "<group>"; };
+		D81AF8ED225E11C700D28630 /* FUIPhoneVerificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUIPhoneVerificationViewController.xib; sourceTree = "<group>"; };
+		D81AF8EE225E11C700D28630 /* FUICodeField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUICodeField.h; sourceTree = "<group>"; };
+		D81AF8EF225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FUIPrivacyAndTermsOfServiceView+PhoneAuth.h"; sourceTree = "<group>"; };
+		D81AF8F1225E11C700D28630 /* FUIPhoneAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneAuth.m; sourceTree = "<group>"; };
+		D81AF90D225EA1A000D28630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MeezanMainViewController.xib; sourceTree = "<group>"; };
+		D81AF910225EA59500D28630 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MeezanMainViewController.strings; sourceTree = "<group>"; };
+		D82936DB225DFF190040F839 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		D82936DD225E011E0040F839 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D849250926170B54008F4182 /* DemocraticFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemocraticFeatures.swift; sourceTree = "<group>"; };
+		D890F7D32259522100D37E2A /* Meezan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meezan.swift; sourceTree = "<group>"; };
+		D8A156F5225D4EB600C8F274 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
+		D8A156F6225D4EB700C8F274 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
+		D8A9E5492257984800544B08 /* MeezanMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeezanMainViewController.swift; sourceTree = "<group>"; };
+		D8B6DFFE225D56C70067FDC6 /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
+		D8B6DFFF225D56C70067FDC6 /* AppSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingsViewController.xib; sourceTree = "<group>"; };
+		D8D6C1A828592565008D4F50 /* tokens.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tokens.plist; sourceTree = "<group>"; };
+		D8E14896225EA21600513F22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MeezanMainViewController.strings; sourceTree = "<group>"; };
+		DE7E9CB71F907D5583FF4764 /* Pods_DailyAthkar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyAthkar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F821CB790BE1AC7D5F45D6BA /* Pods-DailyAthkar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyAthkar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92B2659F2135332A0021C973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F50E087C61F8AA4845D1EAC /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E1526F2093A85400301BB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D4117B85C02E10418D78642 /* Pods_DailyAthkar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9203671120988FA2003D8DAC /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9203672420988FB4003D8DAC /* Al Qalam Quran Majeed 1.ttf */,
+				9203671820988FB0003D8DAC /* amiri-regular.ttf */,
+				9203671720988FAF003D8DAC /* blob-round.ttf */,
+				9203671F20988FB2003D8DAC /* DroidKufi-Regular.ttf */,
+				9203671520988FAF003D8DAC /* DroidNaskh-Regular.ttf */,
+				9203671220988FAE003D8DAC /* DroidSans.ttf */,
+				9203671320988FAE003D8DAC /* DroidSerif-Italic.ttf */,
+				9203672020988FB2003D8DAC /* DroidSerif.ttf */,
+				9203673A20988FBE003D8DAC /* BebasNeue.otf */,
+				9203671D20988FB1003D8DAC /* LateefRegOT.ttf */,
+				9203672120988FB3003D8DAC /* mb.ttf */,
+				9203671A20988FB0003D8DAC /* noorehira.ttf */,
+				9203671E20988FB1003D8DAC /* OpenSans-Italic.ttf */,
+				9203672320988FB3003D8DAC /* OpenSans-Light.ttf */,
+				9203671420988FAE003D8DAC /* OpenSans-LightItalic.ttf */,
+				9203671620988FAF003D8DAC /* OpenSans-Regular.ttf */,
+				9203671B20988FB1003D8DAC /* PDMS_Saleem_QuranFont-signed.ttf */,
+				9203672520988FB4003D8DAC /* Roboto-Thin.ttf */,
+				9203671C20988FB1003D8DAC /* Scheherazade-R.ttf */,
+				9203671920988FB0003D8DAC /* Ubuntu-L.ttf */,
+				9203672220988FB3003D8DAC /* Ubuntu-LI.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		9203674520989262003D8DAC /* LanguageManager */ = {
+			isa = PBXGroup;
+			children = (
+				9203673F20989258003D8DAC /* LanguageManager.h */,
+				9203674020989259003D8DAC /* LanguageManager.m */,
+				9203674120989259003D8DAC /* NSBundle+Language.h */,
+				9203674220989259003D8DAC /* NSBundle+Language.m */,
+			);
+			path = LanguageManager;
+			sourceTree = "<group>";
+		};
+		92377B3C213B308100312036 /* Contact Developer */ = {
+			isa = PBXGroup;
+			children = (
+				92377B3D213B30A200312036 /* ContactDeveloperViewController.swift */,
+			);
+			path = "Contact Developer";
+			sourceTree = "<group>";
+		};
+		92377B3F213B528300312036 /* 3rd Parties */ = {
+			isa = PBXGroup;
+			children = (
+				D81AF878225E11C600D28630 /* FirebasePhoneAuthUI */,
+				D8A156F8225D4EC000C8F274 /* UIAlertController+Blocks */,
+				D8A156F4225D4E9D00C8F274 /* MBProgressHUD */,
+			);
+			path = "3rd Parties";
+			sourceTree = "<group>";
+		};
+		926D01E52098DB320023F06C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				92E152772093A85400301BB6 /* HomeViewController.swift */,
+				92E44EF02093C2D900040452 /* HomeSectionTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		926D01E62098DB3A0023F06C /* Section Contents */ = {
+			isa = PBXGroup;
+			children = (
+				926D01E32098D9990023F06C /* SectionContentViewController.swift */,
+				926D01E72098DB5A0023F06C /* ThikrTableViewCell.swift */,
+			);
+			path = "Section Contents";
+			sourceTree = "<group>";
+		};
+		926D01E92098F86E0023F06C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				926D01EA2098F87E0023F06C /* SettingsViewController.swift */,
+				926066F42129A5990083C144 /* FontSelectionViewController.swift */,
+				D8B6DFFE225D56C70067FDC6 /* AppSettingsViewController.swift */,
+				D8B6DFFF225D56C70067FDC6 /* AppSettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9281478E209BCD23007B0D85 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9281478F209BCD23007B0D85 /* mishary */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		9281478F209BCD23007B0D85 /* mishary */ = {
+			isa = PBXGroup;
+			children = (
+				92814790209BCD23007B0D85 /* After Prayer */,
+				92814795209BCD23007B0D85 /* Before Sleeping */,
+				9281479E209BCD23007B0D85 /* common */,
+				928147B0209BCD23007B0D85 /* Evening Remembrance */,
+				928147B8209BCD23007B0D85 /* Morning Remembrance */,
+				928147C1209BCD23007B0D85 /* ProjectNamingConvention.txt */,
+				928147C2209BCD23007B0D85 /* When Waking Up */,
+			);
+			path = mishary;
+			sourceTree = "<group>";
+		};
+		92814790209BCD23007B0D85 /* After Prayer */ = {
+			isa = PBXGroup;
+			children = (
+				92814791209BCD23007B0D85 /* Mishary_AfterPrayer_3.mp3 */,
+				92814792209BCD23007B0D85 /* Mishary_AfterPrayer_4.mp3 */,
+				92E4D0C4212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 */,
+				92814793209BCD23007B0D85 /* Mishary_AfterPrayer_5.mp3 */,
+				92814794209BCD23007B0D85 /* Mishary_AfterPrayer_6.mp3 */,
+			);
+			path = "After Prayer";
+			sourceTree = "<group>";
+		};
+		92814795209BCD23007B0D85 /* Before Sleeping */ = {
+			isa = PBXGroup;
+			children = (
+				92814796209BCD23007B0D85 /* FormatFactoryaaman.mp3 */,
+				92814797209BCD23007B0D85 /* Mishary_Sleeping_.mp3 */,
+				92814798209BCD23007B0D85 /* Mishary_Sleeping_1.mp3 */,
+				92814799209BCD23007B0D85 /* Mishary_Sleeping_2.mp3 */,
+				9281479A209BCD23007B0D85 /* Mishary_Sleeping_3.mp3 */,
+				9281479B209BCD23007B0D85 /* Mishary_Sleeping_5.mp3 */,
+				9281479C209BCD23007B0D85 /* Mishary_Sleeping_6.mp3 */,
+				9281479D209BCD23007B0D85 /* Mishary_Sleeping_7.mp3 */,
+			);
+			path = "Before Sleeping";
+			sourceTree = "<group>";
+		};
+		9281479E209BCD23007B0D85 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				9281479F209BCD23007B0D85 /* _unused_astaghfero_w_atoobo.mp3 */,
+				928147A0209BCD23007B0D85 /* _UNUSED_nabi_salat.mp3 */,
+				928147A1209BCD23007B0D85 /* Mishary_3afini.mp3 */,
+				928147A2209BCD23007B0D85 /* Mishary_3alem_alghyb.mp3 */,
+				928147A3209BCD23007B0D85 /* Mishary_7asbia-allah.mp3 */,
+				928147A4209BCD23007B0D85 /* Mishary_al3fw_w_3afia.mp3 */,
+				928147A5209BCD23007B0D85 /* Mishary_ayat_korsi.mp3 */,
+				928147A6209BCD23007B0D85 /* Mishary_la_elah_kadeer.mp3 */,
+				928147A7209BCD23007B0D85 /* Mishary_raditu_b_allah.mp3 */,
+				928147A8209BCD23007B0D85 /* Mishary_samee3_3leem.mp3 */,
+				928147A9209BCD23007B0D85 /* Mishary_sayed_estghfar.mp3 */,
+				928147AA209BCD23007B0D85 /* Mishary_suat_samad.mp3 */,
+				928147AB209BCD23007B0D85 /* Mishary_sub7an_3dd.mp3 */,
+				928147AC209BCD23007B0D85 /* Mishary_sub7an_w_b7mdeh.mp3 */,
+				928147AD209BCD23007B0D85 /* Mishary_surat_falak.mp3 */,
+				928147AE209BCD23007B0D85 /* Mishary_surat_nas.mp3 */,
+				928147AF209BCD23007B0D85 /* Mishary_ya_7ii.mp3 */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		928147B0209BCD23007B0D85 /* Evening Remembrance */ = {
+			isa = PBXGroup;
+			children = (
+				928147B1209BCD23007B0D85 /* FormatFactoryamsyna3.mp3 */,
+				928147B2209BCD23007B0D85 /* Mishary_Evening_1.mp3 */,
+				928147B3209BCD23007B0D85 /* Mishary_Evening_17.mp3 */,
+				928147B4209BCD23007B0D85 /* Mishary_Evening_2.mp3 */,
+				928147B5209BCD23007B0D85 /* Mishary_Evening_4.mp3 */,
+				928147B6209BCD23007B0D85 /* Mishary_Evening_5.mp3 */,
+				928147B7209BCD23007B0D85 /* Mishary_Evening_8.mp3 */,
+			);
+			path = "Evening Remembrance";
+			sourceTree = "<group>";
+		};
+		928147B8209BCD23007B0D85 /* Morning Remembrance */ = {
+			isa = PBXGroup;
+			children = (
+				928147B9209BCD23007B0D85 /* FormatFactoryallahomma.mp3 */,
+				928147BA209BCD23007B0D85 /* FormatFactoryfitra.mp3 */,
+				928147BB209BCD23007B0D85 /* FormatFactoryheader.mp3 */,
+				928147BC209BCD23007B0D85 /* Mishary_Morning_1.mp3 */,
+				928147BD209BCD23007B0D85 /* Mishary_Morning_16.mp3 */,
+				928147BE209BCD23007B0D85 /* Mishary_Morning_2.mp3 */,
+				928147BF209BCD23007B0D85 /* Mishary_Morning_4.mp3 */,
+				928147C0209BCD23007B0D85 /* Mishary_Morning_5.mp3 */,
+			);
+			path = "Morning Remembrance";
+			sourceTree = "<group>";
+		};
+		928147C2209BCD23007B0D85 /* When Waking Up */ = {
+			isa = PBXGroup;
+			children = (
+				928147C3209BCD23007B0D85 /* Mishary_WakingUp_1.mp3 */,
+				928147C4209BCD23007B0D85 /* Mishary_WakingUp_2.mp3 */,
+				928147C5209BCD23007B0D85 /* Mishary_WakingUp_3.mp3 */,
+			);
+			path = "When Waking Up";
+			sourceTree = "<group>";
+		};
+		92B265A32135332A0021C973 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				92B265AE213533B30021C973 /* OneSignalNotificationServiceExtension.entitlements */,
+				92B265A42135332A0021C973 /* NotificationService.swift */,
+				92B265A62135332A0021C973 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		92E152692093A85400301BB6 = {
+			isa = PBXGroup;
+			children = (
+				92E152742093A85400301BB6 /* DailyAthkar */,
+				92B265A32135332A0021C973 /* OneSignalNotificationServiceExtension */,
+				92E152732093A85400301BB6 /* Products */,
+				93E992A09AFC7F6FDB66E083 /* Pods */,
+				F195E545B3E239AACCE989DF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		92E152732093A85400301BB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92E152722093A85400301BB6 /* DailyAthkar.app */,
+				92B265A22135332A0021C973 /* OneSignalNotificationServiceExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92E152742093A85400301BB6 /* DailyAthkar */ = {
+			isa = PBXGroup;
+			children = (
+				D849250926170B54008F4182 /* DemocraticFeatures.swift */,
+				D82936DD225E011E0040F839 /* main.swift */,
+				D8A9E5482257982900544B08 /* Meezan */,
+				92377B3F213B528300312036 /* 3rd Parties */,
+				92377B3C213B308100312036 /* Contact Developer */,
+				9262EEC72135E63B003D12A9 /* GoogleService-Info.plist */,
+				92B265AF213533C20021C973 /* DailyAthkar.entitlements */,
+				9281478E209BCD23007B0D85 /* sounds */,
+				9281478C209B9985007B0D85 /* CustomUIClasses.swift */,
+				922F37172099A2DC00991346 /* Extensions.swift */,
+				926D01E92098F86E0023F06C /* Settings */,
+				92E49AF9209897990090DB34 /* db.json */,
+				9203674520989262003D8DAC /* LanguageManager */,
+				9203671120988FA2003D8DAC /* fonts */,
+				92E152752093A85400301BB6 /* AppDelegate.swift */,
+				92E152792093A85400301BB6 /* Main.storyboard */,
+				92E1527C2093A85400301BB6 /* Assets.xcassets */,
+				92E1527E2093A85400301BB6 /* LaunchScreen.storyboard */,
+				9203673C2098912D003D8DAC /* Config.swift */,
+				9203673E20989257003D8DAC /* DailyAthkar-Bridging-Header.h */,
+				926D01E52098DB320023F06C /* Home */,
+				926D01E62098DB3A0023F06C /* Section Contents */,
+				92CB9901211B08BF00F4BF7B /* ShareView.xib */,
+				925BEB09212863920051BA8D /* ShareView.swift */,
+				926066F2212973C40083C144 /* Localizable.strings */,
+				92E152812093A85400301BB6 /* Info.plist */,
+				9260075321333D8700C0FF4F /* InfoPlist.strings */,
+				9260074D2132C61600C0FF4F /* Utils.swift */,
+				D82936DB225DFF190040F839 /* LanguageManager.swift */,
+				D8D6C1A828592565008D4F50 /* tokens.plist */,
+			);
+			path = DailyAthkar;
+			sourceTree = "<group>";
+		};
+		93E992A09AFC7F6FDB66E083 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F821CB790BE1AC7D5F45D6BA /* Pods-DailyAthkar.debug.xcconfig */,
+				854B3BCDC456DE17F39F0558 /* Pods-DailyAthkar.release.xcconfig */,
+				85312CDAEBEF17B3267DFBA0 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				227A61BD14E356938895BC40 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D81AF878225E11C600D28630 /* FirebasePhoneAuthUI */ = {
+			isa = PBXGroup;
+			children = (
+				D81AF879225E11C600D28630 /* Strings */,
+				D81AF8CF225E11C700D28630 /* FUIPhoneVerificationViewController.h */,
+				D81AF8D0225E11C700D28630 /* FUIPhoneAuthStrings.m */,
+				D81AF8D1225E11C700D28630 /* Resources */,
+				D81AF8D6225E11C700D28630 /* FUIPhoneEntryViewController.m */,
+				D81AF8D7225E11C700D28630 /* FUIPhoneAuth.h */,
+				D81AF8D8225E11C700D28630 /* FUIPhoneAuth_Internal.h */,
+				D81AF8D9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m */,
+				D81AF8DA225E11C700D28630 /* CountryCode */,
+				D81AF8E6225E11C700D28630 /* FUICodeField.m */,
+				D81AF8E7225E11C700D28630 /* FUIPhoneVerificationViewController.m */,
+				D81AF8E8225E11C700D28630 /* FUIPhoneEntryViewController.xib */,
+				D81AF8E9225E11C700D28630 /* FUIPhoneAuthStrings.h */,
+				D81AF8EA225E11C700D28630 /* FirebasePhoneAuthUI.h */,
+				D81AF8EB225E11C700D28630 /* FUIPhoneEntryViewController.h */,
+				D81AF8EC225E11C700D28630 /* FUICodeField.xib */,
+				D81AF8ED225E11C700D28630 /* FUIPhoneVerificationViewController.xib */,
+				D81AF8EE225E11C700D28630 /* FUICodeField.h */,
+				D81AF8EF225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.h */,
+				D81AF8F1225E11C700D28630 /* FUIPhoneAuth.m */,
+			);
+			path = FirebasePhoneAuthUI;
+			sourceTree = "<group>";
+		};
+		D81AF879225E11C600D28630 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				D81AF87A225E11C600D28630 /* FirebasePhoneAuthUI.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		D81AF8D1225E11C700D28630 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D81AF8D2225E11C700D28630 /* ic_phone.png */,
+				D81AF8D3225E11C700D28630 /* ic_phone@3x.png */,
+				D81AF8D4225E11C700D28630 /* ic_phone@2x.png */,
+				D81AF8D5225E11C700D28630 /* country-codes.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D81AF8DA225E11C700D28630 /* CountryCode */ = {
+			isa = PBXGroup;
+			children = (
+				D81AF8DB225E11C700D28630 /* FUICollationForCountries.m */,
+				D81AF8DC225E11C700D28630 /* FUICountryTableViewController.h */,
+				D81AF8DD225E11C700D28630 /* FUICountryCodes.m */,
+				D81AF8DE225E11C700D28630 /* FUIFeatureSwitch.h */,
+				D81AF8DF225E11C700D28630 /* FUIPhoneNumber.h */,
+				D81AF8E0225E11C700D28630 /* FUICountryTableViewController.xib */,
+				D81AF8E1225E11C700D28630 /* FUICountryTableViewController.m */,
+				D81AF8E2225E11C700D28630 /* FUICollationForCountries.h */,
+				D81AF8E3225E11C700D28630 /* FUICountryCodes.h */,
+				D81AF8E4225E11C700D28630 /* FUIPhoneNumber.m */,
+				D81AF8E5225E11C700D28630 /* FUIFeatureSwitch.m */,
+			);
+			path = CountryCode;
+			sourceTree = "<group>";
+		};
+		D8A156F4225D4E9D00C8F274 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				92377B41213B529000312036 /* MBProgressHUD.h */,
+				92377B40213B529000312036 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		D8A156F8225D4EC000C8F274 /* UIAlertController+Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				D8A156F6225D4EB700C8F274 /* UIAlertController+Blocks.h */,
+				D8A156F5225D4EB600C8F274 /* UIAlertController+Blocks.m */,
+			);
+			path = "UIAlertController+Blocks";
+			sourceTree = "<group>";
+		};
+		D8A9E5482257982900544B08 /* Meezan */ = {
+			isa = PBXGroup;
+			children = (
+				D81AF90E225EA1A000D28630 /* MeezanMainViewController.xib */,
+				D8A9E5492257984800544B08 /* MeezanMainViewController.swift */,
+				D890F7D32259522100D37E2A /* Meezan.swift */,
+			);
+			path = Meezan;
+			sourceTree = "<group>";
+		};
+		F195E545B3E239AACCE989DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE7E9CB71F907D5583FF4764 /* Pods_DailyAthkar.framework */,
+				6008ACACE3D9E077D201C5F9 /* Pods_OneSignalNotificationServiceExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92B265A12135332A0021C973 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92B265AA2135332A0021C973 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				8C27F3E7184CEE7EA5981E69 /* [CP] Check Pods Manifest.lock */,
+				92B2659E2135332A0021C973 /* Sources */,
+				92B2659F2135332A0021C973 /* Frameworks */,
+				92B265A02135332A0021C973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 92B265A22135332A0021C973 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		92E152712093A85400301BB6 /* DailyAthkar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E152842093A85400301BB6 /* Build configuration list for PBXNativeTarget "DailyAthkar" */;
+			buildPhases = (
+				FAE2C4CB5D1DBF8990F43ADF /* [CP] Check Pods Manifest.lock */,
+				92E1526E2093A85400301BB6 /* Sources */,
+				92E1526F2093A85400301BB6 /* Frameworks */,
+				92E152702093A85400301BB6 /* Resources */,
+				92B265AD2135332A0021C973 /* Embed App Extensions */,
+				6F292B3A89D7B55C97F552E0 /* [CP] Embed Pods Frameworks */,
+				BFC0A0878B298F0AEB27B139 /* [CP] Copy Pods Resources */,
+				D81AF911225EAC0F00D28630 /* Crashlytics */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92B265A82135332A0021C973 /* PBXTargetDependency */,
+			);
+			name = DailyAthkar;
+			productName = DailyAthkar;
+			productReference = 92E152722093A85400301BB6 /* DailyAthkar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92E1526A2093A85400301BB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = iPhonePal.com;
+				TargetAttributes = {
+					92B265A12135332A0021C973 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					92E152712093A85400301BB6 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 92E1526D2093A85400301BB6 /* Build configuration list for PBXProject "DailyAthkar" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = ar;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+				de,
+				ur,
+				he,
+				"es-SV",
+				"zh-Hant-TW",
+				el,
+				"zh-Hans",
+				ja,
+				fa,
+				mr,
+				"es-GT",
+				"en-CA",
+				uk,
+				"es-PY",
+				gu,
+				kn,
+				nb,
+				"es-US",
+				"en-GB",
+				es,
+				"es-VE",
+				"es-CL",
+				sl,
+				da,
+				"es-419",
+				it,
+				bg,
+				sk,
+				"sr-Latn",
+				"nn-NO",
+				"es-PA",
+				"en-SG",
+				sr,
+				ms,
+				"es-CR",
+				ta,
+				sv,
+				cs,
+				"es-AR",
+				"es-PE",
+				ko,
+				"en-IE",
+				fil,
+				"zh-Hant",
+				"es-CO",
+				gsw,
+				"en-ZA",
+				hu,
+				"es-PR",
+				"de-AT",
+				"en-AU",
+				tr,
+				pl,
+				"pt-BR",
+				vi,
+				lv,
+				"es-MX",
+				lt,
+				ru,
+				"es-DO",
+				"fr-CH",
+				"es-NI",
+				fr,
+				fi,
+				id,
+				nl,
+				th,
+				pt,
+				"de-CH",
+				bn,
+				"es-EC",
+				"pt-PT",
+				"es-BO",
+				ro,
+				ln,
+				"es-UY",
+				"es-HN",
+				hr,
+				hi,
+				ca,
+				zh,
+				"en-IN",
+			);
+			mainGroup = 92E152692093A85400301BB6;
+			productRefGroup = 92E152732093A85400301BB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92E152712093A85400301BB6 /* DailyAthkar */,
+				92B265A12135332A0021C973 /* OneSignalNotificationServiceExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92B265A02135332A0021C973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E152702093A85400301BB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928147D9209BCD23007B0D85 /* Mishary_la_elah_kadeer.mp3 in Resources */,
+				9203673820988FB5003D8DAC /* Al Qalam Quran Majeed 1.ttf in Resources */,
+				D81AF904225E11C700D28630 /* FUIPhoneVerificationViewController.xib in Resources */,
+				9203672620988FB5003D8DAC /* DroidSans.ttf in Resources */,
+				928147E4209BCD23007B0D85 /* Mishary_Evening_1.mp3 in Resources */,
+				92E152802093A85400301BB6 /* LaunchScreen.storyboard in Resources */,
+				D81AF8F6225E11C700D28630 /* ic_phone@2x.png in Resources */,
+				9203672B20988FB5003D8DAC /* blob-round.ttf in Resources */,
+				928147DB209BCD23007B0D85 /* Mishary_samee3_3leem.mp3 in Resources */,
+				9203672820988FB5003D8DAC /* OpenSans-LightItalic.ttf in Resources */,
+				928147E7209BCD23007B0D85 /* Mishary_Evening_4.mp3 in Resources */,
+				9203673020988FB5003D8DAC /* Scheherazade-R.ttf in Resources */,
+				D81AF8FC225E11C700D28630 /* FUICountryTableViewController.xib in Resources */,
+				926066F0212973C40083C144 /* Localizable.strings in Resources */,
+				928147D2209BCD23007B0D85 /* _unused_astaghfero_w_atoobo.mp3 in Resources */,
+				9203673520988FB5003D8DAC /* mb.ttf in Resources */,
+				D81AF8F5225E11C700D28630 /* ic_phone@3x.png in Resources */,
+				928147EE209BCD23007B0D85 /* Mishary_Morning_16.mp3 in Resources */,
+				9203673620988FB5003D8DAC /* Ubuntu-LI.ttf in Resources */,
+				928147D1209BCD23007B0D85 /* Mishary_Sleeping_7.mp3 in Resources */,
+				D8D6C1A928592565008D4F50 /* tokens.plist in Resources */,
+				9203672E20988FB5003D8DAC /* noorehira.ttf in Resources */,
+				928147E8209BCD23007B0D85 /* Mishary_Evening_5.mp3 in Resources */,
+				D81AF8F4225E11C700D28630 /* ic_phone.png in Resources */,
+				928147CA209BCD23007B0D85 /* FormatFactoryaaman.mp3 in Resources */,
+				928147CD209BCD23007B0D85 /* Mishary_Sleeping_2.mp3 in Resources */,
+				9203673920988FB5003D8DAC /* Roboto-Thin.ttf in Resources */,
+				92CB9902211B08BF00F4BF7B /* ShareView.xib in Resources */,
+				928147DF209BCD23007B0D85 /* Mishary_sub7an_w_b7mdeh.mp3 in Resources */,
+				928147D0209BCD23007B0D85 /* Mishary_Sleeping_6.mp3 in Resources */,
+				D81AF90C225EA1A000D28630 /* MeezanMainViewController.xib in Resources */,
+				9203673320988FB5003D8DAC /* DroidKufi-Regular.ttf in Resources */,
+				9203673720988FB5003D8DAC /* OpenSans-Light.ttf in Resources */,
+				928147CB209BCD23007B0D85 /* Mishary_Sleeping_.mp3 in Resources */,
+				928147DE209BCD23007B0D85 /* Mishary_sub7an_3dd.mp3 in Resources */,
+				928147CE209BCD23007B0D85 /* Mishary_Sleeping_3.mp3 in Resources */,
+				925BEB0B2128722F0051BA8D /* BebasNeue.otf in Resources */,
+				9203672D20988FB5003D8DAC /* Ubuntu-L.ttf in Resources */,
+				928147E3209BCD23007B0D85 /* FormatFactoryamsyna3.mp3 in Resources */,
+				928147D6209BCD23007B0D85 /* Mishary_7asbia-allah.mp3 in Resources */,
+				928147EA209BCD23007B0D85 /* FormatFactoryallahomma.mp3 in Resources */,
+				928147CF209BCD23007B0D85 /* Mishary_Sleeping_5.mp3 in Resources */,
+				928147E6209BCD23007B0D85 /* Mishary_Evening_2.mp3 in Resources */,
+				928147F5209BCD23007B0D85 /* Mishary_WakingUp_3.mp3 in Resources */,
+				D81AF8F2225E11C700D28630 /* FirebasePhoneAuthUI.strings in Resources */,
+				928147E1209BCD23007B0D85 /* Mishary_surat_nas.mp3 in Resources */,
+				928147F1209BCD23007B0D85 /* Mishary_Morning_5.mp3 in Resources */,
+				928147D5209BCD23007B0D85 /* Mishary_3alem_alghyb.mp3 in Resources */,
+				928147DD209BCD23007B0D85 /* Mishary_suat_samad.mp3 in Resources */,
+				9203672C20988FB5003D8DAC /* amiri-regular.ttf in Resources */,
+				928147EF209BCD23007B0D85 /* Mishary_Morning_2.mp3 in Resources */,
+				928147C6209BCD23007B0D85 /* Mishary_AfterPrayer_3.mp3 in Resources */,
+				928147D8209BCD23007B0D85 /* Mishary_ayat_korsi.mp3 in Resources */,
+				928147E9209BCD23007B0D85 /* Mishary_Evening_8.mp3 in Resources */,
+				D81AF903225E11C700D28630 /* FUICodeField.xib in Resources */,
+				D81AF8F7225E11C700D28630 /* country-codes.json in Resources */,
+				928147DC209BCD23007B0D85 /* Mishary_sayed_estghfar.mp3 in Resources */,
+				9203673120988FB5003D8DAC /* LateefRegOT.ttf in Resources */,
+				928147C7209BCD23007B0D85 /* Mishary_AfterPrayer_4.mp3 in Resources */,
+				928147D3209BCD23007B0D85 /* _UNUSED_nabi_salat.mp3 in Resources */,
+				9203673220988FB5003D8DAC /* OpenSans-Italic.ttf in Resources */,
+				D81AF902225E11C700D28630 /* FUIPhoneEntryViewController.xib in Resources */,
+				92E1527D2093A85400301BB6 /* Assets.xcassets in Resources */,
+				928147F0209BCD23007B0D85 /* Mishary_Morning_4.mp3 in Resources */,
+				928147EB209BCD23007B0D85 /* FormatFactoryfitra.mp3 in Resources */,
+				928147C8209BCD23007B0D85 /* Mishary_AfterPrayer_5.mp3 in Resources */,
+				928147D4209BCD23007B0D85 /* Mishary_3afini.mp3 in Resources */,
+				928147CC209BCD23007B0D85 /* Mishary_Sleeping_1.mp3 in Resources */,
+				92E4D0C5212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 in Resources */,
+				928147E5209BCD23007B0D85 /* Mishary_Evening_17.mp3 in Resources */,
+				928147F4209BCD23007B0D85 /* Mishary_WakingUp_2.mp3 in Resources */,
+				92E49AFA209897990090DB34 /* db.json in Resources */,
+				928147E0209BCD23007B0D85 /* Mishary_surat_falak.mp3 in Resources */,
+				9203672F20988FB5003D8DAC /* PDMS_Saleem_QuranFont-signed.ttf in Resources */,
+				9203672920988FB5003D8DAC /* DroidNaskh-Regular.ttf in Resources */,
+				9260075121333D8700C0FF4F /* InfoPlist.strings in Resources */,
+				9262EEC82135E63B003D12A9 /* GoogleService-Info.plist in Resources */,
+				92E1527B2093A85400301BB6 /* Main.storyboard in Resources */,
+				928147D7209BCD23007B0D85 /* Mishary_al3fw_w_3afia.mp3 in Resources */,
+				928147DA209BCD23007B0D85 /* Mishary_raditu_b_allah.mp3 in Resources */,
+				9203672A20988FB5003D8DAC /* OpenSans-Regular.ttf in Resources */,
+				928147F2209BCD23007B0D85 /* ProjectNamingConvention.txt in Resources */,
+				9203672720988FB5003D8DAC /* DroidSerif-Italic.ttf in Resources */,
+				928147C9209BCD23007B0D85 /* Mishary_AfterPrayer_6.mp3 in Resources */,
+				928147E2209BCD23007B0D85 /* Mishary_ya_7ii.mp3 in Resources */,
+				9203673420988FB5003D8DAC /* DroidSerif.ttf in Resources */,
+				928147ED209BCD23007B0D85 /* Mishary_Morning_1.mp3 in Resources */,
+				928147F3209BCD23007B0D85 /* Mishary_WakingUp_1.mp3 in Resources */,
+				928147EC209BCD23007B0D85 /* FormatFactoryheader.mp3 in Resources */,
+				D8B6E001225D56C70067FDC6 /* AppSettingsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F292B3A89D7B55C97F552E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BadgeHub/BadgeHub.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/DLLocalNotifications/DLLocalNotifications.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Sheeeeeeeeet/Sheeeeeeeeet.framework",
+				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BadgeHub.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLLocalNotifications.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sheeeeeeeeet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C27F3E7184CEE7EA5981E69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFC0A0878B298F0AEB27B139 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D81AF911225EAC0F00D28630 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		FAE2C4CB5D1DBF8990F43ADF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DailyAthkar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92B2659E2135332A0021C973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B265A52135332A0021C973 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E1526E2093A85400301BB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925BEB0A212863920051BA8D /* ShareView.swift in Sources */,
+				D890F7D42259522100D37E2A /* Meezan.swift in Sources */,
+				926D01E82098DB5A0023F06C /* ThikrTableViewCell.swift in Sources */,
+				9203674320989259003D8DAC /* LanguageManager.m in Sources */,
+				9260074E2132C61600C0FF4F /* Utils.swift in Sources */,
+				92377B3E213B30A200312036 /* ContactDeveloperViewController.swift in Sources */,
+				D81AF8F9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m in Sources */,
+				D81AF8FB225E11C700D28630 /* FUICountryCodes.m in Sources */,
+				D81AF906225E11C700D28630 /* FUIPhoneAuth.m in Sources */,
+				D81AF900225E11C700D28630 /* FUICodeField.m in Sources */,
+				92E152782093A85400301BB6 /* HomeViewController.swift in Sources */,
+				D81AF8FD225E11C700D28630 /* FUICountryTableViewController.m in Sources */,
+				D81AF8F8225E11C700D28630 /* FUIPhoneEntryViewController.m in Sources */,
+				D81AF8F3225E11C700D28630 /* FUIPhoneAuthStrings.m in Sources */,
+				D8B6E000225D56C70067FDC6 /* AppSettingsViewController.swift in Sources */,
+				D849250A26170B55008F4182 /* DemocraticFeatures.swift in Sources */,
+				9203674420989259003D8DAC /* NSBundle+Language.m in Sources */,
+				D81AF901225E11C700D28630 /* FUIPhoneVerificationViewController.m in Sources */,
+				9203673D2098912D003D8DAC /* Config.swift in Sources */,
+				926066F52129A5990083C144 /* FontSelectionViewController.swift in Sources */,
+				922F37182099A2DC00991346 /* Extensions.swift in Sources */,
+				D8A9E54B2257984800544B08 /* MeezanMainViewController.swift in Sources */,
+				92E44EF12093C2D900040452 /* HomeSectionTableViewCell.swift in Sources */,
+				9281478D209B9985007B0D85 /* CustomUIClasses.swift in Sources */,
+				D82936DC225DFF190040F839 /* LanguageManager.swift in Sources */,
+				926D01E42098D9990023F06C /* SectionContentViewController.swift in Sources */,
+				D8A156F7225D4EB800C8F274 /* UIAlertController+Blocks.m in Sources */,
+				D81AF8FF225E11C700D28630 /* FUIFeatureSwitch.m in Sources */,
+				D81AF8FA225E11C700D28630 /* FUICollationForCountries.m in Sources */,
+				D82936DE225E011E0040F839 /* main.swift in Sources */,
+				92E152762093A85400301BB6 /* AppDelegate.swift in Sources */,
+				D81AF8FE225E11C700D28630 /* FUIPhoneNumber.m in Sources */,
+				926D01EB2098F87E0023F06C /* SettingsViewController.swift in Sources */,
+				92377B42213B529100312036 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92B265A82135332A0021C973 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92B265A12135332A0021C973 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 92B265A72135332A0021C973 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9260075321333D8700C0FF4F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9260075221333D8700C0FF4F /* ar */,
+				9260075421333D8900C0FF4F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		926066F2212973C40083C144 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				926066F1212973C40083C144 /* en */,
+				926066F3212973C60083C144 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		92E152792093A85400301BB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92E1527A2093A85400301BB6 /* Base */,
+				92036746209892A0003D8DAC /* ar */,
+				92DB00AE209893FA00BCB381 /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92E1527E2093A85400301BB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92E1527F2093A85400301BB6 /* Base */,
+				92DB00B02098941B00BCB381 /* en */,
+				92DB00B22098942000BCB381 /* ar */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D81AF87A225E11C600D28630 /* FirebasePhoneAuthUI.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D81AF87B225E11C600D28630 /* de */,
+				D81AF87C225E11C600D28630 /* ur */,
+				D81AF87D225E11C600D28630 /* he */,
+				D81AF87E225E11C600D28630 /* es-SV */,
+				D81AF87F225E11C600D28630 /* zh-Hant-TW */,
+				D81AF880225E11C600D28630 /* ar */,
+				D81AF881225E11C600D28630 /* el */,
+				D81AF882225E11C600D28630 /* zh-Hans */,
+				D81AF883225E11C600D28630 /* ja */,
+				D81AF884225E11C600D28630 /* fa */,
+				D81AF885225E11C600D28630 /* mr */,
+				D81AF886225E11C600D28630 /* es-GT */,
+				D81AF887225E11C600D28630 /* en */,
+				D81AF888225E11C600D28630 /* en-CA */,
+				D81AF889225E11C600D28630 /* uk */,
+				D81AF88A225E11C600D28630 /* es-PY */,
+				D81AF88B225E11C600D28630 /* gu */,
+				D81AF88C225E11C600D28630 /* kn */,
+				D81AF88D225E11C600D28630 /* nb */,
+				D81AF88E225E11C600D28630 /* es-US */,
+				D81AF88F225E11C600D28630 /* en-GB */,
+				D81AF890225E11C600D28630 /* es */,
+				D81AF891225E11C600D28630 /* es-VE */,
+				D81AF892225E11C600D28630 /* es-CL */,
+				D81AF893225E11C600D28630 /* sl */,
+				D81AF894225E11C600D28630 /* da */,
+				D81AF895225E11C600D28630 /* es-419 */,
+				D81AF896225E11C600D28630 /* it */,
+				D81AF897225E11C600D28630 /* bg */,
+				D81AF898225E11C600D28630 /* sk */,
+				D81AF899225E11C600D28630 /* sr-Latn */,
+				D81AF89A225E11C600D28630 /* nn-NO */,
+				D81AF89B225E11C600D28630 /* es-PA */,
+				D81AF89C225E11C600D28630 /* en-SG */,
+				D81AF89D225E11C600D28630 /* sr */,
+				D81AF89E225E11C600D28630 /* ms */,
+				D81AF89F225E11C600D28630 /* es-CR */,
+				D81AF8A0225E11C600D28630 /* ta */,
+				D81AF8A1225E11C600D28630 /* sv */,
+				D81AF8A2225E11C600D28630 /* cs */,
+				D81AF8A3225E11C600D28630 /* es-AR */,
+				D81AF8A4225E11C600D28630 /* es-PE */,
+				D81AF8A5225E11C600D28630 /* ko */,
+				D81AF8A6225E11C600D28630 /* en-IE */,
+				D81AF8A7225E11C600D28630 /* fil */,
+				D81AF8A8225E11C600D28630 /* zh-Hant */,
+				D81AF8A9225E11C600D28630 /* es-CO */,
+				D81AF8AA225E11C600D28630 /* gsw */,
+				D81AF8AB225E11C600D28630 /* en-ZA */,
+				D81AF8AC225E11C600D28630 /* hu */,
+				D81AF8AD225E11C600D28630 /* es-PR */,
+				D81AF8AE225E11C600D28630 /* de-AT */,
+				D81AF8AF225E11C600D28630 /* en-AU */,
+				D81AF8B0225E11C600D28630 /* tr */,
+				D81AF8B1225E11C600D28630 /* pl */,
+				D81AF8B2225E11C600D28630 /* pt-BR */,
+				D81AF8B3225E11C600D28630 /* vi */,
+				D81AF8B4225E11C600D28630 /* lv */,
+				D81AF8B5225E11C600D28630 /* es-MX */,
+				D81AF8B6225E11C600D28630 /* lt */,
+				D81AF8B7225E11C600D28630 /* ru */,
+				D81AF8B8225E11C600D28630 /* es-DO */,
+				D81AF8B9225E11C600D28630 /* fr-CH */,
+				D81AF8BA225E11C600D28630 /* es-NI */,
+				D81AF8BB225E11C600D28630 /* fr */,
+				D81AF8BC225E11C600D28630 /* fi */,
+				D81AF8BD225E11C700D28630 /* id */,
+				D81AF8BE225E11C700D28630 /* nl */,
+				D81AF8BF225E11C700D28630 /* th */,
+				D81AF8C0225E11C700D28630 /* pt */,
+				D81AF8C1225E11C700D28630 /* de-CH */,
+				D81AF8C2225E11C700D28630 /* bn */,
+				D81AF8C3225E11C700D28630 /* es-EC */,
+				D81AF8C4225E11C700D28630 /* pt-PT */,
+				D81AF8C5225E11C700D28630 /* es-BO */,
+				D81AF8C6225E11C700D28630 /* ro */,
+				D81AF8C7225E11C700D28630 /* ln */,
+				D81AF8C8225E11C700D28630 /* es-UY */,
+				D81AF8C9225E11C700D28630 /* es-HN */,
+				D81AF8CA225E11C700D28630 /* hr */,
+				D81AF8CB225E11C700D28630 /* hi */,
+				D81AF8CC225E11C700D28630 /* ca */,
+				D81AF8CD225E11C700D28630 /* zh */,
+				D81AF8CE225E11C700D28630 /* en-IN */,
+			);
+			name = FirebasePhoneAuthUI.strings;
+			sourceTree = "<group>";
+		};
+		D81AF90E225EA1A000D28630 /* MeezanMainViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D81AF90D225EA1A000D28630 /* Base */,
+				D8E14896225EA21600513F22 /* en */,
+				D81AF910225EA59500D28630 /* ar */,
+			);
+			name = MeezanMainViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92B265AB2135332A0021C973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85312CDAEBEF17B3267DFBA0 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = KEYC53CXGS;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.9.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanova.dailyathkar.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92B265AC2135332A0021C973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 227A61BD14E356938895BC40 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = KEYC53CXGS;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.9.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanova.dailyathkar.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92E152822093A85400301BB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92E152832093A85400301BB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92E152852093A85400301BB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F821CB790BE1AC7D5F45D6BA /* Pods-DailyAthkar.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DailyAthkar/DailyAthkar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KEYC53CXGS;
+				INFOPLIST_FILE = DailyAthkar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.9.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanova.dailyathkar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyAthkar/DailyAthkar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92E152862093A85400301BB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 854B3BCDC456DE17F39F0558 /* Pods-DailyAthkar.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DailyAthkar/DailyAthkar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KEYC53CXGS;
+				INFOPLIST_FILE = DailyAthkar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.9.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanova.dailyathkar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyAthkar/DailyAthkar-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92B265AA2135332A0021C973 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92B265AB2135332A0021C973 /* Debug */,
+				92B265AC2135332A0021C973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E1526D2093A85400301BB6 /* Build configuration list for PBXProject "DailyAthkar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E152822093A85400301BB6 /* Debug */,
+				92E152832093A85400301BB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E152842093A85400301BB6 /* Build configuration list for PBXNativeTarget "DailyAthkar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E152852093A85400301BB6 /* Debug */,
+				92E152862093A85400301BB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92E1526A2093A85400301BB6 /* Project object */;
+}

@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+  DailyAthkar
+
+  Created by Mohamed ElSIfi on 8/19/18.
+  Copyright © 2018 Badi3.com. All rights reserved.
+*/
+
+"app language" = "اللغة - Language";
+"arabic" = "العربية";
+"english" = "English";
+"font" = "Font";
+"text length mode" = "Default Mode";
+"back" = "Back";
+"tap to choose" = "Tap to choose";
+"save" = "Save Settings";
+"all athkar" = "All Athkar";
+"only short athkar" = "Only Short and Common ones";
+"of" = "Of";
+"times" = "Times";
+"play" = "Play";
+"next" = "Next";
+"previous" = "Previous";
+"pause" = "Pause";
+"stop" = "Stop";
+"morning alert" = "Morning Duaa";
+"morning alert body" = "Tap to read or listen to Athkar";
+"evening alert" = "Evening Duaa";
+"evening alert body" = "Tap to read or listen to Athkar";
+"share the app" = "Share the app";
+"contact developer" = "Contact Developer";
+"share message" = "#AtkharApp - I read my daily dua and athkar on this app  %@";
+"short message error" = "Message is too short";
+"message sent" = "Message sent. Thanks for caring, your feedback is much appreciated.";
+"could not send your message" = "Message couldn't be sent. Please contact me at mo@badi3.com";
+"send" = "Send Message";
+"contact developer top text" = "You can report a bug or request a new feature.";
+"optional email address" = "An email for following up (optional)";
+"rate the app" = "Rate the app";
+"sign in is required to keep track of your invites" = "Sign in is required to keep track of your invites";
+"are you sure you want to log out?"="Are you sure you want to log out?";
+"yes, log me out" = "Yes, log me out";
+"cancel" = "Cancel";
+"log out" = "Log out";
+"log in" = "Log in";
+"yes, sign me up" = "Yes, a quick signup is fine";
+"no, share without keeping track" = "No, share without keeping track";
