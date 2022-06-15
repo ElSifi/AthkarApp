@@ -36,6 +36,8 @@ workflows:
                   LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number '821664774')
                   NEXT_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
                   echo "LATEST_BUILD_NUMBER $(LATEST_BUILD_NUMBER)"
+                  echo LATEST_BUILD_NUMBER
+                  echo APPLICATION_APP_ID
                   echo "NEXT_BUILD_NUMBER $(NEXT_BUILD_NUMBER)"
                   agvtool new-version -all $NEXT_BUILD_NUMBER
       - name: Build ipa for distribution
