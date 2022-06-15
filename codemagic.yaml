@@ -26,7 +26,10 @@ workflows:
         script: |
                     keychain add-certificates 
       - name: Increment build number
-        script: agvtool new-version -all $(($BUILD_NUMBER +1))
+        script: |
+                  LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number 'APPLICATION_APP_ID')
+                  NEXT_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
+                  agvtool new-version -all $NEXT_BUILD_NUMBER
       - name: Set up code signing settings on Xcode project
         script: xcode-project use-profiles
       - name: Setup Info PList files
