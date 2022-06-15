@@ -1,5 +1,5 @@
 workflows:
-  my-workflow:
+  release-workflow:
     environment:
       groups:
         - app_store_credentials
