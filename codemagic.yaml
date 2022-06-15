@@ -25,19 +25,17 @@ workflows:
       - name: Add certificates to keychain
         script: |
                     keychain add-certificates 
-      - name: Increment build number
-        script: |
-                  LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number 'APPLICATION_APP_ID')
-                  NEXT_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
-                  agvtool new-version -all $NEXT_BUILD_NUMBER
       - name: Set up code signing settings on Xcode project
         script: xcode-project use-profiles
       - name: Setup Info PList files
         script: |
                     echo $IOS_FIREBASE_SECRET > DailyAthkar/GoogleService-Info.plist
                     echo $IOS_TOKENS > DailyAthkar/tokens.plist
-                    echo "Listing iOS Directory to confirm the GoogleService-Info.plist is there!"
-                    ls DailyAthkar
+      - name: Increment build number
+        script: |
+                  LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number 'APPLICATION_APP_ID')
+                  NEXT_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
+                  agvtool new-version -all $NEXT_BUILD_NUMBER
       - name: Build ipa for distribution
         script: xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
     artifacts:
