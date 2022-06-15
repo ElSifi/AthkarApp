@@ -1,5 +1,11 @@
 workflows:
   release-workflow:
+    triggering:
+      events:
+        - tag
+      tag_patterns:          
+        - pattern: release-*
+      cancel_previous_builds: true
     environment:
       groups:
         - app_store_credentials
