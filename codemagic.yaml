@@ -25,12 +25,10 @@ workflows:
         script: xcode-project use-profiles
       - name: Setup Info PList files
         script: |
-                    echo $IOS_FIREBASE_SECRET > GoogleService-Info.plist
-                    echo $IOS_TOKENS > $CM_BUILD_DIR/tokens.plist
+                    echo $IOS_FIREBASE_SECRET > DailyAthkar/GoogleService-Info.plist
+                    echo $IOS_TOKENS > DailyAthkar/tokens.plist
                     echo "\nListing iOS Directory to confirm the GoogleService-Info.plist is there! "
-                    ls $CM_BUILD_DIR
-                    echo "\nListing iOS Directory to confirm the GoogleService-Info.plist is there! "
-                    ls
+                    ls DailyAthkar
       - name: Build ipa for distribution
         script: xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
     artifacts:
