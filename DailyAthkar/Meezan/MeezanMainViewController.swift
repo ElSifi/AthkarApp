@@ -9,7 +9,7 @@ import FirebaseAuth
 import UIKit
 import FirebaseFirestore
 
-class MeezanMainViewController: UIViewController {
+class MeezanMainViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var navBarBGView: UIView!{
         didSet{

@@ -13,7 +13,7 @@ import FirebaseUI
 import FirebaseFirestore
 import BadgeHub
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate, Storyboarded {
     
     // You need to adopt a FUIAuthDelegate protocol to receive callback
 
@@ -195,49 +195,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             Meezan.recordTheAppLaunch(userUID: currentUser.uid)
         }
-        
-        let vc = self.storyboard!.instantiateViewController(withIdentifier: "sectionContent") as! SectionContentViewController
+        let vc = SectionContentViewController.instantiate()
         vc.data = theDatabase[indexPath.row]
-        
-        
-        
         self.show(vc, sender: self)
     }
     
     @IBAction func meezanAction(_ sender: UIButton) {
-  
-        let vc = MeezanMainViewController.init(nibName: "MeezanMainViewController", bundle: nil)
+        let vc = MeezanMainViewController.instantiate()
         vc.edgesForExtendedLayout = .init(rawValue: 0)
         let navController = UINavigationController.init(rootViewController: vc)
-        
-        
-        
         navController.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navController.navigationBar.shadowImage = UIImage()
         navController.navigationBar.isTranslucent = true
-        
         navController.modalPresentationStyle = .overCurrentContext
-        
         self.present(navController, animated: true, completion: nil)
-
     }
     
     @IBAction func openSettings(_ sender: UIButton) {
-        
-        //assert(false)
-        
-//        let appSettingsVC = AppSettingsViewController.init(nibName: "AppSettingsViewController", bundle: nil)
-//        let appSettingsNavVC = UINavigationController.init(rootViewController: appSettingsVC)
-//        self.present(appSettingsNavVC, animated: true, completion: nil)
-//
-//        
-//        return
-        let vc = self.storyboard!.instantiateViewController(withIdentifier: "settings") as! SettingsViewController
+        let vc = SettingsViewController.instantiate()
         let navVC = UINavigationController.init(rootViewController: vc)
-
-        //navVC.modalPresentationStyle = .formSheet
-        
-        //navVC.popoverPresentationController?.sourceView = sender
         self.present(navVC, animated: true){
             self.viewDidAppear(false);
         }

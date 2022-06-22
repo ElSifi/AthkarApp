@@ -70,7 +70,7 @@ struct SettingsItem {
     
 }
 
-class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, Storyboarded {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.settingsItems.count
     }
