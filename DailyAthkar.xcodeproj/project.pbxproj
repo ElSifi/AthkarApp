@@ -131,8 +131,8 @@
 		D824AD112863254D00956412 /* MainCoordintator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AD102863254D00956412 /* MainCoordintator.swift */; };
 		D82936DC225DFF190040F839 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82936DB225DFF190040F839 /* LanguageManager.swift */; };
 		D82936DE225E011E0040F839 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82936DD225E011E0040F839 /* main.swift */; };
-		D8467A182863549300D7E15B /* Athkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8467A172863549300D7E15B /* Athkar.swift */; };
 		D849250A26170B55008F4182 /* DemocraticFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849250926170B54008F4182 /* DemocraticFeatures.swift */; };
+		D85410C428636C980031548B /* Athkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85410C328636C980031548B /* Athkar.swift */; };
 		D890F7D42259522100D37E2A /* Meezan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890F7D32259522100D37E2A /* Meezan.swift */; };
 		D8A156F7225D4EB800C8F274 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A156F5225D4EB600C8F274 /* UIAlertController+Blocks.m */; };
 		D8A9E54B2257984800544B08 /* MeezanMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9E5492257984800544B08 /* MeezanMainViewController.swift */; };
@@ -404,8 +404,8 @@
 		D824AD102863254D00956412 /* MainCoordintator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordintator.swift; sourceTree = "<group>"; };
 		D82936DB225DFF190040F839 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		D82936DD225E011E0040F839 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		D8467A172863549300D7E15B /* Athkar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athkar.swift; sourceTree = "<group>"; };
 		D849250926170B54008F4182 /* DemocraticFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemocraticFeatures.swift; sourceTree = "<group>"; };
+		D85410C328636C980031548B /* Athkar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athkar.swift; sourceTree = "<group>"; };
 		D890F7D32259522100D37E2A /* Meezan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meezan.swift; sourceTree = "<group>"; };
 		D8A156F5225D4EB600C8F274 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
 		D8A156F6225D4EB700C8F274 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
@@ -669,7 +669,7 @@
 		92E152742093A85400301BB6 /* DailyAthkar */ = {
 			isa = PBXGroup;
 			children = (
-				D8467A162863548900D7E15B /* Models */,
+				D85410C228636C980031548B /* Models */,
 				D824AD0B286322FE00956412 /* Coordinators */,
 				D849250926170B54008F4182 /* DemocraticFeatures.swift */,
 				D82936DD225E011E0040F839 /* main.swift */,
@@ -780,12 +780,6 @@
 			path = CountryCode;
 			sourceTree = "<group>";
 		};
-		D8467A162863548900D7E15B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D8467A172863549300D7E15B /* Athkar.swift */,
-			);
-			path = Models;
 		D824AD0B286322FE00956412 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,6 +788,14 @@
 				D824AD102863254D00956412 /* MainCoordintator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D85410C228636C980031548B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D85410C328636C980031548B /* Athkar.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D8A156F4225D4E9D00C8F274 /* MBProgressHUD */ = {
@@ -1132,6 +1134,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BadgeHub/BadgeHub.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/DLLocalNotifications/DLLocalNotifications.framework",
@@ -1140,6 +1143,7 @@
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Sheeeeeeeeet/Sheeeeeeeeet.framework",
 				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -1148,6 +1152,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BadgeHub.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLLocalNotifications.framework",
@@ -1156,6 +1161,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sheeeeeeeeet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -1271,7 +1277,6 @@
 				D824AD112863254D00956412 /* MainCoordintator.swift in Sources */,
 				D81AF8F8225E11C700D28630 /* FUIPhoneEntryViewController.m in Sources */,
 				D81AF8F3225E11C700D28630 /* FUIPhoneAuthStrings.m in Sources */,
-				D8467A182863549300D7E15B /* Athkar.swift in Sources */,
 				D8B6E000225D56C70067FDC6 /* AppSettingsViewController.swift in Sources */,
 				D849250A26170B55008F4182 /* DemocraticFeatures.swift in Sources */,
 				9203674420989259003D8DAC /* NSBundle+Language.m in Sources */,
@@ -1280,6 +1285,7 @@
 				926066F52129A5990083C144 /* FontSelectionViewController.swift in Sources */,
 				922F37182099A2DC00991346 /* Extensions.swift in Sources */,
 				D8A9E54B2257984800544B08 /* MeezanMainViewController.swift in Sources */,
+				D85410C428636C980031548B /* Athkar.swift in Sources */,
 				D824AD0F2863243600956412 /* Storyboarded.swift in Sources */,
 				92E44EF12093C2D900040452 /* HomeSectionTableViewCell.swift in Sources */,
 				9281478D209B9985007B0D85 /* CustomUIClasses.swift in Sources */,

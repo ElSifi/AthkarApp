@@ -13,8 +13,8 @@ import FirebaseFirestore
 import BadgeHub
 
 protocol HomeViewControllerCoordinator{
-    func showAthkarSection(section: JSON)
-    func showAthkarSectionWithMode(onlyBrief: Bool, section: JSON)
+    func showAthkarSection(section: AthkarSection)
+    func showAthkarSectionWithMode(onlyBrief: Bool, section: AthkarSection)
     func showMeezan()
     func showSettings()
 }
@@ -198,7 +198,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let currentUser = Auth.auth().currentUser {
             Meezan.recordTheAppLaunch(userUID: currentUser.uid)
         }
-        let section : JSON = theDatabase[indexPath.row]
+        let section : AthkarSection = theDatabase[indexPath.row]
         coordinator?.showAthkarSection(section: section)
     }
     

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 class MainCoodinator : DACoordinator{
     var childCoordinators = [DACoordinator]()
@@ -26,13 +25,13 @@ class MainCoodinator : DACoordinator{
 
 
 extension MainCoodinator : HomeViewControllerCoordinator{
-    func showAthkarSection(section: JSON) {
+    func showAthkarSection(section: AthkarSection) {
         let vc = SectionContentViewController.instantiate()
         vc.data = section
         self.navigationController.pushViewController(vc, animated: true)
     }
     
-    func showAthkarSectionWithMode(onlyBrief: Bool, section: JSON) {
+    func showAthkarSectionWithMode(onlyBrief: Bool, section: AthkarSection) {
         let vc = SectionContentViewController.instantiate()
         vc.data = section
         vc.commonOnly = onlyBrief
