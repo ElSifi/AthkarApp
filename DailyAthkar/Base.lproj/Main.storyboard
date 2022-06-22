@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="twK-Z0-Cco">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="DailyAthkar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="DailyAthkar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +28,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="section" rowHeight="87" id="h9f-d6-96Z" customClass="HomeSectionTableViewCell" customModule="DailyAthkar" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="288" height="87"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="288" height="87"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h9f-d6-96Z" id="D17-6a-PAF">
                                                     <rect key="frame" x="0.0" y="0.0" width="288" height="87"/>
@@ -39,7 +40,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DNL-K3-tyf">
                                                                     <rect key="frame" x="89" y="10" width="179" height="66"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                                    <color key="textColor" systemColor="tableCellGroupedBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvW-yt-OJA">
@@ -136,7 +137,7 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-sF-BRy">
                                 <rect key="frame" x="274" y="10" width="16" height="16"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="d0c-hi-Wv3"/>
                                     <constraint firstAttribute="width" constant="16" id="vNA-Cg-agN"/>
@@ -148,6 +149,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="B9x-Al-9df" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="1MH-Sm-vaC"/>
@@ -174,7 +176,6 @@
                             <constraint firstItem="WJc-sF-BRy" firstAttribute="top" secondItem="Re8-eZ-74H" secondAttribute="top" id="x62-P2-aYV"/>
                             <constraint firstItem="Re8-eZ-74H" firstAttribute="trailing" secondItem="B9x-Al-9df" secondAttribute="trailing" constant="10" id="yCP-zh-YpS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="TqQ-Cb-2E4"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -195,7 +196,7 @@
         <!--Settings View Controller-->
         <scene sceneID="DXu-V3-CKX">
             <objects>
-                <viewController storyboardIdentifier="settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GvJ-Jf-azx" customClass="SettingsViewController" customModule="DailyAthkar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GvJ-Jf-azx" customClass="SettingsViewController" customModule="DailyAthkar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u0I-IS-FQK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,20 +206,20 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="72" id="Uzq-rT-Tig">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="72"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uzq-rT-Tig" id="ZLQ-Ee-SnF">
-                                            <rect key="frame" x="0.0" y="0.0" width="294" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295.5" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lns-sR-aL0">
-                                                    <rect key="frame" x="15" y="25.5" width="4" height="21"/>
+                                                    <rect key="frame" x="16" y="25.5" width="4" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiy-m7-2ui">
-                                                    <rect key="frame" x="281" y="25.5" width="5" height="21"/>
+                                                    <rect key="frame" x="282.5" y="25.5" width="5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -239,6 +240,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="viH-6A-P4g"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="viH-6A-P4g" firstAttribute="trailing" secondItem="Tii-UA-ZZd" secondAttribute="trailing" id="GlZ-cj-fQq"/>
@@ -246,7 +248,6 @@
                             <constraint firstItem="Tii-UA-ZZd" firstAttribute="top" secondItem="viH-6A-P4g" secondAttribute="top" id="Qkf-Nb-Z37"/>
                             <constraint firstItem="Tii-UA-ZZd" firstAttribute="leading" secondItem="viH-6A-P4g" secondAttribute="leading" id="oRw-oM-SfR"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="viH-6A-P4g"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXk-5d-gmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,14 +267,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="uFS-jf-bml">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="120"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uFS-jf-bml" id="2b8-fc-XdI">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7E-Gt-iBJ">
-                                                    <rect key="frame" x="25" y="21" width="270" height="78"/>
+                                                    <rect key="frame" x="26" y="21" width="268" height="78"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -329,7 +330,8 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="9Wd-BU-K6v"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9Wd-BU-K6v" firstAttribute="trailing" secondItem="Z0x-ZS-bD6" secondAttribute="trailing" id="3Ih-oe-reo"/>
                             <constraint firstItem="Z0x-ZS-bD6" firstAttribute="leading" secondItem="9Wd-BU-K6v" secondAttribute="leading" id="Jxg-or-ll9"/>
@@ -342,7 +344,6 @@
                             <constraint firstItem="Tn6-ms-20B" firstAttribute="top" secondItem="Z0x-ZS-bD6" secondAttribute="bottom" constant="1" id="g6A-Vn-DYp"/>
                             <constraint firstItem="Z0x-ZS-bD6" firstAttribute="top" secondItem="1MU-xx-zTX" secondAttribute="bottom" constant="10" id="ilm-AO-iwd"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="9Wd-BU-K6v"/>
                     </view>
                     <connections>
                         <outlet property="stepper" destination="Gnt-bq-rDP" id="Cdp-qv-BqD"/>
@@ -357,7 +358,7 @@
         <!--Section Content View Controller-->
         <scene sceneID="nlu-ij-9Rn">
             <objects>
-                <viewController storyboardIdentifier="sectionContent" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JZu-Wf-dBn" customClass="SectionContentViewController" customModule="DailyAthkar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SectionContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JZu-Wf-dBn" customClass="SectionContentViewController" customModule="DailyAthkar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="zqH-Yy-Uuo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -402,7 +403,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="thikr" rowHeight="244" id="aQT-Sq-Fbv" customClass="ThikrTableViewCell" customModule="DailyAthkar" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="288" height="244"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="288" height="244"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aQT-Sq-Fbv" id="NE7-Dr-6g4">
                                                     <rect key="frame" x="0.0" y="0.0" width="288" height="244"/>
@@ -473,7 +474,7 @@
                                                                         <constraint firstItem="vpQ-gm-5O8" firstAttribute="leading" secondItem="5U3-59-ssd" secondAttribute="leading" constant="8" id="vVd-d9-jII"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-yt-BI9">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-yt-BI9">
                                                                     <rect key="frame" x="235" y="186" width="53" height="53"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="g4R-yt-BI9" secondAttribute="height" id="8Ie-45-DwM"/>
@@ -593,6 +594,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="tAx-zT-7Is"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tAx-zT-7Is" firstAttribute="trailing" secondItem="OVr-oi-nUg" secondAttribute="trailing" id="8gB-49-TvI"/>
@@ -616,7 +618,6 @@
                             <constraint firstItem="ffT-vg-nUe" firstAttribute="top" secondItem="OVr-oi-nUg" secondAttribute="bottom" id="mm7-Y1-A9c"/>
                             <constraint firstItem="P6m-J7-Dkp" firstAttribute="top" secondItem="zqH-Yy-Uuo" secondAttribute="top" id="ti6-Km-7RY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="tAx-zT-7Is"/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="7Df-uZ-DHE" id="nXr-I5-Tdf"/>
@@ -636,7 +637,7 @@
         <!--Contact Developer View Controller-->
         <scene sceneID="lq7-qw-oAr">
             <objects>
-                <viewController storyboardIdentifier="contactDeveloper" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hPA-Cb-WuC" customClass="ContactDeveloperViewController" customModule="DailyAthkar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactDeveloperViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hPA-Cb-WuC" customClass="ContactDeveloperViewController" customModule="DailyAthkar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s5K-5M-7FF" customClass="C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -653,7 +654,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZh-Zh-1Xj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZh-Zh-1Xj">
                                 <rect key="frame" x="30" y="202.5" width="260" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IXy-iW-Oqr"/>
@@ -672,6 +673,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6iD-LF-79B"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EwA-rK-aS5" firstAttribute="trailing" secondItem="fEu-2c-ogE" secondAttribute="trailing" id="2qL-np-acJ"/>
@@ -688,7 +690,6 @@
                             <constraint firstItem="gQW-Mw-47H" firstAttribute="top" secondItem="EwA-rK-aS5" secondAttribute="bottom" constant="10" id="siN-uL-KVr"/>
                             <constraint firstItem="TZh-Zh-1Xj" firstAttribute="top" secondItem="fEu-2c-ogE" secondAttribute="bottom" constant="10" id="vVJ-NN-Lag"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6iD-LF-79B"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="gQW-Mw-47H" id="BWp-Nx-nmS"/>
@@ -701,24 +702,6 @@
             </objects>
             <point key="canvasLocation" x="1811.25" y="-1152.4647887323945"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="TvF-ka-ShM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="twK-Z0-Cco" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ep3-BU-gJZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="exj-GB-Pfh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ut3-m5-5eV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-609" y="-70"/>
-        </scene>
     </scenes>
     <resources>
         <image name="WakingUp" width="128" height="128"/>
@@ -727,5 +710,14 @@
         <image name="logo" width="275" height="115"/>
         <image name="meezanIcon" width="256" height="256"/>
         <image name="settingsIcon" width="512" height="512"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
