@@ -13,10 +13,17 @@ import FirebaseUI
 import FirebaseFirestore
 import BadgeHub
 
+protocol HomeViewControllerCoordinator{
+    func showAthkarSection(section: JSON)
+    func showAthkarSectionWithMode(onlyBrief: Bool, section: JSON)
+    func showMeezan()
+    func showSettings()
+}
+
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate, Storyboarded {
     
-    // You need to adopt a FUIAuthDelegate protocol to receive callback
-
+    var coordinator : HomeViewControllerCoordinator?
+    
     @IBOutlet weak var theTable: UITableView!
     @IBOutlet weak var bgImage: UIImageView!{
         didSet{
@@ -44,20 +51,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-
         doUI()
     }
     
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         
-        let common = SwipeAction(style: .default, title: nil) { action, indexPath in
+        let common = SwipeAction(style: .default, title: nil) {[weak self] action, indexPath in
             let cell = tableView.cellForRow(at: indexPath) as! SwipeTableViewCell
             action.fulfill(with: .reset)
-            let vc = self.storyboard!.instantiateViewController(withIdentifier: "sectionContent") as! SectionContentViewController
-            vc.commonOnly = true
-            vc.data = theDatabase[indexPath.row]
-            self.show(vc, sender: self)
+            
+            let section = theDatabase[indexPath.row]
+
+            self?.coordinator?.showAthkarSectionWithMode(onlyBrief: true, section: section)
             
             cell.hideSwipe(animated: true, completion: { (completed) in
 
@@ -67,14 +73,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         common.image = #imageLiteral(resourceName: "ex").maskWith(color: UIColor.init(hexString: "#211f1d"))
         common.backgroundColor = UIColor.clear//UIColor.init(hexString: "#211f1d").withAlphaComponent(0.1)
         
-        let all = SwipeAction(style: .default, title: nil) { action, indexPath in
+        let all = SwipeAction(style: .default, title: nil) {[weak self] action, indexPath in
             let cell = tableView.cellForRow(at: indexPath) as! SwipeTableViewCell
             action.fulfill(with: ExpansionFulfillmentStyle.delete)
 
-            let vc = self.storyboard!.instantiateViewController(withIdentifier: "sectionContent") as! SectionContentViewController
-            vc.commonOnly = false
-            vc.data = theDatabase[indexPath.row]
-            self.show(vc, sender: self)
+            let section = theDatabase[indexPath.row]
+            self?.coordinator?.showAthkarSectionWithMode(onlyBrief: false, section: section)
+
             
             cell.hideSwipe(animated: true, completion: { (completed) in
                 
@@ -192,31 +197,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {        
         if let currentUser = Auth.auth().currentUser {
-            
             Meezan.recordTheAppLaunch(userUID: currentUser.uid)
         }
-        let vc = SectionContentViewController.instantiate()
-        vc.data = theDatabase[indexPath.row]
-        self.show(vc, sender: self)
+        let section : JSON = theDatabase[indexPath.row]
+        coordinator?.showAthkarSection(section: section)
     }
     
     @IBAction func meezanAction(_ sender: UIButton) {
-        let vc = MeezanMainViewController.instantiate()
-        vc.edgesForExtendedLayout = .init(rawValue: 0)
-        let navController = UINavigationController.init(rootViewController: vc)
-        navController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navController.navigationBar.shadowImage = UIImage()
-        navController.navigationBar.isTranslucent = true
-        navController.modalPresentationStyle = .overCurrentContext
-        self.present(navController, animated: true, completion: nil)
+        coordinator?.showMeezan()
     }
     
     @IBAction func openSettings(_ sender: UIButton) {
-        let vc = SettingsViewController.instantiate()
-        let navVC = UINavigationController.init(rootViewController: vc)
-        self.present(navVC, animated: true){
-            self.viewDidAppear(false);
-        }
+        coordinator?.showSettings()
     }
 }
 
