@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
-import Alamofire
 
 class ContactDeveloperViewController: UIViewController {
     @IBOutlet weak var topLabel: UILabel!{
@@ -54,45 +52,45 @@ class ContactDeveloperViewController: UIViewController {
     }
     
     func sendMessage(intended : Bool){
-        self.textView.resignFirstResponder()
-        let text = self.textView.text ?? ""
-        if(text.count < 2){
-            self.showToast(message: "short message error".localized, completion: nil)
-            return
-        }
-        let params : [String : String] = [
-            "from":"DA User <da@mg.Badi3.com>",
-            "to":"m@elsifi.com",
-            "subject":"From the Athkar App",
-            "text":"\(self.emailTextField.text ?? "no email") - \(text) - Intended \(intended)"
-        ]
-        let headers : [String : String] = ["Authorization" : "Basic YXBpOjk3MjAxYzU1YzRmMWZjZTQxMzI0NDU5ODlkM2JlZWY3LWMxZmUxMzFlLWFlODg1ZGNm"]
-        var indicator : MBProgressHUD?
-        if(intended){
-             indicator = MBProgressHUD.showAdded(to: self.view, animated: true)
-        }
-        
-        Alamofire.request("https://api.mailgun.net/v3/mg.Badi3.com/messages", method: .post, parameters: params, headers: headers).responseJSON { (response) in
-            indicator?.hide(animated: true)
-            switch(response.result){
-            case .success(let value):
-                let json = JSON.init(value)
-                print("message response \(json)")
-                if let code = response.response?.statusCode, code == 200{
-                    print("code \(code)")
-                    self.showToast(message: "message sent".localized, long: true, completion: {
-                        self.autoDismiss = true
-                        _  = self.navigationController?.popViewController(animated: true)
-                    })
-                }else{
-                    self.showToast(message: "could not send your message".localized, long: true, completion: nil)
-                }
-                
-            case .failure(let error):
-                print("message error \(error.localizedDescription)")
-                self.showToast(message: error.localizedDescription, completion: nil)
-            }
-        }
+//        self.textView.resignFirstResponder()
+//        let text = self.textView.text ?? ""
+//        if(text.count < 2){
+//            self.showToast(message: "short message error".localized, completion: nil)
+//            return
+//        }
+//        let params : [String : String] = [
+//            "from":"DA User <da@mg.Badi3.com>",
+//            "to":"m@elsifi.com",
+//            "subject":"From the Athkar App",
+//            "text":"\(self.emailTextField.text ?? "no email") - \(text) - Intended \(intended)"
+//        ]
+//        let headers : [String : String] = ["Authorization" : "Basic YXBpOjk3MjAxYzU1YzRmMWZjZTQxMzI0NDU5ODlkM2JlZWY3LWMxZmUxMzFlLWFlODg1ZGNm"]
+//        var indicator : MBProgressHUD?
+//        if(intended){
+//             indicator = MBProgressHUD.showAdded(to: self.view, animated: true)
+//        }
+//        
+//        Alamofire.request("https://api.mailgun.net/v3/mg.Badi3.com/messages", method: .post, parameters: params, headers: headers).responseJSON { (response) in
+//            indicator?.hide(animated: true)
+//            switch(response.result){
+//            case .success(let value):
+//                let json = JSON.init(value)
+//                print("message response \(json)")
+//                if let code = response.response?.statusCode, code == 200{
+//                    print("code \(code)")
+//                    self.showToast(message: "message sent".localized, long: true, completion: {
+//                        self.autoDismiss = true
+//                        _  = self.navigationController?.popViewController(animated: true)
+//                    })
+//                }else{
+//                    self.showToast(message: "could not send your message".localized, long: true, completion: nil)
+//                }
+//                
+//            case .failure(let error):
+//                print("message error \(error.localizedDescription)")
+//                self.showToast(message: error.localizedDescription, completion: nil)
+//            }
+//        }
  
         
     }

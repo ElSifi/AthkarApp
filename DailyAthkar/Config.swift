@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
-
 
 let allImages = [#imageLiteral(resourceName: "bg1"), #imageLiteral(resourceName: "bg2")]
 let theBGImage = allImages.randomItem()!
@@ -117,14 +115,16 @@ struct DA_STYLE {
 }
 
 
-var theDatabase : [JSON]{
+var theDatabase : [AthkarSection]{
     if let path = Bundle.main.path(forResource:"db", ofType: "json")
     {
         let url = URL.init(fileURLWithPath: path)
         do{
-            let pathAsData = try Data.init(contentsOf: url, options: Data.ReadingOptions.mappedIfSafe)
-            let json = JSON(pathAsData)
-            return json.arrayValue
+            let jsonData = try Data.init(contentsOf: url)
+            let athkarSections = try! JSONDecoder().decode([AthkarSection].self, from: jsonData)
+                return athkarSections
+            
+
         } catch{
             return []
         }

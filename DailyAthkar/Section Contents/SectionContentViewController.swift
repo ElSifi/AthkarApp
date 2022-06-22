@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 import SwipeCellKit
 import AVFoundation
 import MediaPlayer
@@ -66,20 +65,20 @@ Storyboarded
     
     
     
-    var data : JSON?{
+    var data : AthkarSection?{
         didSet{
             if let data = self.data{
                 if(self.commonOnly){
-                    self.athkar =  data["content"].arrayValue.filter { $0["scriptMode"].stringValue == "1" }
+                    self.athkar =  data.content.filter { $0.scriptMode == "1" }
                 }else{
-                    self.athkar = data["content"].arrayValue
+                    self.athkar = data.content
                 }
             }
             
         }
     }
     var commonOnly : Bool = ((StringKeys.SettingsItemAllAthkarOrOnlyShortOnes.savedValue as? String) ?? "") == "short"
-    var athkar : [JSON] = []
+    var athkar : [Thikr] = []
     @IBOutlet weak var footerBarHeight: NSLayoutConstraint!
     @IBOutlet weak var tableContainer: UIView!
     @IBOutlet weak var theTable: UITableView!
@@ -180,9 +179,9 @@ Storyboarded
             playAthkarList(passedAthkarToPlay: self.athkar)
         }
     }
-    func getThikrIndex(thikr : JSON)->Int{
+    func getThikrIndex(thikr : Thikr)->Int{
         for (index, aThikr) in self.athkar.enumerated() {
-            if(aThikr["Z_PK"].stringValue == thikr["Z_PK"].stringValue){
+            if(aThikr.zPk == thikr.zPk){
                 return index
             }
         }
@@ -199,7 +198,7 @@ Storyboarded
                         !athkarToPlay.isEmpty
                         && self.audioPlayer != nil
                         && self.audioPlayer!.isPlaying
-                        && data["Z_PK"].stringValue == athkarToPlay[currentPlayingThikrIndex]["Z_PK"].stringValue
+                        && data.zPk == athkarToPlay[currentPlayingThikrIndex].zPk
                     )
                 {
                     theCell.isAudioPlaying = true
@@ -237,7 +236,7 @@ Storyboarded
         
         let thikr = athkarToPlay[currentPlayingThikrIndex]
         
-        if let path = Utils.getPathForSoundFileForThikr(thikr: thikr, sectionID: self.data!["stringID"].stringValue){
+        if let path = Utils.getPathForSoundFileForThikr(thikr: thikr, sectionID: self.data!.stringID){
             let thikrIndex = getThikrIndex(thikr: thikr)
             let indexPath = IndexPath.init(row: thikrIndex, section: 0)
             
@@ -263,8 +262,8 @@ Storyboarded
                 self.audioPlayer?.play()
                 UIApplication.shared.beginReceivingRemoteControlEvents()
                 MPNowPlayingInfoCenter.default().nowPlayingInfo = [
-                    MPMediaItemPropertyTitle: thikr["text_ar_unsigned"].stringValue,
-                    MPMediaItemPropertyAlbumTitle: self.data!["stringID"].stringValue,
+                    MPMediaItemPropertyTitle: thikr.textArUnsigned,
+                    MPMediaItemPropertyAlbumTitle: self.data!.stringID,
                     MPMediaItemPropertyArtist: "mishary".localized
                 ]
             }
@@ -281,9 +280,9 @@ Storyboarded
             return false
         }
     }
-    var athkarToPlay : [JSON] = []
+    var athkarToPlay : [Thikr] = []
     var currentPlayingThikrIndex = 0
-    func playAthkarList(passedAthkarToPlay : [JSON]){
+    func playAthkarList(passedAthkarToPlay : [Thikr]){
         self.athkarToPlay = passedAthkarToPlay
         self.currentPlayingThikrIndex = 0
         if(!playCurrentThikr()){
@@ -413,7 +412,7 @@ Storyboarded
         shareView.textContainer.insertSubview(blurEffectView, at: 0)
         
         
-        shareView.thirkLabel.text = thikr[Utils.getThikrTextKey()].stringValue
+        shareView.thirkLabel.text = "thikr[Utils.getThikrTextKey()].stringValue"
         shareView.thirkLabel.numberOfLines = 0
         shareView.thirkLabel.textAlignment = .center
         shareView.thirkLabel.font = DA_STYLE.savedFont.withSize(50)
@@ -450,7 +449,7 @@ Storyboarded
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.athkar.count
     }
-    func playSoundOfThikr(thikr: JSON) {
+    func playSoundOfThikr(thikr: Thikr) {
         
         let index = getThikrIndex(thikr: thikr)
         
@@ -458,7 +457,7 @@ Storyboarded
             (
                 !athkarToPlay.isEmpty
                 && self.audioPlayer != nil
-                && thikr["Z_PK"].stringValue == athkarToPlay[currentPlayingThikrIndex]["Z_PK"].stringValue
+                && thikr.zPk == athkarToPlay[currentPlayingThikrIndex].zPk
             )
         {
             if(self.audioPlayer!.isPlaying){
@@ -501,8 +500,8 @@ Storyboarded
         let athkarData = thikr
         
         
-        let maxCount = thikr["repeatTimes"].intValue
-        let currentCount = thikr["currentCount"].int ?? 0
+        let maxCount = thikr.repeatTimes
+        let currentCount = thikr.currentCount
         
         cell.leftRepeatLabel.text = String.init(describing: currentCount)
         cell.middleRepeatLabel.text = " \("of".localized) \(maxCount) "
@@ -517,15 +516,11 @@ Storyboarded
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(self.athkar[indexPath.row]["currentCount"].intValue < self.athkar[indexPath.row]["repeatTimes"].intValue)
+        if(self.athkar[indexPath.row].currentCount < self.athkar[indexPath.row].repeatTimes)
         {
-            self.athkar[indexPath.row]["currentCount"] = JSON(self.athkar[indexPath.row]["currentCount"].intValue + 1)
+            self.athkar[indexPath.row].currentCount = self.athkar[indexPath.row].currentCount + 1
             tableView.reloadRows(at: [indexPath], with: .fade)
         }
-        
-        
-        
-        
     }
     
     
@@ -537,10 +532,8 @@ Storyboarded
         blurEffectView.frame = tableContainer.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableContainer.insertSubview(blurEffectView, at: 0)
-        
-        let theKey = "name_\(LanguageManager.currentLanguageCode()!)"
-        
-        self.topTitle.text = self.data![theKey].stringValue
+                
+        self.topTitle.text = self.data!.localizedName()
         self.topTitle.font = DA_STYLE.savedFont.withSize(26)
     }
     

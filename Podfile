@@ -6,8 +6,6 @@ target 'DailyAthkar' do
   use_frameworks!
 
   # Pods for DailyAthkar
-  pod 'SwiftyJSON'
-  pod 'Alamofire'
   pod 'SwipeCellKit'
   pod 'Sheeeeeeeeet'
   pod 'DLLocalNotifications'

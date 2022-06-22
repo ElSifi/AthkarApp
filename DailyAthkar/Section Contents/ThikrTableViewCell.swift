@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import SwiftyJSON
 import SwipeCellKit
 
 protocol ThikrTableViewCellDelegate : class {
-    func playSoundOfThikr(thikr : JSON)
+    func playSoundOfThikr(thikr : Thikr)
 }
 
 class ThikrTableViewCell: SwipeTableViewCell {
@@ -21,12 +20,12 @@ class ThikrTableViewCell: SwipeTableViewCell {
     @IBOutlet weak var middleRepeatLabel: UILabel!
     @IBOutlet weak var rightRepeatLabel: UILabel!
     @IBOutlet weak var soundIcon: UIImageView!
-    var data :JSON?{
+    var data :Thikr?{
         didSet{
-            guard let date = data else{
+            guard let data = data else{
                 return
             }
-            self.textContent.text = date[Utils.getThikrTextKey()].stringValue
+            self.textContent.text = data.localizedText()
             
         }
     }
