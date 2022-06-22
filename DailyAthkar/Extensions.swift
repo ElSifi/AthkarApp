@@ -1,14 +1,12 @@
 //
 //  Extensions.swift
-//  Zad Fresh
 //
 //  Created by Mohamed ElSIfi on 5/17/17.
-//  Copyright © 2017 ZadFresh. All rights reserved.
+//  Copyright © 2017 . All rights reserved.
 //
 
 import Foundation
 import UIKit
-import SwiftyJSON
 
 extension UIImageView {
     func maskWith(color: UIColor){
@@ -275,35 +273,6 @@ extension UIColor {
     }
 }
 
-//MARK: - Save and load JSON locally using NSUserDefaults.
-extension JSON {
-    public func saveToLocal(forKey: String) -> Bool {
-        let defaults = UserDefaults.standard
-        var rawData: Data
-        do {
-            rawData = try self.rawData()
-        }
-        catch {
-            return false
-        }
-        
-        defaults.setValue(rawData, forKey: forKey)
-        return true
-    }
-    
-    static public func loadFromLocal(Key: String) -> JSON? {
-        let defaults = UserDefaults.standard
-        guard let rawData = defaults.value(forKey: Key) as? Data else {
-            return nil
-        }
-        do {
-            return try JSON.init(data: rawData)
-        }
-        catch{
-            return nil
-        }
-    }
-}
 
 
 public extension UIViewController{

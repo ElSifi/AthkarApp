@@ -7,15 +7,14 @@
 //
 
 import UIKit
-import SwiftyJSON
 import SwipeCellKit
 
 class HomeSectionTableViewCell: SwipeTableViewCell {
 
-    var data: JSON?{
+    var data: AthkarSection?{
         didSet{
             if let theData = data{
-                self.titleLabel.text = theData["name_\(LanguageManager.currentLanguageCode()!)"].stringValue
+                self.titleLabel.text = theData.localizedName()
             }
         }
     }

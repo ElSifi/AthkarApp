@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 import UserNotifications
 import DLLocalNotifications
 
@@ -89,15 +88,15 @@ class Utils: NSObject {
         
     }
     
-    static func getPathForSoundFileForThikr(thikr : JSON, sectionID: String) -> String?{
+    static func getPathForSoundFileForThikr(thikr : Thikr, sectionID: String) -> String?{
         var path : String?
         let sheikhNamePrefix = "Mishary"
-        let commonZikrTitle = thikr["thikrTitle"].stringValue
+        let commonZikrTitle = thikr.thikrTitle
         if (commonZikrTitle != "")
         {
             path = Bundle.main.path(forResource: "\(sheikhNamePrefix)_\(commonZikrTitle)", ofType: "mp3")!
         } else {
-            let zikrNum = thikr["number"].intValue
+            let zikrNum = thikr.number
             let resourceName = "\(sheikhNamePrefix)_\(sectionID)_\(zikrNum)".replacingOccurrences(of: " ", with: "")
             if let thePath = Bundle.main.path(forResource: resourceName, ofType: "mp3"){
                 path = thePath

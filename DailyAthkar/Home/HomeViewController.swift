@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 import SwipeCellKit
 import FirebaseUI
 import FirebaseFirestore
