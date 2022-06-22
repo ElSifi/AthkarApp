@@ -126,6 +126,9 @@
 		D81AF904225E11C700D28630 /* FUIPhoneVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8ED225E11C700D28630 /* FUIPhoneVerificationViewController.xib */; };
 		D81AF906225E11C700D28630 /* FUIPhoneAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8F1225E11C700D28630 /* FUIPhoneAuth.m */; };
 		D81AF90C225EA1A000D28630 /* MeezanMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF90E225EA1A000D28630 /* MeezanMainViewController.xib */; };
+		D824AD0D2863231800956412 /* DACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AD0C2863231800956412 /* DACoordinator.swift */; };
+		D824AD0F2863243600956412 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AD0E2863243600956412 /* Storyboarded.swift */; };
+		D824AD112863254D00956412 /* MainCoordintator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AD102863254D00956412 /* MainCoordintator.swift */; };
 		D82936DC225DFF190040F839 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82936DB225DFF190040F839 /* LanguageManager.swift */; };
 		D82936DE225E011E0040F839 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82936DD225E011E0040F839 /* main.swift */; };
 		D8467A182863549300D7E15B /* Athkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8467A172863549300D7E15B /* Athkar.swift */; };
@@ -396,6 +399,9 @@
 		D81AF8F1225E11C700D28630 /* FUIPhoneAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneAuth.m; sourceTree = "<group>"; };
 		D81AF90D225EA1A000D28630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MeezanMainViewController.xib; sourceTree = "<group>"; };
 		D81AF910225EA59500D28630 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MeezanMainViewController.strings; sourceTree = "<group>"; };
+		D824AD0C2863231800956412 /* DACoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DACoordinator.swift; sourceTree = "<group>"; };
+		D824AD0E2863243600956412 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		D824AD102863254D00956412 /* MainCoordintator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordintator.swift; sourceTree = "<group>"; };
 		D82936DB225DFF190040F839 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		D82936DD225E011E0040F839 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D8467A172863549300D7E15B /* Athkar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athkar.swift; sourceTree = "<group>"; };
@@ -664,6 +670,7 @@
 			isa = PBXGroup;
 			children = (
 				D8467A162863548900D7E15B /* Models */,
+				D824AD0B286322FE00956412 /* Coordinators */,
 				D849250926170B54008F4182 /* DemocraticFeatures.swift */,
 				D82936DD225E011E0040F839 /* main.swift */,
 				D8A9E5482257982900544B08 /* Meezan */,
@@ -779,6 +786,14 @@
 				D8467A172863549300D7E15B /* Athkar.swift */,
 			);
 			path = Models;
+		D824AD0B286322FE00956412 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D824AD0C2863231800956412 /* DACoordinator.swift */,
+				D824AD0E2863243600956412 /* Storyboarded.swift */,
+				D824AD102863254D00956412 /* MainCoordintator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		D8A156F4225D4E9D00C8F274 /* MBProgressHUD */ = {
@@ -1252,6 +1267,8 @@
 				D81AF900225E11C700D28630 /* FUICodeField.m in Sources */,
 				92E152782093A85400301BB6 /* HomeViewController.swift in Sources */,
 				D81AF8FD225E11C700D28630 /* FUICountryTableViewController.m in Sources */,
+				D824AD0D2863231800956412 /* DACoordinator.swift in Sources */,
+				D824AD112863254D00956412 /* MainCoordintator.swift in Sources */,
 				D81AF8F8225E11C700D28630 /* FUIPhoneEntryViewController.m in Sources */,
 				D81AF8F3225E11C700D28630 /* FUIPhoneAuthStrings.m in Sources */,
 				D8467A182863549300D7E15B /* Athkar.swift in Sources */,
@@ -1263,6 +1280,7 @@
 				926066F52129A5990083C144 /* FontSelectionViewController.swift in Sources */,
 				922F37182099A2DC00991346 /* Extensions.swift in Sources */,
 				D8A9E54B2257984800544B08 /* MeezanMainViewController.swift in Sources */,
+				D824AD0F2863243600956412 /* Storyboarded.swift in Sources */,
 				92E44EF12093C2D900040452 /* HomeSectionTableViewCell.swift in Sources */,
 				9281478D209B9985007B0D85 /* CustomUIClasses.swift in Sources */,
 				D82936DC225DFF190040F839 /* LanguageManager.swift in Sources */,

@@ -20,7 +20,8 @@ class SectionContentViewController: UIViewController,
     AVAudioPlayerDelegate,
     UIGestureRecognizerDelegate,
     UIScrollViewDelegate,
-    ThikrTableViewCellDelegate
+    ThikrTableViewCellDelegate,
+Storyboarded
 {
     
     var audioPlayer : AVAudioPlayer?
