@@ -15,6 +15,10 @@ var currentLanguageMode : LanguageMode {
     return LanguageMode.init(rawValue: LanguageManager.currentLanguageCode()!.lowercased())!
 }
 
+extension UIColor{
+    static let primary = UIColor.brown
+}
+
 enum LanguageMode : String{
     case english = "en"
     case arabic = "ar"

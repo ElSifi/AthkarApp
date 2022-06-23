@@ -17,7 +17,6 @@ target 'DailyAthkar' do
   pod 'FirebaseUI/Auth'
   #pod 'FirebaseUI/Phone'
   pod 'Siren'
-  pod 'Fabric', '~> 1.9.0'
   pod 'Crashlytics', '~> 3.12.0'
   pod 'Firebase/Database'
   pod 'BadgeHub'

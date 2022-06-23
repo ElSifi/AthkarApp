@@ -8,10 +8,20 @@
 
 import Foundation
 
-protocol DACoordinator {
+protocol DACoordinator : AnyObject{
     var childCoordinators :[DACoordinator] {get set}
+    var parentCoodinator :DACoordinator? {get set}
     var navigationController :UINavigationController {get set}
-    
     func start()
+    func childCoodinatorDidFinish(_ child: DACoordinator)
+}
 
+extension DACoordinator{
+    func childCoodinatorDidFinish(_ child: DACoordinator) {
+        if let index = childCoordinators.firstIndex(where: { aCoodinator in
+            return aCoodinator === child
+        }){
+            self.childCoordinators.remove(at: index)
+        }
+    }
 }

@@ -24,17 +24,17 @@ class MeezanMainViewController: UIViewController {
         }
     }
     
-  
+    
     @IBOutlet weak var meezanCount: UILabel!
     
     @IBAction func shareAction(_ sender: UIButton) {
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-        Meezan.getMyInvitationLink { (link, error) in
+        Meezan.getMyInvitationLink { [weak self] (link, error) in
             hud.hide(animated: true)
             if let error = error as NSError?{
                 switch(error.code){
                 case 401:
-                    
+                    guard let self = self else { return }
                     UIAlertController.showAlert(in: self, withTitle: "sign in is required to keep track of your invites".localized, message: nil, cancelButtonTitle: nil, destructiveButtonTitle: nil, otherButtonTitles: ["yes, Sign me up".localized, "no, share without keeping track".localized], tap: { (controller, action, index) in
                         print(index)
                         
@@ -68,8 +68,8 @@ class MeezanMainViewController: UIViewController {
                 let objectsToShare:URL = URL(string: theURL)!
                 let sharedObjects:[AnyObject] = [objectsToShare as AnyObject , textToShare as AnyObject]
                 let activityViewController = UIActivityViewController(activityItems : sharedObjects, applicationActivities: nil)
-                activityViewController.popoverPresentationController?.sourceView = self.view
-                self.present(activityViewController, animated: true, completion: nil)
+                activityViewController.popoverPresentationController?.sourceView = self?.view
+                self?.present(activityViewController, animated: true, completion: nil)
             }
             
         }
@@ -86,15 +86,15 @@ class MeezanMainViewController: UIViewController {
             let db = Firestore.firestore().collection("users")
             let myReference = db.document(currentUser.uid)
             
-            countListenr = myReference.addSnapshotListener { (snapshot, error) in
+            countListenr = myReference.addSnapshotListener { [weak self] (snapshot, error) in
                 hud.hide(animated: true)
                 if let snapshot = snapshot, let data = snapshot.data(){
                     let count = (data["inviteesLaunchCount"] as? Int) ?? 0
-                    self.meezanCount.text = "\(count)"
+                    self?.meezanCount.text = "\(count)"
                 }else{
                     print(error as NSError?)
                     
-                    self.meezanCount.text = "\(0)"
+                    self?.meezanCount.text = "\(0)"
                 }
             }
             

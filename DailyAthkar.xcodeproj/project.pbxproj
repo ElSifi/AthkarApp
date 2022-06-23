@@ -33,7 +33,6 @@
 		9203674320989259003D8DAC /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203674020989259003D8DAC /* LanguageManager.m */; };
 		9203674420989259003D8DAC /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203674220989259003D8DAC /* NSBundle+Language.m */; };
 		922F37182099A2DC00991346 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922F37172099A2DC00991346 /* Extensions.swift */; };
-		92377B3E213B30A200312036 /* ContactDeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92377B3D213B30A200312036 /* ContactDeveloperViewController.swift */; };
 		92377B42213B529100312036 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 92377B40213B529000312036 /* MBProgressHUD.m */; };
 		925BEB0A212863920051BA8D /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925BEB09212863920051BA8D /* ShareView.swift */; };
 		925BEB0B2128722F0051BA8D /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9203673A20988FBE003D8DAC /* BebasNeue.otf */; };
@@ -126,10 +125,10 @@
 		D81AF904225E11C700D28630 /* FUIPhoneVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8ED225E11C700D28630 /* FUIPhoneVerificationViewController.xib */; };
 		D81AF906225E11C700D28630 /* FUIPhoneAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8F1225E11C700D28630 /* FUIPhoneAuth.m */; };
 		D81AF90C225EA1A000D28630 /* MeezanMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF90E225EA1A000D28630 /* MeezanMainViewController.xib */; };
+		D820EABC286414C00036E803 /* SettingsCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D820EABB286414C00036E803 /* SettingsCoodinator.swift */; };
 		D824AD0D2863231800956412 /* DACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AD0C2863231800956412 /* DACoordinator.swift */; };
 		D824AD0F2863243600956412 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AD0E2863243600956412 /* Storyboarded.swift */; };
 		D824AD112863254D00956412 /* MainCoordintator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AD102863254D00956412 /* MainCoordintator.swift */; };
-		D82936DC225DFF190040F839 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82936DB225DFF190040F839 /* LanguageManager.swift */; };
 		D82936DE225E011E0040F839 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82936DD225E011E0040F839 /* main.swift */; };
 		D849250A26170B55008F4182 /* DemocraticFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849250926170B54008F4182 /* DemocraticFeatures.swift */; };
 		D85410C428636C980031548B /* Athkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85410C328636C980031548B /* Athkar.swift */; };
@@ -199,7 +198,6 @@
 		9203674220989259003D8DAC /* NSBundle+Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Language.m"; sourceTree = "<group>"; };
 		92036746209892A0003D8DAC /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		922F37172099A2DC00991346 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		92377B3D213B30A200312036 /* ContactDeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDeveloperViewController.swift; sourceTree = "<group>"; };
 		92377B40213B529000312036 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		92377B41213B529000312036 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		925BEB09212863920051BA8D /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
@@ -399,10 +397,10 @@
 		D81AF8F1225E11C700D28630 /* FUIPhoneAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneAuth.m; sourceTree = "<group>"; };
 		D81AF90D225EA1A000D28630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MeezanMainViewController.xib; sourceTree = "<group>"; };
 		D81AF910225EA59500D28630 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MeezanMainViewController.strings; sourceTree = "<group>"; };
+		D820EABB286414C00036E803 /* SettingsCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoodinator.swift; sourceTree = "<group>"; };
 		D824AD0C2863231800956412 /* DACoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DACoordinator.swift; sourceTree = "<group>"; };
 		D824AD0E2863243600956412 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		D824AD102863254D00956412 /* MainCoordintator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordintator.swift; sourceTree = "<group>"; };
-		D82936DB225DFF190040F839 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		D82936DD225E011E0040F839 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D849250926170B54008F4182 /* DemocraticFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemocraticFeatures.swift; sourceTree = "<group>"; };
 		D85410C328636C980031548B /* Athkar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athkar.swift; sourceTree = "<group>"; };
@@ -475,14 +473,6 @@
 				9203674220989259003D8DAC /* NSBundle+Language.m */,
 			);
 			path = LanguageManager;
-			sourceTree = "<group>";
-		};
-		92377B3C213B308100312036 /* Contact Developer */ = {
-			isa = PBXGroup;
-			children = (
-				92377B3D213B30A200312036 /* ContactDeveloperViewController.swift */,
-			);
-			path = "Contact Developer";
 			sourceTree = "<group>";
 		};
 		92377B3F213B528300312036 /* 3rd Parties */ = {
@@ -669,18 +659,18 @@
 		92E152742093A85400301BB6 /* DailyAthkar */ = {
 			isa = PBXGroup;
 			children = (
+				D820EABD2864172E0036E803 /* ViewModels */,
+				D820EABA286414320036E803 /* Extentions */,
 				D85410C228636C980031548B /* Models */,
 				D824AD0B286322FE00956412 /* Coordinators */,
 				D849250926170B54008F4182 /* DemocraticFeatures.swift */,
 				D82936DD225E011E0040F839 /* main.swift */,
 				D8A9E5482257982900544B08 /* Meezan */,
 				92377B3F213B528300312036 /* 3rd Parties */,
-				92377B3C213B308100312036 /* Contact Developer */,
 				9262EEC72135E63B003D12A9 /* GoogleService-Info.plist */,
 				92B265AF213533C20021C973 /* DailyAthkar.entitlements */,
 				9281478E209BCD23007B0D85 /* sounds */,
 				9281478C209B9985007B0D85 /* CustomUIClasses.swift */,
-				922F37172099A2DC00991346 /* Extensions.swift */,
 				926D01E92098F86E0023F06C /* Settings */,
 				92E49AF9209897990090DB34 /* db.json */,
 				9203674520989262003D8DAC /* LanguageManager */,
@@ -699,7 +689,6 @@
 				92E152812093A85400301BB6 /* Info.plist */,
 				9260075321333D8700C0FF4F /* InfoPlist.strings */,
 				9260074D2132C61600C0FF4F /* Utils.swift */,
-				D82936DB225DFF190040F839 /* LanguageManager.swift */,
 				D8D6C1A828592565008D4F50 /* tokens.plist */,
 			);
 			path = DailyAthkar;
@@ -780,12 +769,28 @@
 			path = CountryCode;
 			sourceTree = "<group>";
 		};
+		D820EABA286414320036E803 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				922F37172099A2DC00991346 /* Extensions.swift */,
+				D824AD0E2863243600956412 /* Storyboarded.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		D820EABD2864172E0036E803 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		D824AD0B286322FE00956412 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				D824AD0C2863231800956412 /* DACoordinator.swift */,
-				D824AD0E2863243600956412 /* Storyboarded.swift */,
 				D824AD102863254D00956412 /* MainCoordintator.swift */,
+				D820EABB286414C00036E803 /* SettingsCoodinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -1134,7 +1139,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BadgeHub/BadgeHub.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/DLLocalNotifications/DLLocalNotifications.framework",
@@ -1143,7 +1147,6 @@
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Sheeeeeeeeet/Sheeeeeeeeet.framework",
 				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -1152,7 +1155,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BadgeHub.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLLocalNotifications.framework",
@@ -1161,7 +1163,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sheeeeeeeeet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -1266,7 +1267,6 @@
 				926D01E82098DB5A0023F06C /* ThikrTableViewCell.swift in Sources */,
 				9203674320989259003D8DAC /* LanguageManager.m in Sources */,
 				9260074E2132C61600C0FF4F /* Utils.swift in Sources */,
-				92377B3E213B30A200312036 /* ContactDeveloperViewController.swift in Sources */,
 				D81AF8F9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m in Sources */,
 				D81AF8FB225E11C700D28630 /* FUICountryCodes.m in Sources */,
 				D81AF906225E11C700D28630 /* FUIPhoneAuth.m in Sources */,
@@ -1283,13 +1283,13 @@
 				D81AF901225E11C700D28630 /* FUIPhoneVerificationViewController.m in Sources */,
 				9203673D2098912D003D8DAC /* Config.swift in Sources */,
 				926066F52129A5990083C144 /* FontSelectionViewController.swift in Sources */,
+				D820EABC286414C00036E803 /* SettingsCoodinator.swift in Sources */,
 				922F37182099A2DC00991346 /* Extensions.swift in Sources */,
 				D8A9E54B2257984800544B08 /* MeezanMainViewController.swift in Sources */,
 				D85410C428636C980031548B /* Athkar.swift in Sources */,
 				D824AD0F2863243600956412 /* Storyboarded.swift in Sources */,
 				92E44EF12093C2D900040452 /* HomeSectionTableViewCell.swift in Sources */,
 				9281478D209B9985007B0D85 /* CustomUIClasses.swift in Sources */,
-				D82936DC225DFF190040F839 /* LanguageManager.swift in Sources */,
 				926D01E42098D9990023F06C /* SectionContentViewController.swift in Sources */,
 				D8A156F7225D4EB800C8F274 /* UIAlertController+Blocks.m in Sources */,
 				D81AF8FF225E11C700D28630 /* FUIFeatureSwitch.m in Sources */,

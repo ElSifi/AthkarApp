@@ -71,8 +71,15 @@ struct SettingsItem {
 }
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, Storyboarded {
+    
+    var coordinator : SettingsCoodinator?
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.settingsItems.count
+    }
+    
+    deinit{
+        coordinator?.settingsSaved()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -303,9 +310,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                     UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
                 }else if (UIApplication.shared.canOpenURL(twitterURL)) {
                     UIApplication.shared.open(twitterURL, options: [:], completionHandler: nil)
-                }else {
-                    let vc = self.storyboard!.instantiateViewController(withIdentifier: "contactDeveloper") as! ContactDeveloperViewController
-                    self.show(vc, sender: self)
                 }
             case "rate":
                 rateApp(appId: "id821664774") { success in

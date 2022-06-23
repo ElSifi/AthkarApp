@@ -105,7 +105,6 @@ fileprivate class DemocraticFeaturesListViewController: UIViewController, Democr
         item.votes = (item.votes ?? [])
         
         if(item.votes!.contains(userUniqueID)){
-            print("already voted")
             item.votes?.removeAll(where: { (aVote) -> Bool in
                 aVote == userUniqueID
             })
@@ -146,9 +145,7 @@ fileprivate class DemocraticFeaturesListViewController: UIViewController, Democr
             if snapshot.childrenCount > 0 {
                 self.featuresList.removeAll()
                 for aFeature in snapshot.children.allObjects as! [DataSnapshot] {
-                    if let JSONString = String(data: aFeature.valueToJSON, encoding: String.Encoding.utf8) {
-                        print(JSONString)
-                    }
+                    
                     let feature = try? JSONDecoder().decode(DFFeature.self, from: aFeature.valueToJSON)
                     if let feature = feature{
                         self.featuresList.append(feature)

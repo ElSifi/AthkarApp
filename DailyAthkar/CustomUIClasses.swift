@@ -8,18 +8,6 @@
 
 import UIKit
 
-class NeverClearView: UIView {
-    override var backgroundColor: UIColor? {
-        didSet {
-            if backgroundColor!.cgColor.alpha == 0 {
-                if let theOldValue = oldValue{
-                    backgroundColor = theOldValue
-                }
-            }
-        }
-    }
-}
-
 
 class BlurredView: UIButton {
     @IBInspectable var dark: Bool = true {

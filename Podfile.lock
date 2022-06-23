@@ -135,7 +135,6 @@ DEPENDENCIES:
   - BadgeHub
   - Crashlytics (~> 3.12.0)
   - DLLocalNotifications
-  - Fabric (~> 1.9.0)
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -153,7 +152,6 @@ SPEC REPOS:
     - BoringSSL-GRPC
     - Crashlytics
     - DLLocalNotifications
-    - Fabric
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
@@ -178,6 +176,7 @@ SPEC REPOS:
     - SwipeCellKit
   trunk:
     - BadgeHub
+    - Fabric
     - FirebaseDatabase
 
 SPEC CHECKSUMS:
@@ -210,6 +209,6 @@ SPEC CHECKSUMS:
   Siren: b13a16a26591421b2fe734128baa3eeb8b7e4f73
   SwipeCellKit: 4eada3884ab1bbae5e8d2fb9030c242aa23d7f42
 
-PODFILE CHECKSUM: dfb23a92facca179c97902c5412b8f70cb7cde02
+PODFILE CHECKSUM: 4941dc59786ad591145999b17b81db312698abd4
 
 COCOAPODS: 1.11.3

@@ -9,6 +9,10 @@
 import Foundation
 
 class MainCoodinator : DACoordinator{
+   
+    
+    var parentCoodinator: DACoordinator? = nil
+    
     var childCoordinators = [DACoordinator]()
     var navigationController: UINavigationController
     
@@ -19,7 +23,7 @@ class MainCoodinator : DACoordinator{
     func start() {
         let vc = HomeViewController.instantiate()
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+        navigationController  .pushViewController(vc, animated: false)
     }
 }
 
@@ -32,7 +36,7 @@ extension MainCoodinator : HomeViewControllerCoordinator{
     }
     
     func showAthkarSectionWithMode(onlyBrief: Bool, section: AthkarSection) {
-        let vc = SectionContentViewController.instantiate()
+        let vc : SectionContentViewController = .instantiate()
         vc.data = section
         vc.commonOnly = onlyBrief
         self.navigationController.pushViewController(vc, animated: true)
@@ -56,9 +60,9 @@ extension MainCoodinator : HomeViewControllerCoordinator{
     }
     
     func showSettings() {
-        let vc = SettingsViewController.instantiate()
-        let navVC = UINavigationController.init(rootViewController: vc)
-        navVC.navigationBar.backgroundColor = UIColor.brown
-        self.navigationController.present(navVC, animated: true)
+        let settingsCoodinator = SettingsCoodinator(navigationController: navigationController)
+        settingsCoodinator.parentCoodinator = self
+        childCoordinators.append(settingsCoodinator)
+        settingsCoodinator.start()
     }
 }

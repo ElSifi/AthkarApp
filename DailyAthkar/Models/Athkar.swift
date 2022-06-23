@@ -24,7 +24,7 @@ struct Thikr: Codable {
     let textEn, textEnTrans, moreInfo, number: String
     let scriptMode, textAr: String
     let repeatTimes: Int
-    let specificTimeArabic: SpecificTimeArabic
+    let specificTimeArabic: String
     let specificTimeEnglish, type, textArUnsigned, thikrTitle: String
     let zEnt, zOpt, zPk: String
 
@@ -44,12 +44,6 @@ struct Thikr: Codable {
     }
 }
 
-enum SpecificTimeArabic: String, Codable {
-    case empty = ""
-    case بعدالسلاممنصلاةالفجر = "بعد السلام من صلاة الفجر"
-    case ثلاثمراتبعدصلاتيالفجروالمغربومرةبعدالصلواتالأخرى = "ثلاث مرات بعد صلاتي الفجر والمغرب. ومرة بعد الصلوات الأخرى"
-    case عشرمراتبعدالمغربوالصبح = "عشر مرات بعد المغرب والصبح"
-}
 
 
 extension AthkarSection{

@@ -29,6 +29,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             bgImage.image = theBGImage
         }
     }
+    
     @IBOutlet weak var headerLogo: UIImageView!{
         didSet{
             if(LanguageManager.isCurrentLanguageRTL()){
@@ -38,18 +39,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
+    
     @IBOutlet weak var redSettingsIcon: UIView!{
         didSet{
             redSettingsIcon.isHidden = true
         }
     }
+    
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var statusBarBG: UIView!
     @IBOutlet weak var tableContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
         doUI()
     }
     
@@ -70,7 +72,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         common.image = #imageLiteral(resourceName: "ex").maskWith(color: UIColor.init(hexString: "#211f1d"))
-        common.backgroundColor = UIColor.clear//UIColor.init(hexString: "#211f1d").withAlphaComponent(0.1)
+        common.backgroundColor = UIColor.clear
         
         let all = SwipeAction(style: .default, title: nil) {[weak self] action, indexPath in
             let cell = tableView.cellForRow(at: indexPath) as! SwipeTableViewCell
@@ -85,7 +87,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
         }
         
-        all.backgroundColor = .clear//UIColor.init(hexString: "#211f1d").withAlphaComponent(0.1)
+        all.backgroundColor = .clear
         all.image = #imageLiteral(resourceName: "full").maskWith(color: UIColor.init(hexString: "#211f1d"))
 
         
@@ -93,9 +95,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
-        
-        let alternatingColors = [UIColor.black.withAlphaComponent(0.1), UIColor.clear]
-        
         var options = SwipeTableOptions()
         options.expansionStyle = .none
         options.transitionStyle = .drag
@@ -124,7 +123,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }) { (completed) in
                     self.didTheInitialAnimation = true
                     if(languageWasAlreadySet){
-                    
                         if(!(StringKeys.UserDidSwipeMainSections.savedValue as? Bool ??  false)){
                             if let cell = self.theTable.visibleCells.first{
                                 if let swipeCell = cell as? HomeSectionTableViewCell{
@@ -144,6 +142,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func doUI(){
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         tableContainer.layer.cornerRadius = 6
         tableContainer.clipsToBounds = true
         tableContainer.alpha = 0
@@ -152,12 +151,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         blurEffectView.frame = tableContainer.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableContainer.insertSubview(blurEffectView, at: 0)
-        
-//        let statusBlurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
-//        let statusBlurEffectView = UIVisualEffectView(effect: statusBlurEffect)
-//        statusBlurEffectView.frame = self.statusBarBG.bounds
-//        statusBlurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        statusBarBG.insertSubview(statusBlurEffectView, at: 0)
     }
     
     
