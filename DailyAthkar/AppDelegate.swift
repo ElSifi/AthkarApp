@@ -14,7 +14,6 @@ import DLLocalNotifications
 import UserNotifications
 import OneSignal
 import Firebase
-import Fabric
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -28,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         doGlobalStyling()
         FirebaseApp.configure()
+        FirebaseConfiguration.shared.setLoggerLevel(.min)
         
-        Fabric.sharedSDK().debug = true
         
         let siren = Siren.shared
         siren.rulesManager = RulesManager(
@@ -73,7 +72,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
                 OneSignal.promptForPushNotifications(userResponse: { accepted in
-                    print("User accepted notifications: \(accepted)")
                     Utils.scheduleLocalNotifications(completion: { (success) in
                         print("scheduleLocalNotifications \(success)")
                     })
