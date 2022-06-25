@@ -57,5 +57,17 @@ class HomeSectionTableViewCell: SwipeTableViewCell {
         }
 
     }
+    
+    override open func layoutSubviews() {
+            super.layoutSubviews()
+            update()
+        }
+    
+    func update() {
+        print("New radius \(iconContainer.bounds.height / 2)")
+        iconContainer.layer.cornerRadius = iconContainer.bounds.height / 2
 
+        }
+    
+    
 }

@@ -28,7 +28,7 @@ class AthkarSectionsViewController: UIViewController, UITableViewDelegate, UITab
     
     var coordinator : AthkarSectionsCoordinator?
     var viewModel : AthkarSectionsViewViewModel!
-
+    
     @IBOutlet weak var theTable: UITableView!
     @IBOutlet weak var bgImage: UIImageView!{
         didSet{
@@ -87,7 +87,7 @@ class AthkarSectionsViewController: UIViewController, UITableViewDelegate, UITab
         
         all.backgroundColor = .clear
         all.image = #imageLiteral(resourceName: "full").maskWith(color: UIColor.init(hexString: "#211f1d"))
-
+        
         
         return [common, all]
     }
@@ -100,12 +100,12 @@ class AthkarSectionsViewController: UIViewController, UITableViewDelegate, UITab
         return options
     }
     
-   
+    
     var didTheInitialAnimation = false
     override func viewDidAppear(_ animated: Bool) {
         
-     let didTapAddFeatureBefore = UserDefaults.standard.bool(forKey: "didTapAddFeatureBefore")
-
+        let didTapAddFeatureBefore = UserDefaults.standard.bool(forKey: "didTapAddFeatureBefore")
+        
         if(!didTapAddFeatureBefore){
             self.redSettingsIcon.isHidden = false
         }
@@ -138,7 +138,7 @@ class AthkarSectionsViewController: UIViewController, UITableViewDelegate, UITab
         }
         
     }
-
+    
     func doUI(){
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
@@ -156,19 +156,25 @@ class AthkarSectionsViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return (tableView.bounds.height / CGFloat.init(self.viewModel.numberOfAthkarSections))
     }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cell = cell as? HomeSectionTableViewCell{
-            cell.iconContainer.layer.cornerRadius = (tableView.bounds.height / CGFloat(self.viewModel.numberOfAthkarSections)) * 0.4
-        }
 
-    }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
+    {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: nil) { _ in
+            self.theTable.visibleCells.forEach { aCell in
+                if let cell = aCell as? HomeSectionTableViewCell{
+                    cell.update()
+                }
+            }
+        }
+        
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "section") as! HomeSectionTableViewCell
         let section = self.viewModel.athkarSectionForIndex(indexPath.row)
-
+        
         cell.data = section
         cell.delegate = self
         return cell
