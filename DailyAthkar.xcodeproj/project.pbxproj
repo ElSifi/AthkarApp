@@ -97,7 +97,7 @@
 		92B265A92135332A0021C973 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 92B265A22135332A0021C973 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		92CB9902211B08BF00F4BF7B /* ShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CB9901211B08BF00F4BF7B /* ShareView.xib */; };
 		92E152762093A85400301BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E152752093A85400301BB6 /* AppDelegate.swift */; };
-		92E152782093A85400301BB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E152772093A85400301BB6 /* HomeViewController.swift */; };
+		92E152782093A85400301BB6 /* AthkarSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E152772093A85400301BB6 /* AthkarSectionsViewController.swift */; };
 		92E1527B2093A85400301BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E152792093A85400301BB6 /* Main.storyboard */; };
 		92E1527D2093A85400301BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E1527C2093A85400301BB6 /* Assets.xcassets */; };
 		92E152802093A85400301BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E1527E2093A85400301BB6 /* LaunchScreen.storyboard */; };
@@ -131,12 +131,15 @@
 		D824AD112863254D00956412 /* MainCoordintator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AD102863254D00956412 /* MainCoordintator.swift */; };
 		D82936DE225E011E0040F839 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82936DD225E011E0040F839 /* main.swift */; };
 		D849250A26170B55008F4182 /* DemocraticFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849250926170B54008F4182 /* DemocraticFeatures.swift */; };
+		D84B7F9B2866F1AB00B03AA8 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84B7F9A2866F1AB00B03AA8 /* Box.swift */; };
+		D84B7F9E2866F88D00B03AA8 /* AthkarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84B7F9D2866F88D00B03AA8 /* AthkarService.swift */; };
 		D85410C428636C980031548B /* Athkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85410C328636C980031548B /* Athkar.swift */; };
 		D890F7D42259522100D37E2A /* Meezan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890F7D32259522100D37E2A /* Meezan.swift */; };
 		D8A156F7225D4EB800C8F274 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A156F5225D4EB600C8F274 /* UIAlertController+Blocks.m */; };
 		D8A9E54B2257984800544B08 /* MeezanMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9E5492257984800544B08 /* MeezanMainViewController.swift */; };
 		D8B6E000225D56C70067FDC6 /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6DFFE225D56C70067FDC6 /* AppSettingsViewController.swift */; };
 		D8B6E001225D56C70067FDC6 /* AppSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B6DFFF225D56C70067FDC6 /* AppSettingsViewController.xib */; };
+		D8C858C628647CC6009074E8 /* AthkarSectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C858C528647CC6009074E8 /* AthkarSectionsViewModel.swift */; };
 		D8D6C1A928592565008D4F50 /* tokens.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D6C1A828592565008D4F50 /* tokens.plist */; };
 /* End PBXBuildFile section */
 
@@ -271,7 +274,7 @@
 		92DB00B22098942000BCB381 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		92E152722093A85400301BB6 /* DailyAthkar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyAthkar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E152752093A85400301BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		92E152772093A85400301BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		92E152772093A85400301BB6 /* AthkarSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarSectionsViewController.swift; sourceTree = "<group>"; };
 		92E1527A2093A85400301BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92E1527C2093A85400301BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92E1527F2093A85400301BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 		D824AD102863254D00956412 /* MainCoordintator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordintator.swift; sourceTree = "<group>"; };
 		D82936DD225E011E0040F839 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D849250926170B54008F4182 /* DemocraticFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemocraticFeatures.swift; sourceTree = "<group>"; };
+		D84B7F9A2866F1AB00B03AA8 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		D84B7F9D2866F88D00B03AA8 /* AthkarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarService.swift; sourceTree = "<group>"; };
 		D85410C328636C980031548B /* Athkar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athkar.swift; sourceTree = "<group>"; };
 		D890F7D32259522100D37E2A /* Meezan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meezan.swift; sourceTree = "<group>"; };
 		D8A156F5225D4EB600C8F274 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
@@ -410,6 +415,7 @@
 		D8A9E5492257984800544B08 /* MeezanMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeezanMainViewController.swift; sourceTree = "<group>"; };
 		D8B6DFFE225D56C70067FDC6 /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		D8B6DFFF225D56C70067FDC6 /* AppSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingsViewController.xib; sourceTree = "<group>"; };
+		D8C858C528647CC6009074E8 /* AthkarSectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarSectionsViewModel.swift; sourceTree = "<group>"; };
 		D8D6C1A828592565008D4F50 /* tokens.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tokens.plist; sourceTree = "<group>"; };
 		D8E14896225EA21600513F22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MeezanMainViewController.strings; sourceTree = "<group>"; };
 		DE7E9CB71F907D5583FF4764 /* Pods_DailyAthkar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyAthkar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -488,7 +494,7 @@
 		926D01E52098DB320023F06C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				92E152772093A85400301BB6 /* HomeViewController.swift */,
+				92E152772093A85400301BB6 /* AthkarSectionsViewController.swift */,
 				92E44EF02093C2D900040452 /* HomeSectionTableViewCell.swift */,
 			);
 			path = Home;
@@ -659,6 +665,7 @@
 		92E152742093A85400301BB6 /* DailyAthkar */ = {
 			isa = PBXGroup;
 			children = (
+				D84B7F9C2866F88100B03AA8 /* Services */,
 				D820EABD2864172E0036E803 /* ViewModels */,
 				D820EABA286414320036E803 /* Extentions */,
 				D85410C228636C980031548B /* Models */,
@@ -781,6 +788,8 @@
 		D820EABD2864172E0036E803 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D84B7F9A2866F1AB00B03AA8 /* Box.swift */,
+				D8C858C528647CC6009074E8 /* AthkarSectionsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -793,6 +802,14 @@
 				D820EABB286414C00036E803 /* SettingsCoodinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D84B7F9C2866F88100B03AA8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D84B7F9D2866F88D00B03AA8 /* AthkarService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D85410C228636C980031548B /* Models */ = {
@@ -1244,19 +1261,22 @@
 			files = (
 				925BEB0A212863920051BA8D /* ShareView.swift in Sources */,
 				D890F7D42259522100D37E2A /* Meezan.swift in Sources */,
+				D84B7F9E2866F88D00B03AA8 /* AthkarService.swift in Sources */,
 				926D01E82098DB5A0023F06C /* ThikrTableViewCell.swift in Sources */,
 				9203674320989259003D8DAC /* LanguageManager.m in Sources */,
 				9260074E2132C61600C0FF4F /* Utils.swift in Sources */,
+				D84B7F9B2866F1AB00B03AA8 /* Box.swift in Sources */,
 				D81AF8F9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m in Sources */,
 				D81AF8FB225E11C700D28630 /* FUICountryCodes.m in Sources */,
 				D81AF906225E11C700D28630 /* FUIPhoneAuth.m in Sources */,
 				D81AF900225E11C700D28630 /* FUICodeField.m in Sources */,
-				92E152782093A85400301BB6 /* HomeViewController.swift in Sources */,
+				92E152782093A85400301BB6 /* AthkarSectionsViewController.swift in Sources */,
 				D81AF8FD225E11C700D28630 /* FUICountryTableViewController.m in Sources */,
 				D824AD0D2863231800956412 /* DACoordinator.swift in Sources */,
 				D824AD112863254D00956412 /* MainCoordintator.swift in Sources */,
 				D81AF8F8225E11C700D28630 /* FUIPhoneEntryViewController.m in Sources */,
 				D81AF8F3225E11C700D28630 /* FUIPhoneAuthStrings.m in Sources */,
+				D8C858C628647CC6009074E8 /* AthkarSectionsViewModel.swift in Sources */,
 				D8B6E000225D56C70067FDC6 /* AppSettingsViewController.swift in Sources */,
 				D849250A26170B55008F4182 /* DemocraticFeatures.swift in Sources */,
 				9203674420989259003D8DAC /* NSBundle+Language.m in Sources */,

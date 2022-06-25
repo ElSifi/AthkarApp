@@ -533,7 +533,7 @@ Storyboarded
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableContainer.insertSubview(blurEffectView, at: 0)
                 
-        self.topTitle.text = self.data!.localizedName()
+        self.topTitle.text = self.data!.localizedName
         self.topTitle.font = DA_STYLE.savedFont.withSize(26)
     }
     

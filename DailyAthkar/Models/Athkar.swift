@@ -47,13 +47,18 @@ struct Thikr: Codable {
 
 
 extension AthkarSection{
-    func localizedName()->String {
+    var localizedName: String {
         if(LanguageManager.isCurrentLanguageRTL()){
             return self.nameAr
         }else{
             return self.nameEn
         }
     }
+    
+    var sectionImage:UIImage? {
+        return UIImage(named: self.stringID)
+    }
+    
 }
 
 

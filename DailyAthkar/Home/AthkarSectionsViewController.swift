@@ -12,17 +12,23 @@ import FirebaseUI
 import FirebaseFirestore
 import BadgeHub
 
-protocol HomeViewControllerCoordinator{
+protocol AthkarSectionsCoordinator{
     func showAthkarSection(section: AthkarSection)
     func showAthkarSectionWithMode(onlyBrief: Bool, section: AthkarSection)
     func showMeezan()
     func showSettings()
 }
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate, Storyboarded {
+protocol AthkarSectionsViewViewModel{
+    var numberOfAthkarSections: Int { get }
+    func athkarSectionForIndex(_ index: Int) -> AthkarSection
+}
+
+class AthkarSectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate, Storyboarded {
     
-    var coordinator : HomeViewControllerCoordinator?
-    
+    var coordinator : AthkarSectionsCoordinator?
+    var viewModel : AthkarSectionsViewViewModel!
+
     @IBOutlet weak var theTable: UITableView!
     @IBOutlet weak var bgImage: UIImageView!{
         didSet{
@@ -30,15 +36,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    @IBOutlet weak var headerLogo: UIImageView!{
-        didSet{
-            if(LanguageManager.isCurrentLanguageRTL()){
-                headerLogo.image = #imageLiteral(resourceName: "logo")
-            }else{
-                headerLogo.image = #imageLiteral(resourceName: "logoEnglish")
-            }
-        }
-    }
     
     @IBOutlet weak var redSettingsIcon: UIView!{
         didSet{
@@ -48,7 +45,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var statusBarBG: UIView!
-    @IBOutlet weak var tableContainer: UIView!
+    @IBOutlet weak var tableContainer: UIView!{
+        didSet{
+            tableContainer.layer.cornerRadius = 6
+            tableContainer.clipsToBounds = true
+            tableContainer.alpha = 0
+            let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.frame = tableContainer.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            tableContainer.insertSubview(blurEffectView, at: 0)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,14 +69,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let common = SwipeAction(style: .default, title: nil) {[weak self] action, indexPath in
             let cell = tableView.cellForRow(at: indexPath) as! SwipeTableViewCell
             action.fulfill(with: .reset)
-            
-            let section = theDatabase[indexPath.row]
-
+            guard let section = self?.viewModel.athkarSectionForIndex(indexPath.row) else { return }
             self?.coordinator?.showAthkarSectionWithMode(onlyBrief: true, section: section)
-            
-            cell.hideSwipe(animated: true, completion: { (completed) in
-
-            })
+            cell.hideSwipe(animated: true, completion: nil)
         }
         
         common.image = #imageLiteral(resourceName: "ex").maskWith(color: UIColor.init(hexString: "#211f1d"))
@@ -77,14 +80,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let all = SwipeAction(style: .default, title: nil) {[weak self] action, indexPath in
             let cell = tableView.cellForRow(at: indexPath) as! SwipeTableViewCell
             action.fulfill(with: ExpansionFulfillmentStyle.delete)
-
-            let section = theDatabase[indexPath.row]
+            guard let section = self?.viewModel.athkarSectionForIndex(indexPath.row) else { return }
             self?.coordinator?.showAthkarSectionWithMode(onlyBrief: false, section: section)
-
-            
-            cell.hideSwipe(animated: true, completion: { (completed) in
-                
-            })
+            cell.hideSwipe(animated: true, completion: nil)
         }
         
         all.backgroundColor = .clear
@@ -98,7 +96,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var options = SwipeTableOptions()
         options.expansionStyle = .none
         options.transitionStyle = .drag
-        options.backgroundColor = .clear//alternatingColors[ indexPath.row % alternatingColors.count ]//UIColor.red.withAlphaComponent(0.5)
+        options.backgroundColor = .clear
         return options
     }
     
@@ -143,14 +141,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func doUI(){
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        tableContainer.layer.cornerRadius = 6
-        tableContainer.clipsToBounds = true
-        tableContainer.alpha = 0
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = tableContainer.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        tableContainer.insertSubview(blurEffectView, at: 0)
+        
     }
     
     
@@ -159,39 +150,32 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return theDatabase.count
+        return self.viewModel.numberOfAthkarSections
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return (tableView.bounds.height / CGFloat.init(theDatabase.count))
+        return (tableView.bounds.height / CGFloat.init(self.viewModel.numberOfAthkarSections))
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? HomeSectionTableViewCell{
-            cell.iconContainer.layer.cornerRadius = (tableView.bounds.height / CGFloat(theDatabase.count)) * 0.4
+            cell.iconContainer.layer.cornerRadius = (tableView.bounds.height / CGFloat(self.viewModel.numberOfAthkarSections)) * 0.4
         }
 
     }
     
-    var sectionImages:[UIImage] = [#imageLiteral(resourceName: "WakingUp"), #imageLiteral(resourceName: "Morning"), #imageLiteral(resourceName: "AfterPrayer"), #imageLiteral(resourceName: "Evening"), #imageLiteral(resourceName: "Sleeping")]
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "section") as! HomeSectionTableViewCell
-        cell.data = theDatabase[indexPath.row]
+        let section = self.viewModel.athkarSectionForIndex(indexPath.row)
+
+        cell.data = section
         cell.delegate = self
-        if let image = self.sectionImages[safe: indexPath.row]{
-            cell.iconImage.image = image
-        }else{
-            cell.iconImage.image = nil
-        }
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {        
-        if let currentUser = Auth.auth().currentUser {
-            Meezan.recordTheAppLaunch(userUID: currentUser.uid)
-        }
-        let section : AthkarSection = theDatabase[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section : AthkarSection = self.viewModel.athkarSectionForIndex(indexPath.row)
         coordinator?.showAthkarSection(section: section)
     }
     

@@ -7,7 +7,6 @@ target 'DailyAthkar' do
 
   # Pods for DailyAthkar
   pod 'SwipeCellKit'
-  pod 'Sheeeeeeeeet'
   pod 'DLLocalNotifications'
   pod 'OneSignal'
   pod 'Firebase/Core'

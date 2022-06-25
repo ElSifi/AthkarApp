@@ -21,15 +21,21 @@ class MainCoodinator : DACoordinator{
     }
     
     func start() {
-        let vc = HomeViewController.instantiate()
+        let vc = AthkarSectionsViewController.instantiate()
         vc.coordinator = self
-        navigationController  .pushViewController(vc, animated: false)
+        vc.viewModel = HomeAthkarSectionsViewViewModel(athkarLoadingFunction: AthakrService.getAthkarSectionFromJSONFile)
+        navigationController.setViewControllers([vc], animated: false)
     }
 }
 
 
-extension MainCoodinator : HomeViewControllerCoordinator{
+extension MainCoodinator : AthkarSectionsCoordinator{
     func showAthkarSection(section: AthkarSection) {
+        
+        if let currentUser = Auth.auth().currentUser {
+            Meezan.recordTheAppLaunch(userUID: currentUser.uid)
+        }
+        
         let vc = SectionContentViewController.instantiate()
         vc.data = section
         self.navigationController.pushViewController(vc, animated: true)

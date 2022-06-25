@@ -119,20 +119,3 @@ struct DA_STYLE {
 }
 
 
-var theDatabase : [AthkarSection]{
-    if let path = Bundle.main.path(forResource:"db", ofType: "json")
-    {
-        let url = URL.init(fileURLWithPath: path)
-        do{
-            let jsonData = try Data.init(contentsOf: url)
-            let athkarSections = try! JSONDecoder().decode([AthkarSection].self, from: jsonData)
-                return athkarSections
-            
-
-        } catch{
-            return []
-        }
-        
-    }
-    return []
-}

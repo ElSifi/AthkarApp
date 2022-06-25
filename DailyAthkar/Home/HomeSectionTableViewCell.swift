@@ -14,7 +14,8 @@ class HomeSectionTableViewCell: SwipeTableViewCell {
     var data: AthkarSection?{
         didSet{
             if let theData = data{
-                self.titleLabel.text = theData.localizedName()
+                self.titleLabel.text = theData.localizedName
+                self.iconImage?.image = theData.sectionImage
             }
         }
     }

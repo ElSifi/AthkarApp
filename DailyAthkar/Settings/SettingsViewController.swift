@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Sheeeeeeeeet
 import FirebaseAuth
 import FirebaseUI
 
@@ -255,15 +254,17 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 self.show(vc, sender: self)
             
             default:
-                var options : [ActionSheetItem] = []
-                options.append(ActionSheetTitle.init(title: item.title))
-                for value in item.values{
-                    let anOption = ActionSheetItem.init(title: value.title, subtitle: nil, value: value.id, image: nil)
-                    options.append(anOption)
-                }
                 
-                let sheet = ActionSheet(items: options) { _, selectedItem in
-                    guard let value = selectedItem.value as? String else { return }
+                let buttons = item.values.map { settingsItemValue in
+                    return settingsItemValue.title
+                }
+                let alert = UIAlertController.show(in: self, withTitle: item.title, message: nil, preferredStyle: UIAlertController.Style.alert, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: buttons) { popOverController in
+                    
+                } tap: { alertController, alertAction, index in
+                    let selectedItem = item.values.first { settingsItemValue in
+                        return settingsItemValue.title == alertAction.title
+                    }
+                    guard let value = selectedItem?.id as? String else { return }
                     print(theEnumID, value)
                     if let theEnumID : StringKeys = StringKeys.init(rawValue: item.id){
                         switch (theEnumID, value) {
@@ -275,13 +276,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                             tableView.reloadData()
                         }
                     }
-                    
                 }
-                
-                options.append(ActionSheetCancelButton.init(title: "cancel".localized))
-                
-                
-                sheet.present(in: self, from: cell)
+
+                alert.view.tintColor = UIColor.primary
             }
         }else{
             switch(item.id){
@@ -377,16 +374,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 })
 
                 LanguageManager.saveLanguage(by: index!)
-
-
-
-
                 let delegate = UIApplication.shared.delegate as! AppDelegate
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                //delegate.window?.rootViewController = storyboard.instantiateInitialViewController()
-                if let root = delegate.window!.rootViewController as? UINavigationController{
-                    root.setViewControllers([(storyboard.instantiateInitialViewController() as! UINavigationController).viewControllers.first!], animated: true)
-                }
+                delegate.coordinator?.start()
             }
     
         }
