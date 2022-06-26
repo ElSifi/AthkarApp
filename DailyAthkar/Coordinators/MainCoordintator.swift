@@ -21,32 +21,35 @@ class MainCoodinator : DACoordinator{
     }
     
     func start() {
-        let vc = AthkarSectionsViewController.instantiate()
+        let vc = HomeAthkarSectionsViewController.instantiate()
         vc.coordinator = self
-        vc.viewModel = HomeAthkarSectionsViewViewModel(athkarLoadingFunction: AthakrService.getAthkarSectionFromJSONFile)
+        vc.viewModel = HomeAthkarSectionsScreenViewModel(athkarLoadingFunction: AthakrService.getAthkarSectionFromJSONFile)
         navigationController.setViewControllers([vc], animated: false)
     }
 }
 
 
-extension MainCoodinator : AthkarSectionsCoordinator{
-    func showAthkarSection(section: AthkarSection) {
-        
+extension MainCoodinator : AthkarSectionsScreenCoordinator{
+    func showAthkarSectionDetails(sectionViewModel: AthkarSectionDetailsViewModel) {
         if let currentUser = Auth.auth().currentUser {
             Meezan.recordTheAppLaunch(userUID: currentUser.uid)
         }
         
         let vc = SectionContentViewController.instantiate()
-        vc.data = section
+        vc.viewModel = sectionViewModel
         self.navigationController.pushViewController(vc, animated: true)
     }
     
-    func showAthkarSectionWithMode(onlyBrief: Bool, section: AthkarSection) {
+    func showAthkarSectionDetailsWithMode(onlyBrief: Bool, sectionViewModel: AthkarSectionDetailsViewModel) {
         let vc : SectionContentViewController = .instantiate()
-        vc.data = section
-        vc.commonOnly = onlyBrief
+        sectionViewModel.onlyBrief = onlyBrief
+        vc.viewModel = sectionViewModel
         self.navigationController.pushViewController(vc, animated: true)
     }
+    
+  
+    
+
 
     
     func showMeezan() {

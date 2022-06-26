@@ -10,7 +10,7 @@ import UIKit
 import SwipeCellKit
 
 protocol ThikrTableViewCellDelegate : class {
-    func playSoundOfThikr(thikr : Thikr)
+    func playSoundOfThikrViewModel(thikrViewModel : ThikrCellViewModel)
 }
 
 class ThikrTableViewCell: SwipeTableViewCell {
@@ -20,7 +20,7 @@ class ThikrTableViewCell: SwipeTableViewCell {
     @IBOutlet weak var middleRepeatLabel: UILabel!
     @IBOutlet weak var rightRepeatLabel: UILabel!
     @IBOutlet weak var soundIcon: UIImageView!
-    var data :Thikr?{
+    var data :ThikrCellViewModel?{
         didSet{
             guard let data = data else{
                 return
@@ -81,7 +81,7 @@ class ThikrTableViewCell: SwipeTableViewCell {
         print("soundAction")
         
         if let del = self.athkarDelegate, let data = self.data{
-            del.playSoundOfThikr(thikr: data)
+            del.playSoundOfThikrViewModel(thikrViewModel: data)
         }
     }
 }

@@ -187,14 +187,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func doGlobalStyling(){
         
-        
-        
-        //            for fontFamilyName in UIFont.familyNames{
-        //                for fontName in UIFont.fontNames(forFamilyName: fontFamilyName){
-        //                    print("Family: \(fontFamilyName)     Font: \(fontName)")
-        //                }
-        //            }
-        
+
         
         self.window?.tintColor = DA_STYLE.darkThemeColor
         
@@ -208,17 +201,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //NSAttributedStringKey.font: DA_STYLE.defaultBoldFont.withSize(17)
         ]
         
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            //NSAttributedStringKey.font: DA_STYLE.defaultBoldFont.withSize(17)
+        ]
+        
         UISegmentedControl.appearance().tintColor = DA_STYLE.darkThemeColor
         
-        //UIBarButtonItem.appearance().setTitleTextAttributes([
-        //NSAttributedStringKey.font : ShopXStyle.defaultNormalFont.withSize(16)],
-        //                                            for: UIControlState.normal)
-        //UIBarButtonItem.appearance().setTitleTextAttributes([
-        //NSAttributedStringKey.font : ShopXStyle.defaultNormalFont.withSize(16)],
-        //                                              for: UIControlState.highlighted)
-        
-        
-        
+  
         
     }
     

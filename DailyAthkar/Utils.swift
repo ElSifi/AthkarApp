@@ -88,7 +88,7 @@ class Utils: NSObject {
         
     }
     
-    static func getPathForSoundFileForThikr(thikr : Thikr, sectionID: String) -> String?{
+    static func getPathForSoundFileForThikr(thikr : ThikrCellViewModel, sectionID: String) -> String?{
         var path : String?
         let sheikhNamePrefix = "Mishary"
         let commonZikrTitle = thikr.thikrTitle

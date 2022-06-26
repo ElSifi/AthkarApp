@@ -22,7 +22,8 @@ struct AthkarSection: Codable {
 // MARK: - Content
 struct Thikr: Codable {
     let textEn, textEnTrans, moreInfo, number: String
-    let scriptMode, textAr: String
+    let scriptMode: Bool
+    let textAr: String
     let repeatTimes: Int
     let specificTimeArabic: String
     let specificTimeEnglish, type, textArUnsigned, thikrTitle: String
@@ -46,29 +47,6 @@ struct Thikr: Codable {
 
 
 
-extension AthkarSection{
-    var localizedName: String {
-        if(LanguageManager.isCurrentLanguageRTL()){
-            return self.nameAr
-        }else{
-            return self.nameEn
-        }
-    }
-    
-    var sectionImage:UIImage? {
-        return UIImage(named: self.stringID)
-    }
-    
-}
 
 
 
-extension Thikr{
-    func localizedText()->String {
-        if(LanguageManager.isCurrentLanguageRTL()){
-            return self.textAr
-        }else{
-            return self.textEn
-        }
-    }
-}

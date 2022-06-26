@@ -11,11 +11,11 @@ import SwipeCellKit
 
 class HomeSectionTableViewCell: SwipeTableViewCell {
 
-    var data: AthkarSection?{
+    var viewModel: AthkarSectionCellViewModel?{
         didSet{
-            if let theData = data{
-                self.titleLabel.text = theData.localizedName
-                self.iconImage?.image = theData.sectionImage
+            if let viewModel = viewModel{
+                self.titleLabel.text = viewModel.localizedName
+                self.iconImage?.image = viewModel.sectionImage
             }
         }
     }

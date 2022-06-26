@@ -236,7 +236,12 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         
         let closeButton = UIBarButtonItem.init(title: "save".localized, style: .plain, target: self, action: #selector(SettingsViewController.close(_:)))
-        self.navigationItem.leftBarButtonItem = closeButton
+        self.navigationItem.rightBarButtonItem = closeButton
+        
+        navigationItem.title = "Settings".localized
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        
         
     }
     

@@ -12,22 +12,23 @@ import FirebaseUI
 import FirebaseFirestore
 import BadgeHub
 
-protocol AthkarSectionsCoordinator{
-    func showAthkarSection(section: AthkarSection)
-    func showAthkarSectionWithMode(onlyBrief: Bool, section: AthkarSection)
+protocol AthkarSectionsScreenCoordinator{
+    func showAthkarSectionDetails(sectionViewModel: AthkarSectionDetailsViewModel)
+    func showAthkarSectionDetailsWithMode(onlyBrief: Bool, sectionViewModel: AthkarSectionDetailsViewModel)
     func showMeezan()
     func showSettings()
 }
 
-protocol AthkarSectionsViewViewModel{
+protocol AthkarSectionsScreenViewModel{
     var numberOfAthkarSections: Int { get }
-    func athkarSectionForIndex(_ index: Int) -> AthkarSection
+    func athkarSectionCellViewModelForIndex(_ index: Int) -> AthkarSectionCellViewModel
+    func athkarSectionDetailsViewModelForIndex(_ index: Int) -> AthkarSectionDetailsViewModel
 }
 
-class AthkarSectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate, Storyboarded {
+class HomeAthkarSectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate, Storyboarded {
     
-    var coordinator : AthkarSectionsCoordinator?
-    var viewModel : AthkarSectionsViewViewModel!
+    var coordinator : AthkarSectionsScreenCoordinator?
+    var viewModel : AthkarSectionsScreenViewModel!
     
     @IBOutlet weak var theTable: UITableView!
     @IBOutlet weak var bgImage: UIImageView!{
@@ -69,8 +70,8 @@ class AthkarSectionsViewController: UIViewController, UITableViewDelegate, UITab
         let common = SwipeAction(style: .default, title: nil) {[weak self] action, indexPath in
             let cell = tableView.cellForRow(at: indexPath) as! SwipeTableViewCell
             action.fulfill(with: .reset)
-            guard let section = self?.viewModel.athkarSectionForIndex(indexPath.row) else { return }
-            self?.coordinator?.showAthkarSectionWithMode(onlyBrief: true, section: section)
+            guard let section = self?.viewModel.athkarSectionDetailsViewModelForIndex(indexPath.row) else { return }
+            self?.coordinator?.showAthkarSectionDetailsWithMode(onlyBrief: true, sectionViewModel: section)
             cell.hideSwipe(animated: true, completion: nil)
         }
         
@@ -80,8 +81,8 @@ class AthkarSectionsViewController: UIViewController, UITableViewDelegate, UITab
         let all = SwipeAction(style: .default, title: nil) {[weak self] action, indexPath in
             let cell = tableView.cellForRow(at: indexPath) as! SwipeTableViewCell
             action.fulfill(with: ExpansionFulfillmentStyle.delete)
-            guard let section = self?.viewModel.athkarSectionForIndex(indexPath.row) else { return }
-            self?.coordinator?.showAthkarSectionWithMode(onlyBrief: false, section: section)
+            guard let section = self?.viewModel.athkarSectionDetailsViewModelForIndex(indexPath.row) else { return }
+            self?.coordinator?.showAthkarSectionDetailsWithMode(onlyBrief: false, sectionViewModel: section)
             cell.hideSwipe(animated: true, completion: nil)
         }
         
@@ -173,16 +174,16 @@ class AthkarSectionsViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "section") as! HomeSectionTableViewCell
-        let section = self.viewModel.athkarSectionForIndex(indexPath.row)
+        let section = self.viewModel.athkarSectionCellViewModelForIndex(indexPath.row)
         
-        cell.data = section
+        cell.viewModel = section
         cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let section : AthkarSection = self.viewModel.athkarSectionForIndex(indexPath.row)
-        coordinator?.showAthkarSection(section: section)
+        let section: AthkarSectionDetailsViewModel = self.viewModel.athkarSectionDetailsViewModelForIndex(indexPath.row)
+        coordinator?.showAthkarSectionDetails(sectionViewModel: section)
     }
     
     @IBAction func meezanAction(_ sender: UIButton) {

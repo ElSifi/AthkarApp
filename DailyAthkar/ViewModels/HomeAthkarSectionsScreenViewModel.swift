@@ -10,7 +10,7 @@ import Foundation
 
 typealias AthkarLoadingFunction = () -> ([AthkarSection])
 
-class HomeAthkarSectionsViewViewModel {
+class HomeAthkarSectionsScreenViewModel {
     
     var loadAthkar: AthkarLoadingFunction
     var athkarSections: Box<[AthkarSection]> = Box([])
@@ -22,13 +22,19 @@ class HomeAthkarSectionsViewViewModel {
 }
 
 
-extension HomeAthkarSectionsViewViewModel : AthkarSectionsViewViewModel{
+extension HomeAthkarSectionsScreenViewModel : AthkarSectionsScreenViewModel{
+    func athkarSectionCellViewModelForIndex(_ index: Int) -> AthkarSectionCellViewModel {
+        return AthkarSectionCellViewModel(section: athkarSections.value[index])
+    }
+    
+    func athkarSectionDetailsViewModelForIndex(_ index: Int) -> AthkarSectionDetailsViewModel {
+        return AthkarSectionDetailsViewModel(section: athkarSections.value[index])
+
+    }
+    
    
     var numberOfAthkarSections: Int{
         return athkarSections.value.count
     }
 
-    func athkarSectionForIndex(_ index: Int) -> AthkarSection {
-        return athkarSections.value[index]
-    }
 }

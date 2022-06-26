@@ -65,25 +65,17 @@ Storyboarded
     
     
     
-    var data : AthkarSection?{
-        didSet{
-            if let data = self.data{
-                if(self.commonOnly){
-                    self.athkar =  data.content.filter { $0.scriptMode == "1" }
-                }else{
-                    self.athkar = data.content
-                }
-            }
-            
-        }
-    }
-    var commonOnly : Bool = ((StringKeys.SettingsItemAllAthkarOrOnlyShortOnes.savedValue as? String) ?? "") == "short"
-    var athkar : [Thikr] = []
-    @IBOutlet weak var footerBarHeight: NSLayoutConstraint!
+    var viewModel : AthkarSectionDetailsViewModel!
+//    var athkar : [Thikr] = []
     @IBOutlet weak var tableContainer: UIView!
     @IBOutlet weak var theTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+//        if let data = self.viewModel{
+//            self.athkar = data.athkarList
+//
+//        }
+        
         doUI()
         theTable.rowHeight = UITableView.automaticDimension
         theTable.estimatedRowHeight = 100
@@ -176,12 +168,12 @@ Storyboarded
             }
             updatePlayerUI()
         }else{
-            playAthkarList(passedAthkarToPlay: self.athkar)
+            playAthkarList(passedAthkarToPlay: self.viewModel.athkarList)
         }
     }
-    func getThikrIndex(thikr : Thikr)->Int{
-        for (index, aThikr) in self.athkar.enumerated() {
-            if(aThikr.zPk == thikr.zPk){
+    func getThikrViewModelIndex(thikrViewModel : ThikrCellViewModel)->Int{
+        for (index, aThikr) in self.viewModel.athkarList.enumerated() {
+            if(aThikr.zPk == thikrViewModel.zPk){
                 return index
             }
         }
@@ -236,8 +228,8 @@ Storyboarded
         
         let thikr = athkarToPlay[currentPlayingThikrIndex]
         
-        if let path = Utils.getPathForSoundFileForThikr(thikr: thikr, sectionID: self.data!.stringID){
-            let thikrIndex = getThikrIndex(thikr: thikr)
+        if let path = Utils.getPathForSoundFileForThikr(thikr: thikr, sectionID: self.viewModel!.stringID){
+            let thikrIndex = getThikrViewModelIndex(thikrViewModel: thikr)
             let indexPath = IndexPath.init(row: thikrIndex, section: 0)
             
                 let cellRect = theTable.rectForRow(at: indexPath)
@@ -263,7 +255,7 @@ Storyboarded
                 UIApplication.shared.beginReceivingRemoteControlEvents()
                 MPNowPlayingInfoCenter.default().nowPlayingInfo = [
                     MPMediaItemPropertyTitle: thikr.textArUnsigned,
-                    MPMediaItemPropertyAlbumTitle: self.data!.stringID,
+                    MPMediaItemPropertyAlbumTitle: self.viewModel!.stringID,
                     MPMediaItemPropertyArtist: "mishary".localized
                 ]
             }
@@ -280,9 +272,9 @@ Storyboarded
             return false
         }
     }
-    var athkarToPlay : [Thikr] = []
+    var athkarToPlay : [ThikrCellViewModel] = []
     var currentPlayingThikrIndex = 0
-    func playAthkarList(passedAthkarToPlay : [Thikr]){
+    func playAthkarList(passedAthkarToPlay : [ThikrCellViewModel]){
         self.athkarToPlay = passedAthkarToPlay
         self.currentPlayingThikrIndex = 0
         if(!playCurrentThikr()){
@@ -317,7 +309,7 @@ Storyboarded
                 let cell = tableView.cellForRow(at: indexPath) as! ThikrTableViewCell
                 cell.hideSwipe(animated: true, completion: {[weak self] (completed) in
                     if let mySelf = self{
-                        let subArray = mySelf.athkar[indexPath.row...indexPath.row]
+                        let subArray = mySelf.viewModel.athkarList[indexPath.row...indexPath.row]
                         mySelf.playAthkarList(passedAthkarToPlay: Array(subArray))
                     }
                 })
@@ -331,7 +323,7 @@ Storyboarded
                 let cell = tableView.cellForRow(at: indexPath) as! ThikrTableViewCell
                 cell.hideSwipe(animated: true, completion: {[weak self] (completed) in
                     if let mySelf = self{
-                        let subArray = mySelf.athkar[indexPath.row...mySelf.athkar.count - 1]
+                        let subArray = mySelf.viewModel.athkarList[indexPath.row...mySelf.viewModel.athkarList.count - 1]
                         mySelf.playAthkarList(passedAthkarToPlay: Array(subArray))
                     }
                 })
@@ -398,7 +390,7 @@ Storyboarded
     
     func saveAsImage(indexPath : IndexPath){
         
-        let thikr = self.athkar[indexPath.row]
+        let thikr = self.viewModel.athkarList[indexPath.row]
         
         let shareView =  UINib(nibName: "ShareView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ShareView
         
@@ -447,17 +439,17 @@ Storyboarded
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.athkar.count
+        return self.viewModel.athkarList.count
     }
-    func playSoundOfThikr(thikr: Thikr) {
+    func playSoundOfThikrViewModel(thikrViewModel: ThikrCellViewModel) {
         
-        let index = getThikrIndex(thikr: thikr)
+        let index = getThikrViewModelIndex(thikrViewModel: thikrViewModel)
         
         if
             (
                 !athkarToPlay.isEmpty
                 && self.audioPlayer != nil
-                && thikr.zPk == athkarToPlay[currentPlayingThikrIndex].zPk
+                && thikrViewModel.zPk == athkarToPlay[currentPlayingThikrIndex].zPk
             )
         {
             if(self.audioPlayer!.isPlaying){
@@ -466,7 +458,7 @@ Storyboarded
                 self.audioPlayer!.play()
             }
         }else{
-            let subArray = self.athkar[index...self.athkar.count - 1]
+            let subArray = self.viewModel.athkarList[index...self.viewModel.athkarList.count - 1]
             self.playAthkarList(passedAthkarToPlay: Array(subArray))
             
         }
@@ -479,7 +471,7 @@ Storyboarded
         let cell = tableView.dequeueReusableCell(withIdentifier: "thikr") as! ThikrTableViewCell
         cell.delegate = self
         cell.athkarDelegate = self
-        let thikr = self.athkar[indexPath.row]
+        let thikr = self.viewModel.athkarList[indexPath.row]
         
         
         if
@@ -487,7 +479,7 @@ Storyboarded
                 !athkarToPlay.isEmpty
                 && self.audioPlayer != nil
                 && self.audioPlayer!.isPlaying
-                && getThikrIndex(thikr: athkarToPlay[currentPlayingThikrIndex]) == indexPath.row
+                && getThikrViewModelIndex(thikrViewModel: athkarToPlay[currentPlayingThikrIndex]) == indexPath.row
             )
         {
             cell.isAudioPlaying = true
@@ -516,9 +508,9 @@ Storyboarded
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(self.athkar[indexPath.row].currentCount < self.athkar[indexPath.row].repeatTimes)
+        if(self.viewModel.athkarList[indexPath.row].currentCount < self.viewModel.athkarList[indexPath.row].repeatTimes)
         {
-            self.athkar[indexPath.row].currentCount = self.athkar[indexPath.row].currentCount + 1
+            self.viewModel.athkarList[indexPath.row].currentCount = self.viewModel.athkarList[indexPath.row].currentCount + 1
             tableView.reloadRows(at: [indexPath], with: .fade)
         }
     }
@@ -533,7 +525,7 @@ Storyboarded
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableContainer.insertSubview(blurEffectView, at: 0)
                 
-        self.topTitle.text = self.data!.localizedName
+        self.topTitle.text = self.viewModel!.localizedName
         self.topTitle.font = DA_STYLE.savedFont.withSize(26)
     }
     

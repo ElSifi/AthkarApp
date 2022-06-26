@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Athkar Sections View Controller-->
+        <!--Home Athkar Sections View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="AthkarSectionsViewController" id="BYZ-38-t0r" customClass="AthkarSectionsViewController" customModule="DailyAthkar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeAthkarSectionsViewController" id="BYZ-38-t0r" customClass="HomeAthkarSectionsViewController" customModule="DailyAthkar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
