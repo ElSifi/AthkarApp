@@ -193,13 +193,13 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             otherOptions: ["title" : ""])
         )
         
-//        array.append(SettingsItem.init(
-//            id: "contact",
-//            title: "contact developer".localized,
-//            values: [],
-//            selectedValueID: "contact",
-//            otherOptions: ["title" : ""])
-//        )
+        array.append(SettingsItem.init(
+            id: "contact",
+            title: "contact developer".localized,
+            values: [],
+            selectedValueID: "contact",
+            otherOptions: ["title" : ""])
+        )
         
         array.append(SettingsItem.init(
             id: "featureRequests",
@@ -301,17 +301,11 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 })
             case "contact":
                 
-                
-                let phoneNumber =  "+201066276777"
-                let whatsappURL = URL(string: "https://api.whatsapp.com/send?phone=\(phoneNumber)")!
-                let testWhatsappURl = URL(string: "whatsapp://send?text=Message")!
-                
-                let twitterURL = URL(string: "twitter://user?screen_name=mo_badi3")!
-                
-                if (UIApplication.shared.canOpenURL(testWhatsappURl)) {
-                    UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
-                }else if (UIApplication.shared.canOpenURL(twitterURL)) {
+                let twitterURL = URL(string: "twitter://user?screen_name=badi3")!
+                if (UIApplication.shared.canOpenURL(twitterURL)) {
                     UIApplication.shared.open(twitterURL, options: [:], completionHandler: nil)
+                }else{
+                    
                 }
             case "rate":
                 rateApp(appId: "id821664774") { success in
