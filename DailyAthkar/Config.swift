@@ -8,7 +8,7 @@
 
 import UIKit
 
-let allImages = [#imageLiteral(resourceName: "bg1"), #imageLiteral(resourceName: "bg2")]
+let allImages = [#imageLiteral(resourceName: "bg1"), #imageLiteral(resourceName: "bg2"), #imageLiteral(resourceName: "bg3"), #imageLiteral(resourceName: "bg4")]
 let theBGImage = allImages.randomItem()!
 
 var currentLanguageMode : LanguageMode {

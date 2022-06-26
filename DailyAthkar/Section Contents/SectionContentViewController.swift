@@ -369,7 +369,7 @@ class SectionContentViewController: UIViewController,
         shareView.textContainer.insertSubview(blurEffectView, at: 0)
         
         
-        shareView.thirkLabel.text = "thikr[Utils.getThikrTextKey()].stringValue"
+        shareView.thirkLabel.text = thikr.localizedText()
         shareView.thirkLabel.numberOfLines = 0
         shareView.thirkLabel.textAlignment = .center
         shareView.thirkLabel.font = DA_STYLE.savedFont.withSize(50)
