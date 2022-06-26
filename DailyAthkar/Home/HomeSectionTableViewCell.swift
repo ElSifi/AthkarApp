@@ -10,7 +10,7 @@ import UIKit
 import SwipeCellKit
 
 class HomeSectionTableViewCell: SwipeTableViewCell {
-
+    
     var viewModel: AthkarSectionCellViewModel?{
         didSet{
             if let viewModel = viewModel{
@@ -44,10 +44,10 @@ class HomeSectionTableViewCell: SwipeTableViewCell {
     }
     
     
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         //super.setSelected(selected, animated: animated)
-
+        
         
     }
     
@@ -55,19 +55,15 @@ class HomeSectionTableViewCell: SwipeTableViewCell {
         UIView.animate(withDuration: 0.15) {
             self.bgView.backgroundColor = UIColor.black.withAlphaComponent(highlighted ? 0.75 : 0.6)
         }
-
+        
     }
     
     override open func layoutSubviews() {
-            super.layoutSubviews()
-            update()
-        }
+        super.layoutSubviews()
+        update()
+    }
     
     func update() {
-        print("New radius \(iconContainer.bounds.height / 2)")
         iconContainer.layer.cornerRadius = iconContainer.bounds.height / 2
-
-        }
-    
-    
+    }
 }

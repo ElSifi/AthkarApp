@@ -14,14 +14,14 @@ import StoreKit
 
 
 class SectionContentViewController: UIViewController,
-    UITableViewDelegate,
-    UITableViewDataSource,
-    SwipeTableViewCellDelegate,
-    AVAudioPlayerDelegate,
-    UIGestureRecognizerDelegate,
-    UIScrollViewDelegate,
-    ThikrTableViewCellDelegate,
-Storyboarded
+                                    UITableViewDelegate,
+                                    UITableViewDataSource,
+                                    SwipeTableViewCellDelegate,
+                                    AVAudioPlayerDelegate,
+                                    UIGestureRecognizerDelegate,
+                                    UIScrollViewDelegate,
+                                    ThikrTableViewCellDelegate,
+                                    Storyboarded
 {
     
     var audioPlayer : AVAudioPlayer?
@@ -29,7 +29,7 @@ Storyboarded
     @IBOutlet weak var playPauseButton: UIButton!{
         didSet{
             playPauseButton.setTitle("play".localized, for: .normal)
-
+            
         }
     }
     @IBOutlet weak var prevButton: UIButton!{
@@ -40,7 +40,7 @@ Storyboarded
     @IBOutlet weak var nextButton: UIButton!{
         didSet{
             nextButton.setTitle("next".localized, for: .normal)
-
+            
         }
     }
     
@@ -66,50 +66,15 @@ Storyboarded
     
     
     var viewModel : AthkarSectionDetailsViewModel!
-//    var athkar : [Thikr] = []
     @IBOutlet weak var tableContainer: UIView!
     @IBOutlet weak var theTable: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let data = self.viewModel{
-//            self.athkar = data.athkarList
-//
-//        }
-        
         doUI()
-        theTable.rowHeight = UITableView.automaticDimension
-        theTable.estimatedRowHeight = 100
         navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
-        
-        
-        let commandCenter = MPRemoteCommandCenter.shared()
-        commandCenter.playCommand.isEnabled = true
-        commandCenter.pauseCommand.isEnabled = true
-        commandCenter.playCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
-            self?.audioPlayer?.play()
-            self?.updatePlayerUI()
-            print("play")
-            return .success
-        }
-        commandCenter.pauseCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
-            self?.audioPlayer?.pause()
-            self?.updatePlayerUI()
-            print("pause")
-            return .success
-        }
-        
-        commandCenter.nextTrackCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
-            print("nextTrackCommand")
-            self?.nextAction((self?.nextButton)!)
-            return .success
-        }
-        
-        commandCenter.previousTrackCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
-            print("previousTrackCommand")
-            self?.prevAction((self?.prevButton)!)
-            return .success
-        }
+        setupCommandCenter()
     }
     
     //to enable swipe to dismiss UINavigationController thing
@@ -119,6 +84,7 @@ Storyboarded
         }
         return false
     }
+    
     var requstedReview = false
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
@@ -130,7 +96,6 @@ Storyboarded
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        
         self.nextAction(self.nextButton)
     }
     
@@ -206,7 +171,7 @@ Storyboarded
             self.nextButton.alpha = 1
         }else{
             self.nextButton.alpha = 0.5
-
+            
         }
         
         
@@ -232,11 +197,11 @@ Storyboarded
             let thikrIndex = getThikrViewModelIndex(thikrViewModel: thikr)
             let indexPath = IndexPath.init(row: thikrIndex, section: 0)
             
-                let cellRect = theTable.rectForRow(at: indexPath)
-                let completelyVisible = theTable.bounds.contains(cellRect)
-                if(!completelyVisible){
-                    self.theTable.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.none, animated: true)
-                }
+            let cellRect = theTable.rectForRow(at: indexPath)
+            let completelyVisible = theTable.bounds.contains(cellRect)
+            if(!completelyVisible){
+                self.theTable.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.none, animated: true)
+            }
             
             
             
@@ -465,7 +430,7 @@ Storyboarded
         
         updatePlayerUI()
         
-
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "thikr") as! ThikrTableViewCell
@@ -487,7 +452,7 @@ Storyboarded
             cell.isAudioPlaying = false
         }
         
- 
+        
         
         let athkarData = thikr
         
@@ -517,6 +482,8 @@ Storyboarded
     
     
     func doUI(){
+        theTable.rowHeight = UITableView.automaticDimension
+        theTable.estimatedRowHeight = 100
         tableContainer.layer.cornerRadius = 6
         tableContainer.clipsToBounds = true
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
@@ -524,7 +491,7 @@ Storyboarded
         blurEffectView.frame = tableContainer.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableContainer.insertSubview(blurEffectView, at: 0)
-                
+        
         self.topTitle.text = self.viewModel!.localizedName
         self.topTitle.font = DA_STYLE.savedFont.withSize(26)
     }
@@ -532,6 +499,36 @@ Storyboarded
     
     @IBAction func goBack(_ sender: Any) {
         _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+    fileprivate func setupCommandCenter() {
+        let commandCenter = MPRemoteCommandCenter.shared()
+        commandCenter.playCommand.isEnabled = true
+        commandCenter.pauseCommand.isEnabled = true
+        commandCenter.playCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
+            self?.audioPlayer?.play()
+            self?.updatePlayerUI()
+            print("play")
+            return .success
+        }
+        commandCenter.pauseCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
+            self?.audioPlayer?.pause()
+            self?.updatePlayerUI()
+            print("pause")
+            return .success
+        }
+        
+        commandCenter.nextTrackCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
+            print("nextTrackCommand")
+            self?.nextAction((self?.nextButton)!)
+            return .success
+        }
+        
+        commandCenter.previousTrackCommand.addTarget { [weak self] (event) -> MPRemoteCommandHandlerStatus in
+            print("previousTrackCommand")
+            self?.prevAction((self?.prevButton)!)
+            return .success
+        }
     }
     
 }
