@@ -8,21 +8,37 @@
 
 import Foundation
 
-typealias AthkarLoadingFunction = () -> ([AthkarSection])
+typealias AthkarLoadingFunction = (_ completion:(([AthkarSection]) -> ())) -> ()
 
 class HomeAthkarSectionsScreenViewModel {
     
     var loadAthkar: AthkarLoadingFunction
     var athkarSections: Box<[AthkarSection]> = Box([])
+    var realUpdated: (() -> Void)?
     
     init(athkarLoadingFunction: @escaping AthkarLoadingFunction) {
         self.loadAthkar = athkarLoadingFunction
-        self.athkarSections.value = self.loadAthkar()
     }
 }
 
 
 extension HomeAthkarSectionsScreenViewModel : AthkarSectionsScreenViewModel{
+    func fetchData() {
+        self.loadAthkar { [weak self] athkarList in
+            self?.athkarSections.value = athkarList
+            self?.realUpdated?()
+        }
+    }
+    
+    var updated: (() -> Void)? {
+        get {
+            return realUpdated
+        }
+        set {
+            realUpdated = newValue
+        }
+    }
+    
     func athkarSectionCellViewModelForIndex(_ index: Int) -> AthkarSectionCellViewModel {
         return AthkarSectionCellViewModel(section: athkarSections.value[index])
     }
@@ -31,7 +47,6 @@ extension HomeAthkarSectionsScreenViewModel : AthkarSectionsScreenViewModel{
         return AthkarSectionDetailsViewModel(section: athkarSections.value[index])
 
     }
-    
    
     var numberOfAthkarSections: Int{
         return athkarSections.value.count

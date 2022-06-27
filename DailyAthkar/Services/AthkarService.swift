@@ -10,22 +10,23 @@ import Foundation
 
 class AthakrService{
 
-    static func getAthkarSectionFromJSONFile()->[AthkarSection]{
+    static func getAthkarSectionFromJSONFile(_ completion: ([AthkarSection])->())-> Void{
         if let path = Bundle.main.path(forResource:"db", ofType: "json")
         {
             let url = URL.init(fileURLWithPath: path)
             do{
                 let jsonData = try Data.init(contentsOf: url)
                 let athkarSections = try! JSONDecoder().decode([AthkarSection].self, from: jsonData)
-                    return athkarSections
+                    completion(athkarSections)
     
     
             } catch{
-                return []
+                completion([])
             }
     
+        }else{
+            completion([])
         }
-        return []
     }
 
 }

@@ -20,7 +20,9 @@ protocol AthkarSectionsScreenCoordinator{
 }
 
 protocol AthkarSectionsScreenViewModel{
+    var updated: (()->Void)? { get set }
     var numberOfAthkarSections: Int { get }
+    func fetchData()->Void
     func athkarSectionCellViewModelForIndex(_ index: Int) -> AthkarSectionCellViewModel
     func athkarSectionDetailsViewModelForIndex(_ index: Int) -> AthkarSectionDetailsViewModel
 }
@@ -61,6 +63,10 @@ class HomeAthkarSectionsViewController: UIViewController, UITableViewDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.updated = { [weak self] in
+            self?.theTable.reloadData()
+        }
+        viewModel.fetchData()
         doUI()
     }
     
@@ -142,7 +148,6 @@ class HomeAthkarSectionsViewController: UIViewController, UITableViewDelegate, U
     
     func doUI(){
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
     }
     
     
@@ -169,7 +174,6 @@ class HomeAthkarSectionsViewController: UIViewController, UITableViewDelegate, U
                 }
             }
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

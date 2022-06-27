@@ -92,16 +92,10 @@ class MeezanMainViewController: UIViewController {
                     let count = (data["inviteesLaunchCount"] as? Int) ?? 0
                     self?.meezanCount.text = "\(count)"
                 }else{
-                    print(error as NSError?)
                     
                     self?.meezanCount.text = "\(0)"
                 }
             }
-            
-            
-            //            Meezan.getMyInviteesTotalCount(userUID: currentUser.uid) { [weak self] (count) in
-            //
-            //            }
         }else{
             print("not signed in")
             self.meezanCount.text = "-"

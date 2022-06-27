@@ -155,10 +155,7 @@ class Meezan {
         if let userID = Auth.auth().currentUser?.uid{
             regisrationFunc(userID: userID)
         } else{
-            Auth.auth().signInAnonymously(completion: { (result, error) in
-                print(result)
-                print(error)
-                
+            Auth.auth().signInAnonymously(completion: { (result, error) in                
                 if let userID = Auth.auth().currentUser?.uid{
                     regisrationFunc(userID: userID)
                 }
