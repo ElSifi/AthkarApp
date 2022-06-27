@@ -14,6 +14,7 @@ target 'DailyAthkar' do
   pod 'Firebase/DynamicLinks'
   pod 'Firebase/Firestore'
   pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Phone'
   pod 'Siren'
   pod 'Firebase/Database'
   pod 'BadgeHub'

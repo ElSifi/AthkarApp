@@ -10,7 +10,7 @@ import Foundation
 import FirebaseFirestore
 import FirebaseAuth
 import FirebaseDynamicLinks
-import FirebaseUI
+import FirebasePhoneAuthUI
 
 enum CustomError: Error {
     case unknownError
@@ -37,14 +37,14 @@ class Meezan {
             if let credential = credential,let user = Auth.auth().currentUser {
                 
                 
-                user.linkAndRetrieveData(with: credential) { (authResult, error) in
+                user.link(with: credential) { (authResult, error) in
                     
                     if let error = error as NSError? {
                         switch(error.code){
                         case 17025:
                             //merging
                             let anonymousUser = Auth.auth().currentUser
-                            Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
+                            Auth.auth().signIn(with: credential) { (result, error) in
                                 if let newUser = Auth.auth().currentUser, let anonymousUser = anonymousUser, newUser.uid != anonymousUser.uid {
                                     Meezan.getMyAppLaunchCount(userUID: anonymousUser.uid, completion: { (anonymousCount) in
                                         Meezan.recordTheAppLaunch(userUID: newUser.uid, incrementValue: anonymousCount, completion: { (success, error) in

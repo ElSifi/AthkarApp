@@ -323,12 +323,6 @@ class SectionContentViewController: UIViewController,
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let x : Int
-        x = 5
-        
-        func x(){
-            print("xx")
-        }
         
         if(!(StringKeys.UserDidSwipeForAudio.savedValue as? Bool ??  false)){
             if let cell = self.theTable.visibleCells.first{

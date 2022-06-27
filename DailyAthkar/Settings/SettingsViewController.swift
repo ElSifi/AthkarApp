@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseUI
+import FirebaseAuthUI
 
 enum StringKeys : String {
     case SettingsItemLanguage  = "SettingsItemLanguage"

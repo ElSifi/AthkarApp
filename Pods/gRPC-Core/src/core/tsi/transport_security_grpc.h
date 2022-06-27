@@ -22,6 +22,7 @@
 #include <grpc/support/port_platform.h>
 
 #include <grpc/slice_buffer.h>
+
 #include "src/core/tsi/transport_security.h"
 
 /* This method creates a tsi_zero_copy_grpc_protector object. It return TSI_OK
@@ -56,8 +57,12 @@ tsi_result tsi_zero_copy_grpc_protector_unprotect(
 /* Destroys the tsi_zero_copy_grpc_protector object.  */
 void tsi_zero_copy_grpc_protector_destroy(tsi_zero_copy_grpc_protector* self);
 
+/* Returns value of max protected frame size. Useful for testing. */
+tsi_result tsi_zero_copy_grpc_protector_max_frame_size(
+    tsi_zero_copy_grpc_protector* self, size_t* max_frame_size);
+
 /* Base for tsi_zero_copy_grpc_protector implementations.  */
-typedef struct {
+struct tsi_zero_copy_grpc_protector_vtable {
   tsi_result (*protect)(tsi_zero_copy_grpc_protector* self,
                         grpc_slice_buffer* unprotected_slices,
                         grpc_slice_buffer* protected_slices);
@@ -65,8 +70,9 @@ typedef struct {
                           grpc_slice_buffer* protected_slices,
                           grpc_slice_buffer* unprotected_slices);
   void (*destroy)(tsi_zero_copy_grpc_protector* self);
-} tsi_zero_copy_grpc_protector_vtable;
-
+  tsi_result (*max_frame_size)(tsi_zero_copy_grpc_protector* self,
+                               size_t* max_frame_size);
+};
 struct tsi_zero_copy_grpc_protector {
   const tsi_zero_copy_grpc_protector_vtable* vtable;
 };

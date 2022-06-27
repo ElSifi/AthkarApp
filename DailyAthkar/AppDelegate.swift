@@ -59,25 +59,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
-        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
-        
-        
-        if let path = Bundle.main.path(forResource: "tokens", ofType: "plist") {
-            let keys = NSDictionary(contentsOfFile: path)
-            if let oneSignalAppID = keys?.value(forKey: "ONE_SIGNAL_APP_ID") as? String{
-                OneSignal.initWithLaunchOptions(launchOptions,
-                                                appId: oneSignalAppID,
-                                                handleNotificationAction: nil,
-                                                settings: onesignalInitSettings)
-                
-                OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
-                OneSignal.promptForPushNotifications(userResponse: { accepted in
-                    Utils.scheduleLocalNotifications(completion: { (success) in
-                        print("scheduleLocalNotifications \(success)")
-                    })
-                })
-            }
-        }
+//        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+//        
+//        
+//        if let path = Bundle.main.path(forResource: "tokens", ofType: "plist") {
+//            let keys = NSDictionary(contentsOfFile: path)
+//            if let oneSignalAppID = keys?.value(forKey: "ONE_SIGNAL_APP_ID") as? String{
+//                OneSignal.initWithLaunchOptions(launchOptions,
+//                                                appId: oneSignalAppID,
+//                                                handleNotificationAction: nil,
+//                                                settings: onesignalInitSettings)
+//                
+//                OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+//                OneSignal.promptForPushNotifications(userResponse: { accepted in
+//                    Utils.scheduleLocalNotifications(completion: { (success) in
+//                        print("scheduleLocalNotifications \(success)")
+//                    })
+//                })
+//            }
+//        }
         
         
         let navController = UINavigationController()

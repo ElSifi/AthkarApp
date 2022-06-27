@@ -104,26 +104,6 @@
 		92E44EF12093C2D900040452 /* HomeSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E44EF02093C2D900040452 /* HomeSectionTableViewCell.swift */; };
 		92E49AFA209897990090DB34 /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 92E49AF9209897990090DB34 /* db.json */; };
 		92E4D0C5212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92E4D0C4212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 */; };
-		D81AF8F2225E11C700D28630 /* FirebasePhoneAuthUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = D81AF87A225E11C600D28630 /* FirebasePhoneAuthUI.strings */; };
-		D81AF8F3225E11C700D28630 /* FUIPhoneAuthStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8D0225E11C700D28630 /* FUIPhoneAuthStrings.m */; };
-		D81AF8F4225E11C700D28630 /* ic_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8D2225E11C700D28630 /* ic_phone.png */; };
-		D81AF8F5225E11C700D28630 /* ic_phone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8D3225E11C700D28630 /* ic_phone@3x.png */; };
-		D81AF8F6225E11C700D28630 /* ic_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8D4225E11C700D28630 /* ic_phone@2x.png */; };
-		D81AF8F7225E11C700D28630 /* country-codes.json in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8D5225E11C700D28630 /* country-codes.json */; };
-		D81AF8F8225E11C700D28630 /* FUIPhoneEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8D6225E11C700D28630 /* FUIPhoneEntryViewController.m */; };
-		D81AF8F9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8D9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m */; };
-		D81AF8FA225E11C700D28630 /* FUICollationForCountries.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8DB225E11C700D28630 /* FUICollationForCountries.m */; };
-		D81AF8FB225E11C700D28630 /* FUICountryCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8DD225E11C700D28630 /* FUICountryCodes.m */; };
-		D81AF8FC225E11C700D28630 /* FUICountryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8E0225E11C700D28630 /* FUICountryTableViewController.xib */; };
-		D81AF8FD225E11C700D28630 /* FUICountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8E1225E11C700D28630 /* FUICountryTableViewController.m */; };
-		D81AF8FE225E11C700D28630 /* FUIPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8E4225E11C700D28630 /* FUIPhoneNumber.m */; };
-		D81AF8FF225E11C700D28630 /* FUIFeatureSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8E5225E11C700D28630 /* FUIFeatureSwitch.m */; };
-		D81AF900225E11C700D28630 /* FUICodeField.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8E6225E11C700D28630 /* FUICodeField.m */; };
-		D81AF901225E11C700D28630 /* FUIPhoneVerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8E7225E11C700D28630 /* FUIPhoneVerificationViewController.m */; };
-		D81AF902225E11C700D28630 /* FUIPhoneEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8E8225E11C700D28630 /* FUIPhoneEntryViewController.xib */; };
-		D81AF903225E11C700D28630 /* FUICodeField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8EC225E11C700D28630 /* FUICodeField.xib */; };
-		D81AF904225E11C700D28630 /* FUIPhoneVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF8ED225E11C700D28630 /* FUIPhoneVerificationViewController.xib */; };
-		D81AF906225E11C700D28630 /* FUIPhoneAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = D81AF8F1225E11C700D28630 /* FUIPhoneAuth.m */; };
 		D81AF90C225EA1A000D28630 /* MeezanMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF90E225EA1A000D28630 /* MeezanMainViewController.xib */; };
 		D820EABC286414C00036E803 /* SettingsCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D820EABB286414C00036E803 /* SettingsCoodinator.swift */; };
 		D824AD0D2863231800956412 /* DACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AD0C2863231800956412 /* DACoordinator.swift */; };
@@ -293,122 +273,6 @@
 		92E44EF02093C2D900040452 /* HomeSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionTableViewCell.swift; sourceTree = "<group>"; };
 		92E49AF9209897990090DB34 /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
 		92E4D0C4212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_AfterPrayer_14.mp3; sourceTree = "<group>"; };
-		D81AF87B225E11C600D28630 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF87C225E11C600D28630 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF87D225E11C600D28630 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF87E225E11C600D28630 /* es-SV */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-SV"; path = "es-SV.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF87F225E11C600D28630 /* zh-Hant-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant-TW"; path = "zh-Hant-TW.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF880225E11C600D28630 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF881225E11C600D28630 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF882225E11C600D28630 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF883225E11C600D28630 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF884225E11C600D28630 /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF885225E11C600D28630 /* mr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mr; path = mr.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF886225E11C600D28630 /* es-GT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-GT"; path = "es-GT.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF887225E11C600D28630 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF888225E11C600D28630 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF889225E11C600D28630 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF88A225E11C600D28630 /* es-PY */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-PY"; path = "es-PY.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF88B225E11C600D28630 /* gu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gu; path = gu.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF88C225E11C600D28630 /* kn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kn; path = kn.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF88D225E11C600D28630 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF88E225E11C600D28630 /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF88F225E11C600D28630 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF890225E11C600D28630 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF891225E11C600D28630 /* es-VE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-VE"; path = "es-VE.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF892225E11C600D28630 /* es-CL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-CL"; path = "es-CL.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF893225E11C600D28630 /* sl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sl; path = sl.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF894225E11C600D28630 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF895225E11C600D28630 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF896225E11C600D28630 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF897225E11C600D28630 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF898225E11C600D28630 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF899225E11C600D28630 /* sr-Latn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sr-Latn"; path = "sr-Latn.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF89A225E11C600D28630 /* nn-NO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nn-NO"; path = "nn-NO.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF89B225E11C600D28630 /* es-PA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-PA"; path = "es-PA.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF89C225E11C600D28630 /* en-SG */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-SG"; path = "en-SG.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF89D225E11C600D28630 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF89E225E11C600D28630 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF89F225E11C600D28630 /* es-CR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-CR"; path = "es-CR.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8A0225E11C600D28630 /* ta */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ta; path = ta.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8A1225E11C600D28630 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8A2225E11C600D28630 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8A3225E11C600D28630 /* es-AR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-AR"; path = "es-AR.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8A4225E11C600D28630 /* es-PE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-PE"; path = "es-PE.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8A5225E11C600D28630 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8A6225E11C600D28630 /* en-IE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IE"; path = "en-IE.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8A7225E11C600D28630 /* fil */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fil; path = fil.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8A8225E11C600D28630 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8A9225E11C600D28630 /* es-CO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-CO"; path = "es-CO.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8AA225E11C600D28630 /* gsw */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gsw; path = gsw.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8AB225E11C600D28630 /* en-ZA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-ZA"; path = "en-ZA.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8AC225E11C600D28630 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8AD225E11C600D28630 /* es-PR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-PR"; path = "es-PR.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8AE225E11C600D28630 /* de-AT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-AT"; path = "de-AT.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8AF225E11C600D28630 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8B0225E11C600D28630 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8B1225E11C600D28630 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8B2225E11C600D28630 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8B3225E11C600D28630 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8B4225E11C600D28630 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8B5225E11C600D28630 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8B6225E11C600D28630 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8B7225E11C600D28630 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8B8225E11C600D28630 /* es-DO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-DO"; path = "es-DO.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8B9225E11C600D28630 /* fr-CH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CH"; path = "fr-CH.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8BA225E11C600D28630 /* es-NI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-NI"; path = "es-NI.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8BB225E11C600D28630 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8BC225E11C600D28630 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8BD225E11C700D28630 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8BE225E11C700D28630 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8BF225E11C700D28630 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8C0225E11C700D28630 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8C1225E11C700D28630 /* de-CH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "de-CH"; path = "de-CH.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8C2225E11C700D28630 /* bn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bn; path = bn.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8C3225E11C700D28630 /* es-EC */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-EC"; path = "es-EC.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8C4225E11C700D28630 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8C5225E11C700D28630 /* es-BO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-BO"; path = "es-BO.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8C6225E11C700D28630 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8C7225E11C700D28630 /* ln */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ln; path = ln.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8C8225E11C700D28630 /* es-UY */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-UY"; path = "es-UY.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8C9225E11C700D28630 /* es-HN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-HN"; path = "es-HN.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8CA225E11C700D28630 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8CB225E11C700D28630 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8CC225E11C700D28630 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8CD225E11C700D28630 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/FirebasePhoneAuthUI.strings; sourceTree = "<group>"; };
-		D81AF8CE225E11C700D28630 /* en-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-IN"; path = "en-IN.lproj/FirebasePhoneAuthUI.strings"; sourceTree = "<group>"; };
-		D81AF8CF225E11C700D28630 /* FUIPhoneVerificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneVerificationViewController.h; sourceTree = "<group>"; };
-		D81AF8D0225E11C700D28630 /* FUIPhoneAuthStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneAuthStrings.m; sourceTree = "<group>"; };
-		D81AF8D2225E11C700D28630 /* ic_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_phone.png; sourceTree = "<group>"; };
-		D81AF8D3225E11C700D28630 /* ic_phone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_phone@3x.png"; sourceTree = "<group>"; };
-		D81AF8D4225E11C700D28630 /* ic_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_phone@2x.png"; sourceTree = "<group>"; };
-		D81AF8D5225E11C700D28630 /* country-codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "country-codes.json"; sourceTree = "<group>"; };
-		D81AF8D6225E11C700D28630 /* FUIPhoneEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneEntryViewController.m; sourceTree = "<group>"; };
-		D81AF8D7225E11C700D28630 /* FUIPhoneAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneAuth.h; sourceTree = "<group>"; };
-		D81AF8D8225E11C700D28630 /* FUIPhoneAuth_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneAuth_Internal.h; sourceTree = "<group>"; };
-		D81AF8D9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FUIPrivacyAndTermsOfServiceView+PhoneAuth.m"; sourceTree = "<group>"; };
-		D81AF8DB225E11C700D28630 /* FUICollationForCountries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICollationForCountries.m; sourceTree = "<group>"; };
-		D81AF8DC225E11C700D28630 /* FUICountryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUICountryTableViewController.h; sourceTree = "<group>"; };
-		D81AF8DD225E11C700D28630 /* FUICountryCodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICountryCodes.m; sourceTree = "<group>"; };
-		D81AF8DE225E11C700D28630 /* FUIFeatureSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIFeatureSwitch.h; sourceTree = "<group>"; };
-		D81AF8DF225E11C700D28630 /* FUIPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneNumber.h; sourceTree = "<group>"; };
-		D81AF8E0225E11C700D28630 /* FUICountryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUICountryTableViewController.xib; sourceTree = "<group>"; };
-		D81AF8E1225E11C700D28630 /* FUICountryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICountryTableViewController.m; sourceTree = "<group>"; };
-		D81AF8E2225E11C700D28630 /* FUICollationForCountries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUICollationForCountries.h; sourceTree = "<group>"; };
-		D81AF8E3225E11C700D28630 /* FUICountryCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUICountryCodes.h; sourceTree = "<group>"; };
-		D81AF8E4225E11C700D28630 /* FUIPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneNumber.m; sourceTree = "<group>"; };
-		D81AF8E5225E11C700D28630 /* FUIFeatureSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIFeatureSwitch.m; sourceTree = "<group>"; };
-		D81AF8E6225E11C700D28630 /* FUICodeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICodeField.m; sourceTree = "<group>"; };
-		D81AF8E7225E11C700D28630 /* FUIPhoneVerificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneVerificationViewController.m; sourceTree = "<group>"; };
-		D81AF8E8225E11C700D28630 /* FUIPhoneEntryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUIPhoneEntryViewController.xib; sourceTree = "<group>"; };
-		D81AF8E9225E11C700D28630 /* FUIPhoneAuthStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneAuthStrings.h; sourceTree = "<group>"; };
-		D81AF8EA225E11C700D28630 /* FirebasePhoneAuthUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebasePhoneAuthUI.h; sourceTree = "<group>"; };
-		D81AF8EB225E11C700D28630 /* FUIPhoneEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIPhoneEntryViewController.h; sourceTree = "<group>"; };
-		D81AF8EC225E11C700D28630 /* FUICodeField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUICodeField.xib; sourceTree = "<group>"; };
-		D81AF8ED225E11C700D28630 /* FUIPhoneVerificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FUIPhoneVerificationViewController.xib; sourceTree = "<group>"; };
-		D81AF8EE225E11C700D28630 /* FUICodeField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUICodeField.h; sourceTree = "<group>"; };
-		D81AF8EF225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FUIPrivacyAndTermsOfServiceView+PhoneAuth.h"; sourceTree = "<group>"; };
-		D81AF8F1225E11C700D28630 /* FUIPhoneAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIPhoneAuth.m; sourceTree = "<group>"; };
 		D81AF90D225EA1A000D28630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MeezanMainViewController.xib; sourceTree = "<group>"; };
 		D81AF910225EA59500D28630 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MeezanMainViewController.strings; sourceTree = "<group>"; };
 		D820EABB286414C00036E803 /* SettingsCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoodinator.swift; sourceTree = "<group>"; };
@@ -507,7 +371,6 @@
 		92377B3F213B528300312036 /* 3rd Parties */ = {
 			isa = PBXGroup;
 			children = (
-				D81AF878225E11C600D28630 /* FirebasePhoneAuthUI */,
 				D8A156F8225D4EC000C8F274 /* UIAlertController+Blocks */,
 				D8A156F4225D4E9D00C8F274 /* MBProgressHUD */,
 			);
@@ -737,70 +600,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D81AF878225E11C600D28630 /* FirebasePhoneAuthUI */ = {
-			isa = PBXGroup;
-			children = (
-				D81AF879225E11C600D28630 /* Strings */,
-				D81AF8CF225E11C700D28630 /* FUIPhoneVerificationViewController.h */,
-				D81AF8D0225E11C700D28630 /* FUIPhoneAuthStrings.m */,
-				D81AF8D1225E11C700D28630 /* Resources */,
-				D81AF8D6225E11C700D28630 /* FUIPhoneEntryViewController.m */,
-				D81AF8D7225E11C700D28630 /* FUIPhoneAuth.h */,
-				D81AF8D8225E11C700D28630 /* FUIPhoneAuth_Internal.h */,
-				D81AF8D9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m */,
-				D81AF8DA225E11C700D28630 /* CountryCode */,
-				D81AF8E6225E11C700D28630 /* FUICodeField.m */,
-				D81AF8E7225E11C700D28630 /* FUIPhoneVerificationViewController.m */,
-				D81AF8E8225E11C700D28630 /* FUIPhoneEntryViewController.xib */,
-				D81AF8E9225E11C700D28630 /* FUIPhoneAuthStrings.h */,
-				D81AF8EA225E11C700D28630 /* FirebasePhoneAuthUI.h */,
-				D81AF8EB225E11C700D28630 /* FUIPhoneEntryViewController.h */,
-				D81AF8EC225E11C700D28630 /* FUICodeField.xib */,
-				D81AF8ED225E11C700D28630 /* FUIPhoneVerificationViewController.xib */,
-				D81AF8EE225E11C700D28630 /* FUICodeField.h */,
-				D81AF8EF225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.h */,
-				D81AF8F1225E11C700D28630 /* FUIPhoneAuth.m */,
-			);
-			path = FirebasePhoneAuthUI;
-			sourceTree = "<group>";
-		};
-		D81AF879225E11C600D28630 /* Strings */ = {
-			isa = PBXGroup;
-			children = (
-				D81AF87A225E11C600D28630 /* FirebasePhoneAuthUI.strings */,
-			);
-			path = Strings;
-			sourceTree = "<group>";
-		};
-		D81AF8D1225E11C700D28630 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D81AF8D2225E11C700D28630 /* ic_phone.png */,
-				D81AF8D3225E11C700D28630 /* ic_phone@3x.png */,
-				D81AF8D4225E11C700D28630 /* ic_phone@2x.png */,
-				D81AF8D5225E11C700D28630 /* country-codes.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		D81AF8DA225E11C700D28630 /* CountryCode */ = {
-			isa = PBXGroup;
-			children = (
-				D81AF8DB225E11C700D28630 /* FUICollationForCountries.m */,
-				D81AF8DC225E11C700D28630 /* FUICountryTableViewController.h */,
-				D81AF8DD225E11C700D28630 /* FUICountryCodes.m */,
-				D81AF8DE225E11C700D28630 /* FUIFeatureSwitch.h */,
-				D81AF8DF225E11C700D28630 /* FUIPhoneNumber.h */,
-				D81AF8E0225E11C700D28630 /* FUICountryTableViewController.xib */,
-				D81AF8E1225E11C700D28630 /* FUICountryTableViewController.m */,
-				D81AF8E2225E11C700D28630 /* FUICollationForCountries.h */,
-				D81AF8E3225E11C700D28630 /* FUICountryCodes.h */,
-				D81AF8E4225E11C700D28630 /* FUIPhoneNumber.m */,
-				D81AF8E5225E11C700D28630 /* FUIFeatureSwitch.m */,
-			);
-			path = CountryCode;
-			sourceTree = "<group>";
-		};
 		D820EABA286414320036E803 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
@@ -924,7 +723,6 @@
 				92E152702093A85400301BB6 /* Resources */,
 				92B265AD2135332A0021C973 /* Embed App Extensions */,
 				6F292B3A89D7B55C97F552E0 /* [CP] Embed Pods Frameworks */,
-				BFC0A0878B298F0AEB27B139 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1114,28 +912,23 @@
 			files = (
 				928147D9209BCD23007B0D85 /* Mishary_la_elah_kadeer.mp3 in Resources */,
 				9203673820988FB5003D8DAC /* Al Qalam Quran Majeed 1.ttf in Resources */,
-				D81AF904225E11C700D28630 /* FUIPhoneVerificationViewController.xib in Resources */,
 				9203672620988FB5003D8DAC /* DroidSans.ttf in Resources */,
 				928147E4209BCD23007B0D85 /* Mishary_Evening_1.mp3 in Resources */,
 				92E152802093A85400301BB6 /* LaunchScreen.storyboard in Resources */,
-				D81AF8F6225E11C700D28630 /* ic_phone@2x.png in Resources */,
 				9203672B20988FB5003D8DAC /* blob-round.ttf in Resources */,
 				928147DB209BCD23007B0D85 /* Mishary_samee3_3leem.mp3 in Resources */,
 				9203672820988FB5003D8DAC /* OpenSans-LightItalic.ttf in Resources */,
 				928147E7209BCD23007B0D85 /* Mishary_Evening_4.mp3 in Resources */,
 				9203673020988FB5003D8DAC /* Scheherazade-R.ttf in Resources */,
-				D81AF8FC225E11C700D28630 /* FUICountryTableViewController.xib in Resources */,
 				926066F0212973C40083C144 /* Localizable.strings in Resources */,
 				928147D2209BCD23007B0D85 /* _unused_astaghfero_w_atoobo.mp3 in Resources */,
 				9203673520988FB5003D8DAC /* mb.ttf in Resources */,
-				D81AF8F5225E11C700D28630 /* ic_phone@3x.png in Resources */,
 				928147EE209BCD23007B0D85 /* Mishary_Morning_16.mp3 in Resources */,
 				9203673620988FB5003D8DAC /* Ubuntu-LI.ttf in Resources */,
 				928147D1209BCD23007B0D85 /* Mishary_Sleeping_7.mp3 in Resources */,
 				D8D6C1A928592565008D4F50 /* tokens.plist in Resources */,
 				9203672E20988FB5003D8DAC /* noorehira.ttf in Resources */,
 				928147E8209BCD23007B0D85 /* Mishary_Evening_5.mp3 in Resources */,
-				D81AF8F4225E11C700D28630 /* ic_phone.png in Resources */,
 				928147CA209BCD23007B0D85 /* FormatFactoryaaman.mp3 in Resources */,
 				928147CD209BCD23007B0D85 /* Mishary_Sleeping_2.mp3 in Resources */,
 				9203673920988FB5003D8DAC /* Roboto-Thin.ttf in Resources */,
@@ -1156,7 +949,6 @@
 				928147CF209BCD23007B0D85 /* Mishary_Sleeping_5.mp3 in Resources */,
 				928147E6209BCD23007B0D85 /* Mishary_Evening_2.mp3 in Resources */,
 				928147F5209BCD23007B0D85 /* Mishary_WakingUp_3.mp3 in Resources */,
-				D81AF8F2225E11C700D28630 /* FirebasePhoneAuthUI.strings in Resources */,
 				928147E1209BCD23007B0D85 /* Mishary_surat_nas.mp3 in Resources */,
 				928147F1209BCD23007B0D85 /* Mishary_Morning_5.mp3 in Resources */,
 				928147D5209BCD23007B0D85 /* Mishary_3alem_alghyb.mp3 in Resources */,
@@ -1166,14 +958,11 @@
 				928147C6209BCD23007B0D85 /* Mishary_AfterPrayer_3.mp3 in Resources */,
 				928147D8209BCD23007B0D85 /* Mishary_ayat_korsi.mp3 in Resources */,
 				928147E9209BCD23007B0D85 /* Mishary_Evening_8.mp3 in Resources */,
-				D81AF903225E11C700D28630 /* FUICodeField.xib in Resources */,
-				D81AF8F7225E11C700D28630 /* country-codes.json in Resources */,
 				928147DC209BCD23007B0D85 /* Mishary_sayed_estghfar.mp3 in Resources */,
 				9203673120988FB5003D8DAC /* LateefRegOT.ttf in Resources */,
 				928147C7209BCD23007B0D85 /* Mishary_AfterPrayer_4.mp3 in Resources */,
 				928147D3209BCD23007B0D85 /* _UNUSED_nabi_salat.mp3 in Resources */,
 				9203673220988FB5003D8DAC /* OpenSans-Italic.ttf in Resources */,
-				D81AF902225E11C700D28630 /* FUIPhoneEntryViewController.xib in Resources */,
 				92E1527D2093A85400301BB6 /* Assets.xcassets in Resources */,
 				928147F0209BCD23007B0D85 /* Mishary_Morning_4.mp3 in Resources */,
 				928147EB209BCD23007B0D85 /* FormatFactoryfitra.mp3 in Resources */,
@@ -1225,32 +1014,64 @@
 				"${BUILT_PRODUCTS_DIR}/BadgeHub/BadgeHub.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/DLLocalNotifications/DLLocalNotifications.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseAuthUI/FirebaseAuthUI.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseDynamicLinks/FirebaseDynamicLinks.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseFirestore/FirebaseFirestore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebasePhoneAuthUI/FirebasePhoneAuthUI.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/Sheeeeeeeeet/Sheeeeeeeeet.framework",
+				"${BUILT_PRODUCTS_DIR}/Libuv-gRPC/uv.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
 				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
+				"${BUILT_PRODUCTS_DIR}/abseil/absl.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignal/OneSignal.framework/OneSignal",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignal/OneSignalCore/OneSignalCore.framework/OneSignalCore",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignal/OneSignalExtension/OneSignalExtension.framework/OneSignalExtension",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OneSignal/OneSignalOutcomes/OneSignalOutcomes.framework/OneSignalOutcomes",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BadgeHub.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLLocalNotifications.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuthUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreInternal.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDatabase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDynamicLinks.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseFirestore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebasePhoneAuthUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sheeeeeeeeet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/uv.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/absl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OneSignal.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OneSignalCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OneSignalExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OneSignalOutcomes.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1273,24 +1094,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFC0A0878B298F0AEB27B139 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FAE2C4CB5D1DBF8990F43ADF /* [CP] Check Pods Manifest.lock */ = {
@@ -1335,22 +1138,14 @@
 				9203674320989259003D8DAC /* LanguageManager.m in Sources */,
 				9260074E2132C61600C0FF4F /* Utils.swift in Sources */,
 				D84B7F9B2866F1AB00B03AA8 /* Box.swift in Sources */,
-				D81AF8F9225E11C700D28630 /* FUIPrivacyAndTermsOfServiceView+PhoneAuth.m in Sources */,
-				D81AF8FB225E11C700D28630 /* FUICountryCodes.m in Sources */,
-				D81AF906225E11C700D28630 /* FUIPhoneAuth.m in Sources */,
-				D81AF900225E11C700D28630 /* FUICodeField.m in Sources */,
 				92E152782093A85400301BB6 /* HomeAthkarSectionsViewController.swift in Sources */,
-				D81AF8FD225E11C700D28630 /* FUICountryTableViewController.m in Sources */,
 				D84B7FA228688DA500B03AA8 /* AthkarSectionDetailsViewModel.swift in Sources */,
 				D824AD0D2863231800956412 /* DACoordinator.swift in Sources */,
 				D824AD112863254D00956412 /* MainCoordintator.swift in Sources */,
-				D81AF8F8225E11C700D28630 /* FUIPhoneEntryViewController.m in Sources */,
-				D81AF8F3225E11C700D28630 /* FUIPhoneAuthStrings.m in Sources */,
 				D8C858C628647CC6009074E8 /* HomeAthkarSectionsScreenViewModel.swift in Sources */,
 				D8B6E000225D56C70067FDC6 /* AppSettingsViewController.swift in Sources */,
 				D849250A26170B55008F4182 /* DemocraticFeatures.swift in Sources */,
 				9203674420989259003D8DAC /* NSBundle+Language.m in Sources */,
-				D81AF901225E11C700D28630 /* FUIPhoneVerificationViewController.m in Sources */,
 				9203673D2098912D003D8DAC /* Config.swift in Sources */,
 				926066F52129A5990083C144 /* FontSelectionViewController.swift in Sources */,
 				D820EABC286414C00036E803 /* SettingsCoodinator.swift in Sources */,
@@ -1362,11 +1157,8 @@
 				9281478D209B9985007B0D85 /* CustomUIClasses.swift in Sources */,
 				926D01E42098D9990023F06C /* SectionContentViewController.swift in Sources */,
 				D8A156F7225D4EB800C8F274 /* UIAlertController+Blocks.m in Sources */,
-				D81AF8FF225E11C700D28630 /* FUIFeatureSwitch.m in Sources */,
-				D81AF8FA225E11C700D28630 /* FUICollationForCountries.m in Sources */,
 				D82936DE225E011E0040F839 /* main.swift in Sources */,
 				92E152762093A85400301BB6 /* AppDelegate.swift in Sources */,
-				D81AF8FE225E11C700D28630 /* FUIPhoneNumber.m in Sources */,
 				926D01EB2098F87E0023F06C /* SettingsViewController.swift in Sources */,
 				92377B42213B529100312036 /* MBProgressHUD.m in Sources */,
 			);
@@ -1432,97 +1224,6 @@
 				92DB00B22098942000BCB381 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		D81AF87A225E11C600D28630 /* FirebasePhoneAuthUI.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D81AF87B225E11C600D28630 /* de */,
-				D81AF87C225E11C600D28630 /* ur */,
-				D81AF87D225E11C600D28630 /* he */,
-				D81AF87E225E11C600D28630 /* es-SV */,
-				D81AF87F225E11C600D28630 /* zh-Hant-TW */,
-				D81AF880225E11C600D28630 /* ar */,
-				D81AF881225E11C600D28630 /* el */,
-				D81AF882225E11C600D28630 /* zh-Hans */,
-				D81AF883225E11C600D28630 /* ja */,
-				D81AF884225E11C600D28630 /* fa */,
-				D81AF885225E11C600D28630 /* mr */,
-				D81AF886225E11C600D28630 /* es-GT */,
-				D81AF887225E11C600D28630 /* en */,
-				D81AF888225E11C600D28630 /* en-CA */,
-				D81AF889225E11C600D28630 /* uk */,
-				D81AF88A225E11C600D28630 /* es-PY */,
-				D81AF88B225E11C600D28630 /* gu */,
-				D81AF88C225E11C600D28630 /* kn */,
-				D81AF88D225E11C600D28630 /* nb */,
-				D81AF88E225E11C600D28630 /* es-US */,
-				D81AF88F225E11C600D28630 /* en-GB */,
-				D81AF890225E11C600D28630 /* es */,
-				D81AF891225E11C600D28630 /* es-VE */,
-				D81AF892225E11C600D28630 /* es-CL */,
-				D81AF893225E11C600D28630 /* sl */,
-				D81AF894225E11C600D28630 /* da */,
-				D81AF895225E11C600D28630 /* es-419 */,
-				D81AF896225E11C600D28630 /* it */,
-				D81AF897225E11C600D28630 /* bg */,
-				D81AF898225E11C600D28630 /* sk */,
-				D81AF899225E11C600D28630 /* sr-Latn */,
-				D81AF89A225E11C600D28630 /* nn-NO */,
-				D81AF89B225E11C600D28630 /* es-PA */,
-				D81AF89C225E11C600D28630 /* en-SG */,
-				D81AF89D225E11C600D28630 /* sr */,
-				D81AF89E225E11C600D28630 /* ms */,
-				D81AF89F225E11C600D28630 /* es-CR */,
-				D81AF8A0225E11C600D28630 /* ta */,
-				D81AF8A1225E11C600D28630 /* sv */,
-				D81AF8A2225E11C600D28630 /* cs */,
-				D81AF8A3225E11C600D28630 /* es-AR */,
-				D81AF8A4225E11C600D28630 /* es-PE */,
-				D81AF8A5225E11C600D28630 /* ko */,
-				D81AF8A6225E11C600D28630 /* en-IE */,
-				D81AF8A7225E11C600D28630 /* fil */,
-				D81AF8A8225E11C600D28630 /* zh-Hant */,
-				D81AF8A9225E11C600D28630 /* es-CO */,
-				D81AF8AA225E11C600D28630 /* gsw */,
-				D81AF8AB225E11C600D28630 /* en-ZA */,
-				D81AF8AC225E11C600D28630 /* hu */,
-				D81AF8AD225E11C600D28630 /* es-PR */,
-				D81AF8AE225E11C600D28630 /* de-AT */,
-				D81AF8AF225E11C600D28630 /* en-AU */,
-				D81AF8B0225E11C600D28630 /* tr */,
-				D81AF8B1225E11C600D28630 /* pl */,
-				D81AF8B2225E11C600D28630 /* pt-BR */,
-				D81AF8B3225E11C600D28630 /* vi */,
-				D81AF8B4225E11C600D28630 /* lv */,
-				D81AF8B5225E11C600D28630 /* es-MX */,
-				D81AF8B6225E11C600D28630 /* lt */,
-				D81AF8B7225E11C600D28630 /* ru */,
-				D81AF8B8225E11C600D28630 /* es-DO */,
-				D81AF8B9225E11C600D28630 /* fr-CH */,
-				D81AF8BA225E11C600D28630 /* es-NI */,
-				D81AF8BB225E11C600D28630 /* fr */,
-				D81AF8BC225E11C600D28630 /* fi */,
-				D81AF8BD225E11C700D28630 /* id */,
-				D81AF8BE225E11C700D28630 /* nl */,
-				D81AF8BF225E11C700D28630 /* th */,
-				D81AF8C0225E11C700D28630 /* pt */,
-				D81AF8C1225E11C700D28630 /* de-CH */,
-				D81AF8C2225E11C700D28630 /* bn */,
-				D81AF8C3225E11C700D28630 /* es-EC */,
-				D81AF8C4225E11C700D28630 /* pt-PT */,
-				D81AF8C5225E11C700D28630 /* es-BO */,
-				D81AF8C6225E11C700D28630 /* ro */,
-				D81AF8C7225E11C700D28630 /* ln */,
-				D81AF8C8225E11C700D28630 /* es-UY */,
-				D81AF8C9225E11C700D28630 /* es-HN */,
-				D81AF8CA225E11C700D28630 /* hr */,
-				D81AF8CB225E11C700D28630 /* hi */,
-				D81AF8CC225E11C700D28630 /* ca */,
-				D81AF8CD225E11C700D28630 /* zh */,
-				D81AF8CE225E11C700D28630 /* en-IN */,
-			);
-			name = FirebasePhoneAuthUI.strings;
 			sourceTree = "<group>";
 		};
 		D81AF90E225EA1A000D28630 /* MeezanMainViewController.xib */ = {
