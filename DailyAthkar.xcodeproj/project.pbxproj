@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BECCE22C25C0F3BCB76A9D6 /* Pods_DailyAthkarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268BAED460F1A4EFACEF9130 /* Pods_DailyAthkarTests.framework */; };
 		5F50E087C61F8AA4845D1EAC /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6008ACACE3D9E077D201C5F9 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		7D4117B85C02E10418D78642 /* Pods_DailyAthkar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7E9CB71F907D5583FF4764 /* Pods_DailyAthkar.framework */; };
 		9203672620988FB5003D8DAC /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9203671220988FAE003D8DAC /* DroidSans.ttf */; };
@@ -160,7 +161,10 @@
 
 /* Begin PBXFileReference section */
 		227A61BD14E356938895BC40 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		268BAED460F1A4EFACEF9130 /* Pods_DailyAthkarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyAthkarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		561140D4F0AA43FE89326807 /* Pods-DailyAthkarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyAthkarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyAthkarTests/Pods-DailyAthkarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6008ACACE3D9E077D201C5F9 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE231A0D78B6CFEAF2B13E7 /* Pods-DailyAthkarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyAthkarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyAthkarTests/Pods-DailyAthkarTests.release.xcconfig"; sourceTree = "<group>"; };
 		85312CDAEBEF17B3267DFBA0 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		854B3BCDC456DE17F39F0558 /* Pods-DailyAthkar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyAthkar.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyAthkar/Pods-DailyAthkar.release.xcconfig"; sourceTree = "<group>"; };
 		9203671220988FAE003D8DAC /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
@@ -323,6 +327,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BECCE22C25C0F3BCB76A9D6 /* Pods_DailyAthkarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +601,8 @@
 				854B3BCDC456DE17F39F0558 /* Pods-DailyAthkar.release.xcconfig */,
 				85312CDAEBEF17B3267DFBA0 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
 				227A61BD14E356938895BC40 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				561140D4F0AA43FE89326807 /* Pods-DailyAthkarTests.debug.xcconfig */,
+				6AE231A0D78B6CFEAF2B13E7 /* Pods-DailyAthkarTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -688,6 +695,7 @@
 			children = (
 				DE7E9CB71F907D5583FF4764 /* Pods_DailyAthkar.framework */,
 				6008ACACE3D9E077D201C5F9 /* Pods_OneSignalNotificationServiceExtension.framework */,
+				268BAED460F1A4EFACEF9130 /* Pods_DailyAthkarTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -738,6 +746,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D84CBEEF286A4C9300C7F53B /* Build configuration list for PBXNativeTarget "DailyAthkarTests" */;
 			buildPhases = (
+				49E8D645E93ED85E4C9BF20B /* [CP] Check Pods Manifest.lock */,
 				D84CBEE3286A4C9300C7F53B /* Sources */,
 				D84CBEE4286A4C9300C7F53B /* Frameworks */,
 				D84CBEE5286A4C9300C7F53B /* Resources */,
@@ -1004,6 +1013,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		49E8D645E93ED85E4C9BF20B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DailyAthkarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6F292B3A89D7B55C97F552E0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1441,6 +1472,7 @@
 		};
 		D84CBEED286A4C9300C7F53B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 561140D4F0AA43FE89326807 /* Pods-DailyAthkarTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1465,6 +1497,7 @@
 		};
 		D84CBEEE286A4C9300C7F53B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AE231A0D78B6CFEAF2B13E7 /* Pods-DailyAthkarTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

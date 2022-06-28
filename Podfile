@@ -19,7 +19,9 @@ target 'DailyAthkar' do
   pod 'Firebase/Database'
   pod 'BadgeHub'
   pod 'Firebase/Analytics'
-  #for google analytics thing
+  target 'DailyAthkarTests' do
+    inherit! :search_paths
+  end
 end
 
 target 'OneSignalNotificationServiceExtension' do
