@@ -9,9 +9,9 @@
 import UIKit
 
 /// PresentationManager for Siren
-public struct PresentationManager {
+public class PresentationManager {
     /// Return results or errors obtained from performing a version check with Siren.
-    typealias CompletionHandler = (AlertAction) -> Void
+    typealias CompletionHandler = (AlertAction, String?) -> Void
 
     /// The localization data structure that will be used to construct localized strings for the update alert.
     let localization: Localization
@@ -38,12 +38,7 @@ public struct PresentationManager {
     var alertController: UIAlertController?
 
     /// The `UIWindow` instance that presents the `SirenViewController`.
-    private var updaterWindow: UIWindow {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = SirenViewController()
-        window.windowLevel = UIWindow.Level.alert + 1
-        return window
-    }
+    private lazy var updaterWindow = createWindow()
 
     /// `PresentationManager`'s public initializer.
     ///
@@ -82,6 +77,8 @@ public struct PresentationManager {
     public static let `default` = PresentationManager()
 }
 
+// MARK: - Alert Lifecycle
+
 extension PresentationManager {
 
     /// Constructs the localized update alert `UIAlertController` object.
@@ -90,9 +87,9 @@ extension PresentationManager {
     ///   - rules: The rules that are used to define the type of alert that should be presented.
     ///   - currentAppStoreVersion: The current version of the app in the App Store.
     ///   - handler: The completion handler that returns the an `AlertAction` depending on the type of action the end-user took.
-    mutating func presentAlert(withRules rules: Rules,
-                               forCurrentAppStoreVersion currentAppStoreVersion: String,
-                               completion handler: CompletionHandler?) {
+    func presentAlert(withRules rules: Rules,
+                      forCurrentAppStoreVersion currentAppStoreVersion: String,
+                      completion handler: CompletionHandler?) {
         UserDefaults.alertPresentationDate = Date()
 
         // Alert Title
@@ -130,36 +127,49 @@ extension PresentationManager {
             alertController?.addAction(nextTimeAlertAction(completion: handler))
             alertController?.addAction(skipAlertAction(forCurrentAppStoreVersion: currentAppStoreVersion, completion: handler))
         case .none:
-            handler?(.unknown)
+            handler?(.unknown, nil)
         }
 
         // If the alertType is .none, an alert will not be presented.
         // If the `updaterWindow` is not hidden, then an alert is already presented.
-        // The latter prevents `UIAlertControllers` from appearing on top of each other.
-        if rules.alertType != .none && updaterWindow.isHidden {
+        // The latter prevents `UIAlertController`'s from appearing on top of each other.
+        if rules.alertType != .none, let updaterWindow = updaterWindow, updaterWindow.isHidden {
             alertController?.show(window: updaterWindow)
-
+        } else {
+            // This is a safety precaution to avoid multiple windows from presenting on top of each other.
+            cleanUp()
         }
     }
+
+    /// Removes the `alertController` from memory.
+    func cleanUp() {
+        guard let updaterWindow = updaterWindow else { return }
+        alertController?.hide(window: updaterWindow)
+        alertController?.dismiss(animated: true, completion: nil)
+        updaterWindow.resignKey()
+    }
+}
+
+// MARK: - Alert Actions
+
+private extension PresentationManager {
 
     /// The `UIAlertAction` that is executed when the `Update` option is selected.
     ///
     /// - Parameters:
     ///   - handler: The completion handler that returns the `.update` option.
     /// - Returns: The `Update` alert action.
-    private func updateAlertAction(completion handler: CompletionHandler?) -> UIAlertAction {
+    func updateAlertAction(completion handler: CompletionHandler?) -> UIAlertAction {
         let title: String
-        if self.updateButtonTitle == AlertConstants.updateButtonTitle {
+        if updateButtonTitle == AlertConstants.updateButtonTitle {
             title = localization.updateButtonTitle()
         } else {
-            title = self.updateButtonTitle
+            title = updateButtonTitle
         }
 
         let action = UIAlertAction(title: title, style: .default) { _ in
-            self.cleanUpAlertController()
-            Siren.shared.launchAppStore()
-
-            handler?(.appStore)
+            self.cleanUp()
+            handler?(.appStore, nil)
             return
         }
 
@@ -171,18 +181,17 @@ extension PresentationManager {
     /// - Parameters:
     ///   - handler: The completion handler that returns the `.nextTime` option.
     /// - Returns: The `Next time` alert action.
-    private func nextTimeAlertAction(completion handler: CompletionHandler?) -> UIAlertAction {
+    func nextTimeAlertAction(completion handler: CompletionHandler?) -> UIAlertAction {
         let title: String
-        if self.nextTimeButtonTitle == AlertConstants.nextTimeButtonTitle {
+        if nextTimeButtonTitle == AlertConstants.nextTimeButtonTitle {
             title = localization.nextTimeButtonTitle()
         } else {
-            title = self.nextTimeButtonTitle
+            title = nextTimeButtonTitle
         }
 
         let action = UIAlertAction(title: title, style: .default) { _ in
-            self.cleanUpAlertController()
-
-            handler?(.nextTime)
+            self.cleanUp()
+            handler?(.nextTime, nil)
             return
         }
 
@@ -195,30 +204,54 @@ extension PresentationManager {
     ///   - currentAppStoreVersion: The current version of the app in the App Store.
     ///   - handler: The completion handler that returns the `.skip` option.
     /// - Returns: The `Skip this version` alert action.
-    private func skipAlertAction(forCurrentAppStoreVersion currentAppStoreVersion: String, completion handler: CompletionHandler?) -> UIAlertAction {
+    func skipAlertAction(forCurrentAppStoreVersion currentAppStoreVersion: String, completion handler: CompletionHandler?) -> UIAlertAction {
         let title: String
-        if self.skipButtonTitle == AlertConstants.skipButtonTitle {
+        if skipButtonTitle == AlertConstants.skipButtonTitle {
             title = localization.skipButtonTitle()
         } else {
-            title = self.skipButtonTitle
+            title = skipButtonTitle
         }
 
         let action = UIAlertAction(title: title, style: .default) { _ in
-            UserDefaults.storedSkippedVersion = currentAppStoreVersion
-            UserDefaults.standard.synchronize()
-
-            self.cleanUpAlertController()
-
-            handler?(.skip)
+            self.cleanUp()
+            handler?(.skip, currentAppStoreVersion)
             return
         }
 
         return action
     }
+}
 
-    /// Removes the `alertController` from memory.
-    private func cleanUpAlertController() {
-        alertController?.hide(window: self.updaterWindow)
-        alertController?.dismiss(animated: false, completion: nil)
+// MARK: - Helpers
+
+private extension PresentationManager {
+    private func createWindow() -> UIWindow? {
+        var window = UIWindow()
+        if #available(iOS 13.0, *) {
+            guard let windowScene = getFirstForegroundScene() else { return nil }
+            window = UIWindow(windowScene: windowScene)
+        } else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+        }
+
+        window.windowLevel = UIWindow.Level.alert + 1
+
+        let viewController = SirenViewController()
+        viewController.retainedWindow = window
+
+        window.rootViewController = viewController
+        return window
+    }
+
+    @available(iOS 13.0, *)
+    private func getFirstForegroundScene() -> UIWindowScene? {
+        let connectedScenes = UIApplication.shared.connectedScenes
+        if let windowActiveScene = connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+            return windowActiveScene
+        } else if let windowInactiveScene = connectedScenes.first(where: { $0.activationState == .foregroundInactive }) as? UIWindowScene {
+            return windowInactiveScene
+        } else {
+            return nil
+        }
     }
 }

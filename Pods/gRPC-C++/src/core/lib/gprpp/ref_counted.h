@@ -21,44 +21,20 @@
 
 #include <grpc/support/port_platform.h>
 
-#include <grpc/support/log.h>
-#include <grpc/support/sync.h>
-
 #include <atomic>
 #include <cassert>
 #include <cinttypes>
 
-#include "src/core/lib/debug/trace.h"
-#include "src/core/lib/gprpp/abstract.h"
+#include <grpc/support/atm.h>
+#include <grpc/support/log.h>
+#include <grpc/support/sync.h>
+
+#include "src/core/lib/gprpp/atomic_utils.h"
 #include "src/core/lib/gprpp/debug_location.h"
 #include "src/core/lib/gprpp/memory.h"
 #include "src/core/lib/gprpp/ref_counted_ptr.h"
 
 namespace grpc_core {
-
-// PolymorphicRefCount enforces polymorphic destruction of RefCounted.
-class PolymorphicRefCount {
- public:
-  GRPC_ABSTRACT_BASE_CLASS
-
- protected:
-  GPRC_ALLOW_CLASS_TO_USE_NON_PUBLIC_DELETE
-
-  virtual ~PolymorphicRefCount() = default;
-};
-
-// NonPolymorphicRefCount does not enforce polymorphic destruction of
-// RefCounted. Please refer to grpc_core::RefCounted for more details, and
-// when in doubt use PolymorphicRefCount.
-class NonPolymorphicRefCount {
- public:
-  GRPC_ABSTRACT_BASE_CLASS
-
- protected:
-  GPRC_ALLOW_CLASS_TO_USE_NON_PUBLIC_DELETE
-
-  ~NonPolymorphicRefCount() = default;
-};
 
 // RefCount is a simple atomic ref-count.
 //
@@ -73,37 +49,211 @@ class RefCount {
   using Value = intptr_t;
 
   // `init` is the initial refcount stored in this object.
-  constexpr explicit RefCount(Value init = 1) : value_(init) {}
+  //
+  // `trace` is a string to be logged with trace events; if null, no
+  // trace logging will be done.  Tracing is a no-op in non-debug builds.
+  explicit RefCount(
+      Value init = 1,
+      const char*
+#ifndef NDEBUG
+          // Leave unnamed if NDEBUG to avoid unused parameter warning
+          trace
+#endif
+      = nullptr)
+      :
+#ifndef NDEBUG
+        trace_(trace),
+#endif
+        value_(init) {
+  }
 
   // Increases the ref-count by `n`.
-  void Ref(Value n = 1) { value_.fetch_add(n, std::memory_order_relaxed); }
+  void Ref(Value n = 1) {
+#ifndef NDEBUG
+    const Value prior = value_.fetch_add(n, std::memory_order_relaxed);
+    if (trace_ != nullptr) {
+      gpr_log(GPR_INFO, "%s:%p ref %" PRIdPTR " -> %" PRIdPTR, trace_, this,
+              prior, prior + n);
+    }
+#else
+    value_.fetch_add(n, std::memory_order_relaxed);
+#endif
+  }
+  void Ref(const DebugLocation& location, const char* reason, Value n = 1) {
+#ifndef NDEBUG
+    const Value prior = value_.fetch_add(n, std::memory_order_relaxed);
+    if (trace_ != nullptr) {
+      gpr_log(GPR_INFO, "%s:%p %s:%d ref %" PRIdPTR " -> %" PRIdPTR " %s",
+              trace_, this, location.file(), location.line(), prior, prior + n,
+              reason);
+    }
+#else
+    // Use conditionally-important parameters
+    (void)location;
+    (void)reason;
+    value_.fetch_add(n, std::memory_order_relaxed);
+#endif
+  }
 
   // Similar to Ref() with an assert on the ref-count being non-zero.
   void RefNonZero() {
 #ifndef NDEBUG
     const Value prior = value_.fetch_add(1, std::memory_order_relaxed);
+    if (trace_ != nullptr) {
+      gpr_log(GPR_INFO, "%s:%p ref %" PRIdPTR " -> %" PRIdPTR, trace_, this,
+              prior, prior + 1);
+    }
     assert(prior > 0);
 #else
-    Ref();
+    value_.fetch_add(1, std::memory_order_relaxed);
 #endif
+  }
+  void RefNonZero(const DebugLocation& location, const char* reason) {
+#ifndef NDEBUG
+    const Value prior = value_.fetch_add(1, std::memory_order_relaxed);
+    if (trace_ != nullptr) {
+      gpr_log(GPR_INFO, "%s:%p %s:%d ref %" PRIdPTR " -> %" PRIdPTR " %s",
+              trace_, this, location.file(), location.line(), prior, prior + 1,
+              reason);
+    }
+    assert(prior > 0);
+#else
+    // Avoid unused-parameter warnings for debug-only parameters
+    (void)location;
+    (void)reason;
+    RefNonZero();
+#endif
+  }
+
+  bool RefIfNonZero() {
+#ifndef NDEBUG
+    if (trace_ != nullptr) {
+      const Value prior = get();
+      gpr_log(GPR_INFO, "%s:%p ref_if_non_zero %" PRIdPTR " -> %" PRIdPTR,
+              trace_, this, prior, prior + 1);
+    }
+#endif
+    return IncrementIfNonzero(&value_);
+  }
+  bool RefIfNonZero(const DebugLocation& location, const char* reason) {
+#ifndef NDEBUG
+    if (trace_ != nullptr) {
+      const Value prior = get();
+      gpr_log(GPR_INFO,
+              "%s:%p %s:%d ref_if_non_zero %" PRIdPTR " -> %" PRIdPTR " %s",
+              trace_, this, location.file(), location.line(), prior, prior + 1,
+              reason);
+    }
+#endif
+    // Avoid unused-parameter warnings for debug-only parameters
+    (void)location;
+    (void)reason;
+    return IncrementIfNonzero(&value_);
   }
 
   // Decrements the ref-count and returns true if the ref-count reaches 0.
   bool Unref() {
+#ifndef NDEBUG
+    // Grab a copy of the trace flag before the atomic change, since we
+    // will no longer be holding a ref afterwards and therefore can't
+    // safely access it, since another thread might free us in the interim.
+    auto* trace = trace_;
+#endif
     const Value prior = value_.fetch_sub(1, std::memory_order_acq_rel);
+#ifndef NDEBUG
+    if (trace != nullptr) {
+      gpr_log(GPR_INFO, "%s:%p unref %" PRIdPTR " -> %" PRIdPTR, trace, this,
+              prior, prior - 1);
+    }
     GPR_DEBUG_ASSERT(prior > 0);
+#endif
+    return prior == 1;
+  }
+  bool Unref(const DebugLocation& location, const char* reason) {
+#ifndef NDEBUG
+    // Grab a copy of the trace flag before the atomic change, since we
+    // will no longer be holding a ref afterwards and therefore can't
+    // safely access it, since another thread might free us in the interim.
+    auto* trace = trace_;
+#endif
+    const Value prior = value_.fetch_sub(1, std::memory_order_acq_rel);
+#ifndef NDEBUG
+    if (trace != nullptr) {
+      gpr_log(GPR_INFO, "%s:%p %s:%d unref %" PRIdPTR " -> %" PRIdPTR " %s",
+              trace, this, location.file(), location.line(), prior, prior - 1,
+              reason);
+    }
+    GPR_DEBUG_ASSERT(prior > 0);
+#else
+    // Avoid unused-parameter warnings for debug-only parameters
+    (void)location;
+    (void)reason;
+#endif
     return prior == 1;
   }
 
+ private:
   Value get() const { return value_.load(std::memory_order_relaxed); }
 
- private:
-  std::atomic<Value> value_;
+#ifndef NDEBUG
+  const char* trace_;
+#endif
+  std::atomic<Value> value_{0};
 };
 
+// PolymorphicRefCount enforces polymorphic destruction of RefCounted.
+class PolymorphicRefCount {
+ public:
+  virtual ~PolymorphicRefCount() = default;
+};
+
+// NonPolymorphicRefCount does not enforce polymorphic destruction of
+// RefCounted. Please refer to RefCounted for more details, and
+// when in doubt use PolymorphicRefCount.
+class NonPolymorphicRefCount {
+ public:
+  ~NonPolymorphicRefCount() = default;
+};
+
+// Behavior of RefCounted<> upon ref count reaching 0.
+enum UnrefBehavior {
+  // Default behavior: Delete the object.
+  kUnrefDelete,
+  // Do not delete the object upon unref.  This is useful in cases where all
+  // existing objects must be tracked in a registry but the object's entry in
+  // the registry cannot be removed from the object's dtor due to
+  // synchronization issues.  In this case, the registry can be cleaned up
+  // later by identifying entries for which RefIfNonZero() returns null.
+  kUnrefNoDelete,
+  // Call the object's dtor but do not delete it.  This is useful for cases
+  // where the object is stored in memory allocated elsewhere (e.g., the call
+  // arena).
+  kUnrefCallDtor,
+};
+
+namespace internal {
+template <typename T, UnrefBehavior UnrefBehaviorArg>
+class Delete;
+template <typename T>
+class Delete<T, kUnrefDelete> {
+ public:
+  explicit Delete(T* t) { delete t; }
+};
+template <typename T>
+class Delete<T, kUnrefNoDelete> {
+ public:
+  explicit Delete(T* /*t*/) {}
+};
+template <typename T>
+class Delete<T, kUnrefCallDtor> {
+ public:
+  explicit Delete(T* t) { t->~T(); }
+};
+}  // namespace internal
+
 // A base class for reference-counted objects.
-// New objects should be created via New() and start with a refcount of 1.
-// When the refcount reaches 0, the object will be deleted via Delete().
+// New objects should be created via new and start with a refcount of 1.
+// When the refcount reaches 0, executes the specified UnrefBehavior.
 //
 // This will commonly be used by CRTP (curiously-recurring template pattern)
 // e.g., class MyClass : public RefCounted<MyClass>
@@ -115,7 +265,7 @@ class RefCount {
 // So, use NonPolymorphicRefCount only when both of the following conditions
 // are guaranteed to hold:
 // (a) Child is a concrete leaf class in RefCounted<Child>, and
-// (b) you are gauranteed to call Unref only on concrete leaf classes and not
+// (b) you are guaranteed to call Unref only on concrete leaf classes and not
 //     their parents.
 //
 // The following example is illegal, because calling Unref() will not call
@@ -127,11 +277,21 @@ class RefCount {
 //    Child* ch;
 //    ch->Unref();
 //
-template <typename Child, typename Impl = PolymorphicRefCount>
+template <typename Child, typename Impl = PolymorphicRefCount,
+          UnrefBehavior UnrefBehaviorArg = kUnrefDelete>
 class RefCounted : public Impl {
  public:
+  // Note: Depending on the Impl used, this dtor can be implicitly virtual.
+  ~RefCounted() = default;
+
   RefCountedPtr<Child> Ref() GRPC_MUST_USE_RESULT {
     IncrementRefCount();
+    return RefCountedPtr<Child>(static_cast<Child*>(this));
+  }
+
+  RefCountedPtr<Child> Ref(const DebugLocation& location,
+                           const char* reason) GRPC_MUST_USE_RESULT {
+    IncrementRefCount(location, reason);
     return RefCountedPtr<Child>(static_cast<Child*>(this));
   }
 
@@ -140,24 +300,36 @@ class RefCounted : public Impl {
   // private, since it will only be used by RefCountedPtr<>, which is a
   // friend of this class.
   void Unref() {
-    if (refs_.Unref()) {
-      Delete(static_cast<Child*>(this));
+    if (GPR_UNLIKELY(refs_.Unref())) {
+      internal::Delete<Child, UnrefBehaviorArg>(static_cast<Child*>(this));
     }
+  }
+  void Unref(const DebugLocation& location, const char* reason) {
+    if (GPR_UNLIKELY(refs_.Unref(location, reason))) {
+      internal::Delete<Child, UnrefBehaviorArg>(static_cast<Child*>(this));
+    }
+  }
+
+  RefCountedPtr<Child> RefIfNonZero() GRPC_MUST_USE_RESULT {
+    return RefCountedPtr<Child>(refs_.RefIfNonZero() ? static_cast<Child*>(this)
+                                                     : nullptr);
+  }
+  RefCountedPtr<Child> RefIfNonZero(const DebugLocation& location,
+                                    const char* reason) GRPC_MUST_USE_RESULT {
+    return RefCountedPtr<Child>(refs_.RefIfNonZero(location, reason)
+                                    ? static_cast<Child*>(this)
+                                    : nullptr);
   }
 
   // Not copyable nor movable.
   RefCounted(const RefCounted&) = delete;
   RefCounted& operator=(const RefCounted&) = delete;
 
-  GRPC_ABSTRACT_BASE_CLASS
-
  protected:
-  GPRC_ALLOW_CLASS_TO_USE_NON_PUBLIC_DELETE
-
-  RefCounted() = default;
-
-  // Note: Depending on the Impl used, this dtor can be implicitly virtual.
-  ~RefCounted() = default;
+  // Note: Tracing is a no-op on non-debug builds.
+  explicit RefCounted(const char* trace = nullptr,
+                      intptr_t initial_refcount = 1)
+      : refs_(initial_refcount, trace) {}
 
  private:
   // Allow RefCountedPtr<> to access IncrementRefCount().
@@ -165,87 +337,10 @@ class RefCounted : public Impl {
   friend class RefCountedPtr;
 
   void IncrementRefCount() { refs_.Ref(); }
-
-  RefCount refs_;
-};
-
-// An alternative version of the RefCounted base class that
-// supports tracing.  This is intended to be used in cases where the
-// object will be handled both by idiomatic C++ code using smart
-// pointers and legacy code that is manually calling Ref() and Unref().
-// Once all of our code is converted to idiomatic C++, we may be able to
-// eliminate this class.
-template <typename Child, typename Impl = PolymorphicRefCount>
-class RefCountedWithTracing : public Impl {
- public:
-  RefCountedPtr<Child> Ref() GRPC_MUST_USE_RESULT {
-    IncrementRefCount();
-    return RefCountedPtr<Child>(static_cast<Child*>(this));
+  void IncrementRefCount(const DebugLocation& location, const char* reason) {
+    refs_.Ref(location, reason);
   }
 
-  RefCountedPtr<Child> Ref(const DebugLocation& location,
-                           const char* reason) GRPC_MUST_USE_RESULT {
-    if (location.Log() && trace_flag_ != nullptr && trace_flag_->enabled()) {
-      const RefCount::Value old_refs = refs_.get();
-      gpr_log(GPR_INFO, "%s:%p %s:%d ref %" PRIdPTR " -> %" PRIdPTR " %s",
-              trace_flag_->name(), this, location.file(), location.line(),
-              old_refs, old_refs + 1, reason);
-    }
-    return Ref();
-  }
-
-  // TODO(roth): Once all of our code is converted to C++ and can use
-  // RefCountedPtr<> instead of manual ref-counting, make the Unref() methods
-  // private, since they will only be used by RefCountedPtr<>, which is a
-  // friend of this class.
-
-  void Unref() {
-    if (refs_.Unref()) {
-      Delete(static_cast<Child*>(this));
-    }
-  }
-
-  void Unref(const DebugLocation& location, const char* reason) {
-    if (location.Log() && trace_flag_ != nullptr && trace_flag_->enabled()) {
-      const RefCount::Value old_refs = refs_.get();
-      gpr_log(GPR_INFO, "%s:%p %s:%d unref %" PRIdPTR " -> %" PRIdPTR " %s",
-              trace_flag_->name(), this, location.file(), location.line(),
-              old_refs, old_refs - 1, reason);
-    }
-    Unref();
-  }
-
-  // Not copyable nor movable.
-  RefCountedWithTracing(const RefCountedWithTracing&) = delete;
-  RefCountedWithTracing& operator=(const RefCountedWithTracing&) = delete;
-
-  GRPC_ABSTRACT_BASE_CLASS
-
- protected:
-  GPRC_ALLOW_CLASS_TO_USE_NON_PUBLIC_DELETE
-
-  RefCountedWithTracing()
-      : RefCountedWithTracing(static_cast<TraceFlag*>(nullptr)) {}
-
-  explicit RefCountedWithTracing(TraceFlag* trace_flag)
-      : trace_flag_(trace_flag) {}
-
-#ifdef NDEBUG
-  explicit RefCountedWithTracing(DebugOnlyTraceFlag* trace_flag)
-      : RefCountedWithTracing() {}
-#endif
-
-  // Note: Depending on the Impl used, this dtor can be implicitly virtual.
-  ~RefCountedWithTracing() = default;
-
- private:
-  // Allow RefCountedPtr<> to access IncrementRefCount().
-  template <typename T>
-  friend class RefCountedPtr;
-
-  void IncrementRefCount() { refs_.Ref(); }
-
-  TraceFlag* trace_flag_ = nullptr;
   RefCount refs_;
 };
 

@@ -14,25 +14,20 @@
  * limitations under the License.
  */
 
-#import "FIRWriteBatch.h"
-
-#include <algorithm>
-#include <utility>
-#include <vector>
+#import "Firestore/Source/API/FIRWriteBatch+Internal.h"
 
 #import "Firestore/Source/API/FIRDocumentReference+Internal.h"
-#import "Firestore/Source/API/FIRFirestore+Internal.h"
-#import "Firestore/Source/API/FIRWriteBatch+Internal.h"
-#import "Firestore/Source/API/FSTUserDataConverter.h"
-#import "Firestore/Source/Core/FSTFirestoreClient.h"
-#import "Firestore/Source/Model/FSTMutation.h"
-#import "Firestore/Source/Util/FSTUsageValidation.h"
+#import "Firestore/Source/API/FSTUserDataReader.h"
 
-#include "Firestore/core/src/firebase/firestore/model/precondition.h"
+#include "Firestore/core/src/api/write_batch.h"
+#include "Firestore/core/src/core/user_data.h"
+#include "Firestore/core/src/util/delayed_constructor.h"
+#include "Firestore/core/src/util/error_apple.h"
 
 using firebase::firestore::core::ParsedSetData;
 using firebase::firestore::core::ParsedUpdateData;
-using firebase::firestore::model::Precondition;
+using firebase::firestore::util::DelayedConstructor;
+using firebase::firestore::util::MakeCallback;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,29 +35,32 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FIRWriteBatch ()
 
-- (instancetype)initWithFirestore:(FIRFirestore *)firestore NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithDataReader:(FSTUserDataReader *)dataReader
+                        writeBatch:(api::WriteBatch &&)writeBatch NS_DESIGNATED_INITIALIZER;
 
-@property(nonatomic, strong, readonly) FIRFirestore *firestore;
-@property(nonatomic, assign) BOOL committed;
+@property(nonatomic, strong, readonly) FSTUserDataReader *dataReader;
 
 @end
 
 @implementation FIRWriteBatch (Internal)
 
-+ (instancetype)writeBatchWithFirestore:(FIRFirestore *)firestore {
-  return [[FIRWriteBatch alloc] initWithFirestore:firestore];
++ (instancetype)writeBatchWithDataReader:(FSTUserDataReader *)dataReader
+                              writeBatch:(api::WriteBatch &&)writeBatch {
+  return [[FIRWriteBatch alloc] initWithDataReader:dataReader writeBatch:std::move(writeBatch)];
 }
 
 @end
 
 @implementation FIRWriteBatch {
-  std::vector<FSTMutation *> _mutations;
+  DelayedConstructor<api::WriteBatch> _writeBatch;
 }
 
-- (instancetype)initWithFirestore:(FIRFirestore *)firestore {
+- (instancetype)initWithDataReader:(FSTUserDataReader *)dataReader
+                        writeBatch:(api::WriteBatch &&)writeBatch {
   self = [super init];
   if (self) {
-    _firestore = firestore;
+    _dataReader = dataReader;
+    _writeBatch.Init(std::move(writeBatch));
   }
   return self;
 }
@@ -75,14 +73,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (FIRWriteBatch *)setData:(NSDictionary<NSString *, id> *)data
                forDocument:(FIRDocumentReference *)document
                      merge:(BOOL)merge {
-  [self verifyNotCommitted];
-  [self validateReference:document];
-
-  ParsedSetData parsed = merge ? [self.firestore.dataConverter parsedMergeData:data fieldMask:nil]
-                               : [self.firestore.dataConverter parsedSetData:data];
-  std::vector<FSTMutation *> append_mutations =
-      std::move(parsed).ToMutations(document.key, Precondition::None());
-  std::move(append_mutations.begin(), append_mutations.end(), std::back_inserter(_mutations));
+  ParsedSetData parsed = merge ? [self.dataReader parsedMergeData:data fieldMask:nil]
+                               : [self.dataReader parsedSetData:data];
+  _writeBatch->SetData(document.internalReference, std::move(parsed));
 
   return self;
 }
@@ -90,37 +83,23 @@ NS_ASSUME_NONNULL_BEGIN
 - (FIRWriteBatch *)setData:(NSDictionary<NSString *, id> *)data
                forDocument:(FIRDocumentReference *)document
                mergeFields:(NSArray<id> *)mergeFields {
-  [self verifyNotCommitted];
-  [self validateReference:document];
-
-  ParsedSetData parsed = [self.firestore.dataConverter parsedMergeData:data fieldMask:mergeFields];
-  std::vector<FSTMutation *> append_mutations =
-      std::move(parsed).ToMutations(document.key, Precondition::None());
-  std::move(append_mutations.begin(), append_mutations.end(), std::back_inserter(_mutations));
+  ParsedSetData parsed = [self.dataReader parsedMergeData:data fieldMask:mergeFields];
+  _writeBatch->SetData(document.internalReference, std::move(parsed));
 
   return self;
 }
 
 - (FIRWriteBatch *)updateData:(NSDictionary<id, id> *)fields
                   forDocument:(FIRDocumentReference *)document {
-  [self verifyNotCommitted];
-  [self validateReference:document];
-
-  ParsedUpdateData parsed = [self.firestore.dataConverter parsedUpdateData:fields];
-  std::vector<FSTMutation *> append_mutations =
-      std::move(parsed).ToMutations(document.key, Precondition::Exists(true));
-  std::move(append_mutations.begin(), append_mutations.end(), std::back_inserter(_mutations));
+  ParsedUpdateData parsed = [self.dataReader parsedUpdateData:fields];
+  _writeBatch->UpdateData(document.internalReference, std::move(parsed));
 
   return self;
 }
 
 - (FIRWriteBatch *)deleteDocument:(FIRDocumentReference *)document {
-  [self verifyNotCommitted];
-  [self validateReference:document];
+  _writeBatch->DeleteData(document.internalReference);
 
-  _mutations.push_back([[FSTDeleteMutation alloc] initWithKey:document.key
-                                                 precondition:Precondition::None()]);
-  ;
   return self;
 }
 
@@ -129,22 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)commitWithCompletion:(nullable void (^)(NSError *_Nullable error))completion {
-  [self verifyNotCommitted];
-  self.committed = TRUE;
-  [self.firestore.client writeMutations:std::move(_mutations) completion:completion];
-}
-
-- (void)verifyNotCommitted {
-  if (self.committed) {
-    FSTThrowInvalidUsage(@"FIRIllegalStateException",
-                         @"A write batch can no longer be used after commit has been called.");
-  }
-}
-
-- (void)validateReference:(FIRDocumentReference *)reference {
-  if (reference.firestore != self.firestore) {
-    FSTThrowInvalidArgument(@"Provided document reference is from a different Firestore instance.");
-  }
+  _writeBatch->Commit(MakeCallback(completion));
 }
 
 @end

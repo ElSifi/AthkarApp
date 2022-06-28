@@ -21,12 +21,12 @@
 
 #include <grpc/support/port_platform.h>
 
+#include <grpc/support/thd_id.h>
+
 #include "src/core/lib/iomgr/pollset_custom.h"
 #include "src/core/lib/iomgr/resolve_address_custom.h"
 #include "src/core/lib/iomgr/tcp_custom.h"
 #include "src/core/lib/iomgr/timer_custom.h"
-
-#include <grpc/support/thd_id.h>
 
 /* The thread ID of the thread on which grpc was initialized. Used to verify
  * that all calls into the custom iomgr are made on that same thread */
@@ -38,6 +38,8 @@ extern gpr_thd_id g_init_thread;
 #else
 #define GRPC_CUSTOM_IOMGR_ASSERT_SAME_THREAD()
 #endif /* GRPC_CUSTOM_IOMGR_THREAD_CHECK */
+
+extern bool g_custom_iomgr_enabled;
 
 void grpc_custom_iomgr_init(grpc_socket_vtable* socket,
                             grpc_custom_resolver_vtable* resolver,

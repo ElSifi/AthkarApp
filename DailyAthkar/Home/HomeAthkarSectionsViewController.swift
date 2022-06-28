@@ -8,7 +8,7 @@
 
 import UIKit
 import SwipeCellKit
-import FirebaseUI
+import FirebaseAuthUI
 import FirebaseFirestore
 import BadgeHub
 

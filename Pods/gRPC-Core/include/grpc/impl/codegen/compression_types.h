@@ -19,6 +19,8 @@
 #ifndef GRPC_IMPL_CODEGEN_COMPRESSION_TYPES_H
 #define GRPC_IMPL_CODEGEN_COMPRESSION_TYPES_H
 
+// IWYU pragma: private
+
 #include <grpc/impl/codegen/port_platform.h>
 
 #ifdef __cplusplus
@@ -52,13 +54,12 @@ extern "C" {
   "grpc.compression_enabled_algorithms_bitset"
 /** \} */
 
-/** The various compression algorithms supported by gRPC */
+/** The various compression algorithms supported by gRPC (not sorted by
+ * compression level) */
 typedef enum {
   GRPC_COMPRESS_NONE = 0,
   GRPC_COMPRESS_DEFLATE,
   GRPC_COMPRESS_GZIP,
-  /* EXPERIMENTAL: Stream compression is currently experimental. */
-  GRPC_COMPRESS_STREAM_GZIP,
   /* TODO(ctiller): snappy */
   GRPC_COMPRESS_ALGORITHMS_COUNT
 } grpc_compression_algorithm;

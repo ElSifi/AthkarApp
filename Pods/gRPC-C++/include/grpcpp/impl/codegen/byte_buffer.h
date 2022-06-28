@@ -19,15 +19,16 @@
 #ifndef GRPCPP_IMPL_CODEGEN_BYTE_BUFFER_H
 #define GRPCPP_IMPL_CODEGEN_BYTE_BUFFER_H
 
-#include <grpc/impl/codegen/byte_buffer.h>
+// IWYU pragma: private, include <grpcpp/support/byte_buffer.h>
 
+#include <vector>
+
+#include <grpc/impl/codegen/byte_buffer.h>
 #include <grpcpp/impl/codegen/config.h>
 #include <grpcpp/impl/codegen/core_codegen_interface.h>
 #include <grpcpp/impl/codegen/serialization_traits.h>
 #include <grpcpp/impl/codegen/slice.h>
 #include <grpcpp/impl/codegen/status.h>
-
-#include <vector>
 
 namespace grpc {
 
@@ -36,26 +37,24 @@ class ByteBuffer;
 class ServerInterface;
 
 namespace internal {
+template <class RequestType, class ResponseType>
+class CallbackUnaryHandler;
+template <class RequestType, class ResponseType>
+class CallbackServerStreamingHandler;
+template <class RequestType>
+void* UnaryDeserializeHelper(grpc_byte_buffer*, ::grpc::Status*, RequestType*);
+template <class ServiceType, class RequestType, class ResponseType>
+class ServerStreamingHandler;
+template <::grpc::StatusCode code>
+class ErrorMethodHandler;
 class CallOpSendMessage;
 template <class R>
 class CallOpRecvMessage;
 class CallOpGenericRecvMessage;
-class MethodHandler;
-template <class ServiceType, class RequestType, class ResponseType>
-class RpcMethodHandler;
-template <class ServiceType, class RequestType, class ResponseType>
-class ServerStreamingHandler;
-template <class ServiceType, class RequestType, class ResponseType>
-class CallbackUnaryHandler;
-template <StatusCode code>
-class ErrorMethodHandler;
+class ExternalConnectionAcceptorImpl;
 template <class R>
 class DeserializeFuncType;
 class GrpcByteBufferPeer;
-template <class ServiceType, class RequestType, class ResponseType>
-class RpcMethodHandler;
-template <class ServiceType, class RequestType, class ResponseType>
-class ServerStreamingHandler;
 
 }  // namespace internal
 /// A sequence of bytes.
@@ -91,8 +90,10 @@ class ByteBuffer final {
   }
 
   /// Constuct a byte buffer by referencing elements of existing buffer
-  /// \a buf. Wrapper of core function grpc_byte_buffer_copy
-  ByteBuffer(const ByteBuffer& buf);
+  /// \a buf. Wrapper of core function grpc_byte_buffer_copy . This is not
+  /// a deep copy; it is just a referencing. As a result, its performance is
+  /// size-independent.
+  ByteBuffer(const ByteBuffer& buf) : buffer_(nullptr) { operator=(buf); }
 
   ~ByteBuffer() {
     if (buffer_) {
@@ -100,7 +101,26 @@ class ByteBuffer final {
     }
   }
 
-  ByteBuffer& operator=(const ByteBuffer&);
+  /// Wrapper of core function grpc_byte_buffer_copy . This is not
+  /// a deep copy; it is just a referencing. As a result, its performance is
+  /// size-independent.
+  ByteBuffer& operator=(const ByteBuffer& buf) {
+    if (this != &buf) {
+      Clear();  // first remove existing data
+    }
+    if (buf.buffer_) {
+      // then copy
+      buffer_ = g_core_codegen_interface->grpc_byte_buffer_copy(buf.buffer_);
+    }
+    return *this;
+  }
+
+  // If this ByteBuffer's representation is a single flat slice, returns a
+  // slice referencing that array.
+  Status TrySingleSlice(Slice* slice) const;
+
+  /// Dump (read) the buffer contents into \a slics.
+  Status DumpToSingleSlice(Slice* slice) const;
 
   /// Dump (read) the buffer contents into \a slices.
   Status Dump(std::vector<Slice>* slices) const;
@@ -115,7 +135,9 @@ class ByteBuffer final {
 
   /// Make a duplicate copy of the internals of this byte
   /// buffer so that we have our own owned version of it.
-  /// bbuf.Duplicate(); is equivalent to bbuf=bbuf; but is actually readable
+  /// bbuf.Duplicate(); is equivalent to bbuf=bbuf; but is actually readable.
+  /// This is not a deep copy; it is a referencing and its performance
+  /// is size-independent.
   void Duplicate() {
     buffer_ = g_core_codegen_interface->grpc_byte_buffer_copy(buffer_);
   }
@@ -148,16 +170,15 @@ class ByteBuffer final {
   template <class R>
   friend class internal::CallOpRecvMessage;
   friend class internal::CallOpGenericRecvMessage;
-  template <class ServiceType, class RequestType, class ResponseType>
-  friend class RpcMethodHandler;
-  template <class ServiceType, class RequestType, class ResponseType>
-  friend class ServerStreamingHandler;
-  template <class ServiceType, class RequestType, class ResponseType>
-  friend class internal::RpcMethodHandler;
+  template <class RequestType>
+  friend void* internal::UnaryDeserializeHelper(grpc_byte_buffer*,
+                                                ::grpc::Status*, RequestType*);
   template <class ServiceType, class RequestType, class ResponseType>
   friend class internal::ServerStreamingHandler;
-  template <class ServiceType, class RequestType, class ResponseType>
+  template <class RequestType, class ResponseType>
   friend class internal::CallbackUnaryHandler;
+  template <class RequestType, class ResponseType>
+  friend class internal::CallbackServerStreamingHandler;
   template <StatusCode code>
   friend class internal::ErrorMethodHandler;
   template <class R>
@@ -165,6 +186,7 @@ class ByteBuffer final {
   friend class ProtoBufferReader;
   friend class ProtoBufferWriter;
   friend class internal::GrpcByteBufferPeer;
+  friend class internal::ExternalConnectionAcceptorImpl;
 
   grpc_byte_buffer* buffer_;
 
@@ -181,10 +203,14 @@ class ByteBuffer final {
 
   class ByteBufferPointer {
    public:
+    /* NOLINTNEXTLINE(google-explicit-constructor) */
     ByteBufferPointer(const ByteBuffer* b)
         : bbuf_(const_cast<ByteBuffer*>(b)) {}
+    /* NOLINTNEXTLINE(google-explicit-constructor) */
     operator ByteBuffer*() { return bbuf_; }
+    /* NOLINTNEXTLINE(google-explicit-constructor) */
     operator grpc_byte_buffer*() { return bbuf_->buffer_; }
+    /* NOLINTNEXTLINE(google-explicit-constructor) */
     operator grpc_byte_buffer**() { return &bbuf_->buffer_; }
 
    private:
@@ -204,7 +230,7 @@ class SerializationTraits<ByteBuffer, void> {
                           bool* own_buffer) {
     *buffer = source;
     *own_buffer = true;
-    return Status::OK;
+    return g_core_codegen_interface->ok();
   }
 };
 

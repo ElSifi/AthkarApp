@@ -29,32 +29,26 @@ class Utils: NSObject {
                 morningDateComponents.hour = 7
                 morningDateComponents.minute = 30
                 let userCalendar = Calendar.current // user calendar
-                let morningDate = userCalendar.date(from: morningDateComponents)
                 
-                let morning = DLNotification(
-                    identifier: "morning",
-                    alertTitle: "morning alert".localized,
-                    alertBody: "morning alert body".localized,
-                    date: morningDate,
-                    repeats: .daily
-                )
+                let morning = DLNotification(identifier: "morning", alertTitle: "morning alert".localized, alertBody: "morning alert body".localized, fromDateComponents: morningDateComponents, repeatInterval: RepeatingInterval.daily)
+                
+                
                 
                 var eveningDateComponents = DateComponents()
                 eveningDateComponents.hour = 17
                 eveningDateComponents.minute = 30
-                let eveningDate = userCalendar.date(from: eveningDateComponents)
                 
                 
                 let evening = DLNotification(
                     identifier: "evening",
                     alertTitle: "evening alert".localized,
                     alertBody: "evening alert body".localized,
-                    date: eveningDate,
-                    repeats: .daily
+                    fromDateComponents: eveningDateComponents,
+                    repeatInterval: RepeatingInterval.daily
                 )
                 
-                _ = scheduler.scheduleNotification(notification: morning)
-                _ = scheduler.scheduleNotification(notification: evening)
+                scheduler.scheduleNotification(notification: morning)
+                scheduler.scheduleNotification(notification: evening)
                 return completion(true)
             }
         }
