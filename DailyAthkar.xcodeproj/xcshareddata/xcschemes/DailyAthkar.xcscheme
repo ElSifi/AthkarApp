@@ -38,6 +38,26 @@
                ReferencedContainer = "container:DailyAthkar.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D8552DA4286C3A5000C608A4"
+               BuildableName = "DailyAthkarBDD.xctest"
+               BlueprintName = "DailyAthkarBDD"
+               ReferencedContainer = "container:DailyAthkar.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D8A5B66028705D0A00CB8C96"
+               BuildableName = "DailyAthkarQNTest.xctest"
+               BlueprintName = "DailyAthkarQNTest"
+               ReferencedContainer = "container:DailyAthkar.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

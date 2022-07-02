@@ -22,12 +22,23 @@ target 'DailyAthkar' do
   target 'DailyAthkarTests' do
     inherit! :search_paths
   end
+  target 'DailyAthkarBDD' do
+    inherit! :search_paths
+    pod 'Cucumberish'
+  end
+  target 'DailyAthkarQNTest' do
+    inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
+  end
 end
 
 target 'OneSignalNotificationServiceExtension' do
     use_frameworks!
     pod 'OneSignal'
 end
+
+
 
 
 post_install do |installer|

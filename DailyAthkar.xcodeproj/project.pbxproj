@@ -105,6 +105,7 @@
 		92E44EF12093C2D900040452 /* HomeSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E44EF02093C2D900040452 /* HomeSectionTableViewCell.swift */; };
 		92E49AFA209897990090DB34 /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = 92E49AF9209897990090DB34 /* db.json */; };
 		92E4D0C5212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 92E4D0C4212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 */; };
+		B60D86695D5E974F3AE1BEB5 /* Pods_DailyAthkarQNTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17895F709E69AFE105DC3FA6 /* Pods_DailyAthkarQNTest.framework */; };
 		D81AF90C225EA1A000D28630 /* MeezanMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81AF90E225EA1A000D28630 /* MeezanMainViewController.xib */; };
 		D820EABC286414C00036E803 /* SettingsCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D820EABB286414C00036E803 /* SettingsCoodinator.swift */; };
 		D824AD0D2863231800956412 /* DACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824AD0C2863231800956412 /* DACoordinator.swift */; };
@@ -119,13 +120,18 @@
 		D84B7FA428688FA700B03AA8 /* ThikrCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84B7FA328688FA700B03AA8 /* ThikrCellViewModel.swift */; };
 		D84CBEEA286A4C9300C7F53B /* DailyAthkarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84CBEE9286A4C9300C7F53B /* DailyAthkarTests.swift */; };
 		D85410C428636C980031548B /* Athkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85410C328636C980031548B /* Athkar.swift */; };
+		D8552DB1286C530200C608A4 /* CucumberishLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D8552DB0286C530200C608A4 /* CucumberishLoader.m */; };
+		D8552DB3286C53F700C608A4 /* CucumberishInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8552DB2286C53F700C608A4 /* CucumberishInitializer.swift */; };
+		D8552DB5286C58B800C608A4 /* AthkarParsing.feature in Sources */ = {isa = PBXBuildFile; fileRef = D8552DB4286C58B800C608A4 /* AthkarParsing.feature */; };
 		D890F7D42259522100D37E2A /* Meezan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890F7D32259522100D37E2A /* Meezan.swift */; };
 		D8A156F7225D4EB800C8F274 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A156F5225D4EB600C8F274 /* UIAlertController+Blocks.m */; };
+		D8A5B66428705D0A00CB8C96 /* DailyAthkarQNTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5B66328705D0A00CB8C96 /* DailyAthkarQNTest.swift */; };
 		D8A9E54B2257984800544B08 /* MeezanMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9E5492257984800544B08 /* MeezanMainViewController.swift */; };
 		D8B6E000225D56C70067FDC6 /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6DFFE225D56C70067FDC6 /* AppSettingsViewController.swift */; };
 		D8B6E001225D56C70067FDC6 /* AppSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B6DFFF225D56C70067FDC6 /* AppSettingsViewController.xib */; };
 		D8C858C628647CC6009074E8 /* HomeAthkarSectionsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C858C528647CC6009074E8 /* HomeAthkarSectionsScreenViewModel.swift */; };
 		D8D6C1A928592565008D4F50 /* tokens.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D6C1A828592565008D4F50 /* tokens.plist */; };
+		EF6F7A6FEA265D5EC6BC7C26 /* Pods_DailyAthkarBDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186909C9082746B98C406C62 /* Pods_DailyAthkarBDD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +143,20 @@
 			remoteInfo = OneSignalNotificationServiceExtension;
 		};
 		D84CBEEB286A4C9300C7F53B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E1526A2093A85400301BB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E152712093A85400301BB6;
+			remoteInfo = DailyAthkar;
+		};
+		D8552DA9286C3A5000C608A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E1526A2093A85400301BB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E152712093A85400301BB6;
+			remoteInfo = DailyAthkar;
+		};
+		D8A5B66528705D0A00CB8C96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 92E1526A2093A85400301BB6 /* Project object */;
 			proxyType = 1;
@@ -160,7 +180,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C851FD0201018731B5924D7 /* Pods-DailyAthkarQNTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyAthkarQNTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyAthkarQNTest/Pods-DailyAthkarQNTest.release.xcconfig"; sourceTree = "<group>"; };
+		17895F709E69AFE105DC3FA6 /* Pods_DailyAthkarQNTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyAthkarQNTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		186909C9082746B98C406C62 /* Pods_DailyAthkarBDD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyAthkarBDD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		227A61BD14E356938895BC40 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		2526EFB615F3554379182DC0 /* Pods-DailyAthkarBDD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyAthkarBDD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyAthkarBDD/Pods-DailyAthkarBDD.debug.xcconfig"; sourceTree = "<group>"; };
 		268BAED460F1A4EFACEF9130 /* Pods_DailyAthkarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyAthkarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561140D4F0AA43FE89326807 /* Pods-DailyAthkarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyAthkarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyAthkarTests/Pods-DailyAthkarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6008ACACE3D9E077D201C5F9 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +282,7 @@
 		928147C3209BCD23007B0D85 /* Mishary_WakingUp_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_WakingUp_1.mp3; sourceTree = "<group>"; };
 		928147C4209BCD23007B0D85 /* Mishary_WakingUp_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_WakingUp_2.mp3; sourceTree = "<group>"; };
 		928147C5209BCD23007B0D85 /* Mishary_WakingUp_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_WakingUp_3.mp3; sourceTree = "<group>"; };
+		929F4B37AC4FFA34B61A0715 /* Pods-DailyAthkarQNTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyAthkarQNTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyAthkarQNTest/Pods-DailyAthkarQNTest.debug.xcconfig"; sourceTree = "<group>"; };
 		92B265A22135332A0021C973 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B265A42135332A0021C973 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		92B265A62135332A0021C973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -277,6 +302,7 @@
 		92E44EF02093C2D900040452 /* HomeSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionTableViewCell.swift; sourceTree = "<group>"; };
 		92E49AF9209897990090DB34 /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
 		92E4D0C4212ACF5C00AFCF47 /* Mishary_AfterPrayer_14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mishary_AfterPrayer_14.mp3; sourceTree = "<group>"; };
+		99429D701AAF829242D7378C /* Pods-DailyAthkarBDD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyAthkarBDD.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyAthkarBDD/Pods-DailyAthkarBDD.release.xcconfig"; sourceTree = "<group>"; };
 		D81AF90D225EA1A000D28630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MeezanMainViewController.xib; sourceTree = "<group>"; };
 		D81AF910225EA59500D28630 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MeezanMainViewController.strings; sourceTree = "<group>"; };
 		D820EABB286414C00036E803 /* SettingsCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoodinator.swift; sourceTree = "<group>"; };
@@ -293,9 +319,16 @@
 		D84CBEE7286A4C9300C7F53B /* DailyAthkarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyAthkarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D84CBEE9286A4C9300C7F53B /* DailyAthkarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAthkarTests.swift; sourceTree = "<group>"; };
 		D85410C328636C980031548B /* Athkar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Athkar.swift; sourceTree = "<group>"; };
+		D8552DA5286C3A5000C608A4 /* DailyAthkarBDD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyAthkarBDD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8552DAF286C530200C608A4 /* DailyAthkarBDD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyAthkarBDD-Bridging-Header.h"; sourceTree = "<group>"; };
+		D8552DB0286C530200C608A4 /* CucumberishLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CucumberishLoader.m; sourceTree = "<group>"; };
+		D8552DB2286C53F700C608A4 /* CucumberishInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucumberishInitializer.swift; sourceTree = "<group>"; };
+		D8552DB4286C58B800C608A4 /* AthkarParsing.feature */ = {isa = PBXFileReference; lastKnownFileType = text; path = AthkarParsing.feature; sourceTree = "<group>"; };
 		D890F7D32259522100D37E2A /* Meezan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meezan.swift; sourceTree = "<group>"; };
 		D8A156F5225D4EB600C8F274 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
 		D8A156F6225D4EB700C8F274 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
+		D8A5B66128705D0A00CB8C96 /* DailyAthkarQNTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyAthkarQNTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A5B66328705D0A00CB8C96 /* DailyAthkarQNTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAthkarQNTest.swift; sourceTree = "<group>"; };
 		D8A9E5492257984800544B08 /* MeezanMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeezanMainViewController.swift; sourceTree = "<group>"; };
 		D8B6DFFE225D56C70067FDC6 /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		D8B6DFFF225D56C70067FDC6 /* AppSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingsViewController.xib; sourceTree = "<group>"; };
@@ -328,6 +361,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BECCE22C25C0F3BCB76A9D6 /* Pods_DailyAthkarTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8552DA2286C3A5000C608A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6F7A6FEA265D5EC6BC7C26 /* Pods_DailyAthkarBDD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A5B65E28705D0A00CB8C96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60D86695D5E974F3AE1BEB5 /* Pods_DailyAthkarQNTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +588,8 @@
 				92E152742093A85400301BB6 /* DailyAthkar */,
 				92B265A32135332A0021C973 /* OneSignalNotificationServiceExtension */,
 				D84CBEE8286A4C9300C7F53B /* DailyAthkarTests */,
+				D8552DA6286C3A5000C608A4 /* DailyAthkarBDD */,
+				D8A5B66228705D0A00CB8C96 /* DailyAthkarQNTest */,
 				92E152732093A85400301BB6 /* Products */,
 				93E992A09AFC7F6FDB66E083 /* Pods */,
 				F195E545B3E239AACCE989DF /* Frameworks */,
@@ -551,6 +602,8 @@
 				92E152722093A85400301BB6 /* DailyAthkar.app */,
 				92B265A22135332A0021C973 /* OneSignalNotificationServiceExtension.appex */,
 				D84CBEE7286A4C9300C7F53B /* DailyAthkarTests.xctest */,
+				D8552DA5286C3A5000C608A4 /* DailyAthkarBDD.xctest */,
+				D8A5B66128705D0A00CB8C96 /* DailyAthkarQNTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -603,6 +656,10 @@
 				227A61BD14E356938895BC40 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 				561140D4F0AA43FE89326807 /* Pods-DailyAthkarTests.debug.xcconfig */,
 				6AE231A0D78B6CFEAF2B13E7 /* Pods-DailyAthkarTests.release.xcconfig */,
+				2526EFB615F3554379182DC0 /* Pods-DailyAthkarBDD.debug.xcconfig */,
+				99429D701AAF829242D7378C /* Pods-DailyAthkarBDD.release.xcconfig */,
+				929F4B37AC4FFA34B61A0715 /* Pods-DailyAthkarQNTest.debug.xcconfig */,
+				0C851FD0201018731B5924D7 /* Pods-DailyAthkarQNTest.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -662,6 +719,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D8552DA6286C3A5000C608A4 /* DailyAthkarBDD */ = {
+			isa = PBXGroup;
+			children = (
+				D8552DAE286C52B400C608A4 /* Features */,
+				D8552DB0286C530200C608A4 /* CucumberishLoader.m */,
+				D8552DAF286C530200C608A4 /* DailyAthkarBDD-Bridging-Header.h */,
+				D8552DB2286C53F700C608A4 /* CucumberishInitializer.swift */,
+			);
+			path = DailyAthkarBDD;
+			sourceTree = "<group>";
+		};
+		D8552DAE286C52B400C608A4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D8552DB4286C58B800C608A4 /* AthkarParsing.feature */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		D8A156F4225D4E9D00C8F274 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,6 +756,14 @@
 			path = "UIAlertController+Blocks";
 			sourceTree = "<group>";
 		};
+		D8A5B66228705D0A00CB8C96 /* DailyAthkarQNTest */ = {
+			isa = PBXGroup;
+			children = (
+				D8A5B66328705D0A00CB8C96 /* DailyAthkarQNTest.swift */,
+			);
+			path = DailyAthkarQNTest;
+			sourceTree = "<group>";
+		};
 		D8A9E5482257982900544B08 /* Meezan */ = {
 			isa = PBXGroup;
 			children = (
@@ -696,6 +780,8 @@
 				DE7E9CB71F907D5583FF4764 /* Pods_DailyAthkar.framework */,
 				6008ACACE3D9E077D201C5F9 /* Pods_OneSignalNotificationServiceExtension.framework */,
 				268BAED460F1A4EFACEF9130 /* Pods_DailyAthkarTests.framework */,
+				186909C9082746B98C406C62 /* Pods_DailyAthkarBDD.framework */,
+				17895F709E69AFE105DC3FA6 /* Pods_DailyAthkarQNTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -761,6 +847,46 @@
 			productReference = D84CBEE7286A4C9300C7F53B /* DailyAthkarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D8552DA4286C3A5000C608A4 /* DailyAthkarBDD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8552DAD286C3A5000C608A4 /* Build configuration list for PBXNativeTarget "DailyAthkarBDD" */;
+			buildPhases = (
+				ABBB8A844AE3156FE27EF9E0 /* [CP] Check Pods Manifest.lock */,
+				D8552DA1286C3A5000C608A4 /* Sources */,
+				D8552DA2286C3A5000C608A4 /* Frameworks */,
+				D8552DA3286C3A5000C608A4 /* Resources */,
+				9CB99B4F16818875D2BCEA24 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8552DAA286C3A5000C608A4 /* PBXTargetDependency */,
+			);
+			name = DailyAthkarBDD;
+			productName = DailyAthkarBDD;
+			productReference = D8552DA5286C3A5000C608A4 /* DailyAthkarBDD.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D8A5B66028705D0A00CB8C96 /* DailyAthkarQNTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8A5B66928705D0A00CB8C96 /* Build configuration list for PBXNativeTarget "DailyAthkarQNTest" */;
+			buildPhases = (
+				67BE622A0FFF84381E4E46A1 /* [CP] Check Pods Manifest.lock */,
+				D8A5B65D28705D0A00CB8C96 /* Sources */,
+				D8A5B65E28705D0A00CB8C96 /* Frameworks */,
+				D8A5B65F28705D0A00CB8C96 /* Resources */,
+				8E61FA139DB842E82CB5D9B0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8A5B66628705D0A00CB8C96 /* PBXTargetDependency */,
+			);
+			name = DailyAthkarQNTest;
+			productName = DailyAthkarQNTest;
+			productReference = D8A5B66128705D0A00CB8C96 /* DailyAthkarQNTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -798,6 +924,17 @@
 						};
 					};
 					D84CBEE6286A4C9300C7F53B = {
+						CreatedOnToolsVersion = 13.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 92E152712093A85400301BB6;
+					};
+					D8552DA4286C3A5000C608A4 = {
+						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 92E152712093A85400301BB6;
+					};
+					D8A5B66028705D0A00CB8C96 = {
 						CreatedOnToolsVersion = 13.2.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 92E152712093A85400301BB6;
@@ -903,6 +1040,8 @@
 				92E152712093A85400301BB6 /* DailyAthkar */,
 				92B265A12135332A0021C973 /* OneSignalNotificationServiceExtension */,
 				D84CBEE6286A4C9300C7F53B /* DailyAthkarTests */,
+				D8552DA4286C3A5000C608A4 /* DailyAthkarBDD */,
+				D8A5B66028705D0A00CB8C96 /* DailyAthkarQNTest */,
 			);
 		};
 /* End PBXProject section */
@@ -1010,6 +1149,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8552DA3286C3A5000C608A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A5B65F28705D0A00CB8C96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1029,6 +1182,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DailyAthkarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67BE622A0FFF84381E4E46A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DailyAthkarQNTest-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1127,6 +1302,66 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8E61FA139DB842E82CB5D9B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DailyAthkarQNTest/Pods-DailyAthkarQNTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DailyAthkarQNTest/Pods-DailyAthkarQNTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CB99B4F16818875D2BCEA24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DailyAthkarBDD/Pods-DailyAthkarBDD-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cucumberish/Cucumberish.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cucumberish.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DailyAthkarBDD/Pods-DailyAthkarBDD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABBB8A844AE3156FE27EF9E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DailyAthkarBDD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FAE2C4CB5D1DBF8990F43ADF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1203,6 +1438,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8552DA1286C3A5000C608A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8552DB3286C53F700C608A4 /* CucumberishInitializer.swift in Sources */,
+				D8552DB1286C530200C608A4 /* CucumberishLoader.m in Sources */,
+				D8552DB5286C58B800C608A4 /* AthkarParsing.feature in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A5B65D28705D0A00CB8C96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A5B66428705D0A00CB8C96 /* DailyAthkarQNTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1215,6 +1468,16 @@
 			isa = PBXTargetDependency;
 			target = 92E152712093A85400301BB6 /* DailyAthkar */;
 			targetProxy = D84CBEEB286A4C9300C7F53B /* PBXContainerItemProxy */;
+		};
+		D8552DAA286C3A5000C608A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E152712093A85400301BB6 /* DailyAthkar */;
+			targetProxy = D8552DA9286C3A5000C608A4 /* PBXContainerItemProxy */;
+		};
+		D8A5B66628705D0A00CB8C96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E152712093A85400301BB6 /* DailyAthkar */;
+			targetProxy = D8A5B66528705D0A00CB8C96 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1519,6 +1782,113 @@
 			};
 			name = Release;
 		};
+		D8552DAB286C3A5000C608A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2526EFB615F3554379182DC0 /* Pods-DailyAthkarBDD.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KEYC53CXGS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanova.DailyAthkarBDD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyAthkarBDD/DailyAthkarBDD-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyAthkar.app/DailyAthkar";
+			};
+			name = Debug;
+		};
+		D8552DAC286C3A5000C608A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99429D701AAF829242D7378C /* Pods-DailyAthkarBDD.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KEYC53CXGS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanova.DailyAthkarBDD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyAthkarBDD/DailyAthkarBDD-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyAthkar.app/DailyAthkar";
+			};
+			name = Release;
+		};
+		D8A5B66728705D0A00CB8C96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 929F4B37AC4FFA34B61A0715 /* Pods-DailyAthkarQNTest.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KEYC53CXGS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanova.DailyAthkarQNTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyAthkar.app/DailyAthkar";
+			};
+			name = Debug;
+		};
+		D8A5B66828705D0A00CB8C96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C851FD0201018731B5924D7 /* Pods-DailyAthkarQNTest.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KEYC53CXGS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanova.DailyAthkarQNTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyAthkar.app/DailyAthkar";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1554,6 +1924,24 @@
 			buildConfigurations = (
 				D84CBEED286A4C9300C7F53B /* Debug */,
 				D84CBEEE286A4C9300C7F53B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8552DAD286C3A5000C608A4 /* Build configuration list for PBXNativeTarget "DailyAthkarBDD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8552DAB286C3A5000C608A4 /* Debug */,
+				D8552DAC286C3A5000C608A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8A5B66928705D0A00CB8C96 /* Build configuration list for PBXNativeTarget "DailyAthkarQNTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8A5B66728705D0A00CB8C96 /* Debug */,
+				D8A5B66828705D0A00CB8C96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

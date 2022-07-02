@@ -1,0 +1,6 @@
+framework module Pods_DailyAthkarQNTest {
+  umbrella header "Pods-DailyAthkarQNTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
