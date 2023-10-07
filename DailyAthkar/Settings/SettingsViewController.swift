@@ -305,8 +305,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 if (UIApplication.shared.canOpenURL(twitterURL)) {
                     UIApplication.shared.open(twitterURL, options: [:], completionHandler: nil)
                 }else{
-                    
-                }
+                        UIAlertController.showAlert(in: self, withTitle: "mo@badi3.com", message: nil, cancelButtonTitle: "OK", destructiveButtonTitle: nil, otherButtonTitles: nil, tap: nil)                }
             case "rate":
                 rateApp(appId: "id821664774") { success in
                     print("RateApp \(success)")

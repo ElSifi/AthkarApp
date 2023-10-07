@@ -118,31 +118,31 @@ class HomeAthkarSectionsViewController: UIViewController, UITableViewDelegate, U
         }
         
         
-        if(!languageWasAlreadySet){
-            self.openSettings(UIButton.init())
-            languageWasAlreadySet = true
-        }else{
-            if(!didTheInitialAnimation){
-                UIView.animate(withDuration: 0.3, delay: 0.7, options: .curveEaseIn, animations: {
-                    self.tableContainer.alpha = 1
-                }) { (completed) in
-                    self.didTheInitialAnimation = true
-                    if(languageWasAlreadySet){
-                        if(!(StringKeys.UserDidSwipeMainSections.savedValue as? Bool ??  false)){
-                            if let cell = self.theTable.visibleCells.first{
-                                if let swipeCell = cell as? HomeSectionTableViewCell{
-                                    swipeCell.showSwipe(orientation: .right, animated: true) { (completed) in
-                                        print("swipe showed")
-                                        StringKeys.UserDidSwipeMainSections.saveValue(value: true)
-                                    }
+        
+        if(!didTheInitialAnimation){
+            UIView.animate(withDuration: 0.3, delay: 0.7, options: .curveEaseIn, animations: {
+                self.tableContainer.alpha = 1
+            }) { (completed) in
+                self.didTheInitialAnimation = true
+                if(languageWasAlreadySet){
+                    if(!(StringKeys.UserDidSwipeMainSections.savedValue as? Bool ??  false)){
+                        if let cell = self.theTable.visibleCells.first{
+                            if let swipeCell = cell as? HomeSectionTableViewCell{
+                                swipeCell.showSwipe(orientation: .right, animated: true) { (completed) in
+                                    print("swipe showed")
+                                    StringKeys.UserDidSwipeMainSections.saveValue(value: true)
                                 }
-                                
                             }
+                            
                         }
                     }
+                } else {
+                    self.openSettings(UIButton.init())
+                    languageWasAlreadySet = true
                 }
             }
         }
+        
         
     }
     
@@ -162,7 +162,7 @@ class HomeAthkarSectionsViewController: UIViewController, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return (tableView.bounds.height / CGFloat.init(self.viewModel.numberOfAthkarSections))
     }
-
+    
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
     {
