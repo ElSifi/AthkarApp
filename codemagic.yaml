@@ -13,8 +13,8 @@ workflows:
       vars:
         XCODE_WORKSPACE: "DailyAthkar.xcworkspace"
         XCODE_SCHEME: "DailyAthkar"
-      cocoapods: 1.11.3
-      xcode: 13
+      cocoapods: 1.13.0
+      xcode: 13.3
     scripts:
       - name: Set up keychain to be used for code signing using Codemagic CLI 'keychain' command
         script: |
