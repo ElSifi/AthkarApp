@@ -10,7 +10,8 @@ import Foundation
 import FirebaseFirestore
 import FirebaseAuth
 import FirebaseDynamicLinks
-import FirebasePhoneAuthUI
+// TODO: Migrate Meezan login to native phone auth
+// import FirebasePhoneAuthUI
 
 enum CustomError: Error {
     case unknownError
@@ -20,58 +21,10 @@ enum CustomError: Error {
 class Meezan {
     typealias commonCompletion = (_ success : Bool, _ error: Error?)->()
     typealias stringCompletion = (_ value : String?, _ error: Error?)->()
-    
-    static var authUI : FUIAuth? = FUIAuth.defaultAuthUI()
 
-    static func loginWithPhone(viewController : UIViewController){
-        let phoneProvider = FUIPhoneAuth.init(authUI: FUIAuth.defaultAuthUI()!)
-        //FUIAuth.defaultAuthUI()?.providers = [phoneProvider]
-        self.authUI?.providers = [phoneProvider] // NEEDED!?
-
-        phoneProvider.signIn(withDefaultValue: nil, presenting: viewController) { (credential, error, callBack, userInfo)in
-
-            if let error = error as NSError? {
-                callBack?(nil, error)
-                return
-            }
-            if let credential = credential,let user = Auth.auth().currentUser {
-                
-                
-                user.link(with: credential) { (authResult, error) in
-                    
-                    if let error = error as NSError? {
-                        switch(error.code){
-                        case 17025:
-                            //merging
-                            let anonymousUser = Auth.auth().currentUser
-                            Auth.auth().signIn(with: credential) { (result, error) in
-                                if let newUser = Auth.auth().currentUser, let anonymousUser = anonymousUser, newUser.uid != anonymousUser.uid {
-                                    Meezan.getMyAppLaunchCount(userUID: anonymousUser.uid, completion: { (anonymousCount) in
-                                        Meezan.recordTheAppLaunch(userUID: newUser.uid, incrementValue: anonymousCount, completion: { (success, error) in
-                                            if(success){
-                                                let anonymousUserUID = anonymousUser.uid
-                                                anonymousUser.delete(completion: { (error) in
-                                                    if(error == nil){
-                                                        Meezan.deleteUser(userUID: anonymousUserUID)
-                                                    }
-                                                })
-                                            }
-                                        })
-                                    })
-                                }
-                                
-                            }
-                            viewController.dismiss(animated: true, completion: nil)
-                        default:
-                            callBack?(nil, error)
-                        }
-                    }
-                    callBack?(authResult?.user, nil)
-                }
-                
-            }
-        }
-    }
+    // MARK: - Meezan Login (Stubbed - requires FirebasePhoneAuthUI migration)
+    // TODO: Migrate phone auth to native Firebase phone auth without FirebaseUI
+    // static func loginWithPhone(viewController: UIViewController) { ... }
     
     
     struct KEYS {
