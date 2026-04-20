@@ -45,7 +45,14 @@ class SectionContentViewController: UIViewController,
     }
     
     
-    @IBOutlet weak var topTitle: UILabel!
+    @IBOutlet weak var topTitle: UILabel!{
+        didSet{
+            topTitle.layer.masksToBounds = false
+            topTitle.layer.shadowRadius = 2.0
+            topTitle.layer.shadowOpacity = 0.8
+            topTitle.layer.shadowOffset = CGSize(width: 1, height: 2)
+        }
+    }
     @IBOutlet weak var backButton: UIButton!{
         didSet{
             if(LanguageManager.isCurrentLanguageRTL()){

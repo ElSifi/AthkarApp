@@ -49,6 +49,8 @@ class When_opening_a_second_opening_of_the_app: XCTestCase {
 
 class When_opening_athkar: XCTestCase {
 
+    let optionalString : String? = ""
+    
     //athkar should be parsed right
     //should open long and short forms right
 
